@@ -1,0 +1,27 @@
+// Settings
+// ------------------------------------
+
+// THEME
+//
+// This should contains from colors to overriding Bootstrap variables.
+// ------------------------------------
+// @import 'settings/theme';
+@import 'settings/variables';
+
+// GLOBAL
+@import 'globals/links';
+//@import 'generics/font_face';
+//@import 'generics/form';
+//@import 'generics/table';
+
+
+// COMPONENTS
+// Always start your class name *with the* component name, much easier to locate them later in the html
+@import 'components/button';
+@import 'components/header';
+
+
+// PAGES
+// This is where page specific styles live such as homepage, about etc...
+@import 'pages/base';
+@import 'pages/home';

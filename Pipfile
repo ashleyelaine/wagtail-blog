@@ -1,0 +1,57 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[packages]
+
+collectfast = "*"
+django = ">=2.1.3"
+pillow = "*"
+dj-database-url = "*"
+dj-static = "*"
+"django-bootstrap4" = "*"
+django-cors-headers = "*"
+django-debug-toolbar = "*"
+django-maintenancemode = "*"
+django-ses = "*"
+django-storages = "*"
+gunicorn = "*"
+"psycopg2-binary" = "*"
+rollbar = "*"
+
+
+[dev-packages]
+
+behave-django = "*"
+bpython = "*"
+coverage = "*"
+django-extensions = "*"
+django-gulp = "*"
+django-rainbowtests = "*"
+factory-boy = "*"
+faker = "*"
+"flake8" = "*"
+"flake8-bandit" = "*"
+"flake8-builtins" = "*"
+"flake8-debugger" = "*"
+"flake8-deprecated" = "*"
+"flake8-logging-format" = "*"
+"flake8-print" = "*"
+"flake8-quotes" = "*"
+"flake8-tuple" = "*"
+nplusone = "*"
+splinter = { extras = ["django"] }
+unittest-xml-reporting = "*"
+django = ">=2.1.3"
+
+
+[requires]
+
+python_version = "3.6"
+
+
+[pipenv]
+

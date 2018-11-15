@@ -1,0 +1,105 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+# Store the current directory and switch to the project root.
+dir=$(pwd)
+cd "$(dirname "$0")/.." || exit
+
+trap ctrl_c INT TERM
+ctrl_c() {
+  echo "*** Returning you to $dir"
+  cd "$dir" || exit
+  exit 0
+}
+
+display_help() {
+  echo "Usage: $0 [options...] [EB environment name]" >&2
+  echo
+  echo "   EB environment name        [optional] the Elastic Beanstalk environment to deploy to. If none is"
+  echo "                              specified, the default environment from .elasticbeanstalk/config.yml"
+  echo "                              will be used. Multiple environments may be specified."
+  echo "   -h, --help                 show this help text and exit"
+}
+
+if [ $# -gt 0 ]; then
+  while :
+  do
+      case "$1" in
+        -h | --help)
+            display_help
+            exit 0
+            ;;
+        -*)
+            echo "Error: Unknown option: $1" >&2
+            display_help
+            exit 1
+            ;;
+        *)
+            break
+            ;;
+      esac
+  done
+fi
+
+ebenv() {
+  line=$(echo "$1" | grep "$2") || true
+
+  if [ -n "$line" ]; then
+    echo "$line" | sed -e 's/^.*=//'
+  else
+    echo ""
+  fi
+}
+
+echo 'Compiling assets'
+npm install
+gulp clean && gulp build --production
+
+# We generate 2 different requirements files here. All regular dependencies go
+# into `requirements.txt` and all VCS requirements go into
+# `vcs-requirements.txt`. Then, in our `.ebextensions`, we manually install the
+# VCS dependencies. This is to get around the pip hash verification issues with
+# VCS dependencies. See https://github.com/pypa/pipenv/issues/1231.
+echo 'Generating requirements files'
+requirements="$(pipenv lock --requirements)"
+! echo "$requirements" | grep -v '^-e' > requirements.txt
+! echo "$requirements" | grep '^-e' > vcs-requirements.txt
+
+if [ $# -gt 0 ] && [ -n "$1" ]; then
+  environments="$*"
+else
+  environments="$(pipenv run eb list | grep "\* " | sed -e 's/\* //')"
+fi
+
+for environment in $environments; do
+  _ebenv="$(pipenv run eb printenv "$environment" | tail -n +2 | sed -e 's/^[ \t]*//' | sed -e 's/ = /=/')"
+
+  echo "Deploying to EB environment $environment"
+  pipenv run eb deploy "$environment"
+  pipenv run eb labs cleanup-versions "$environment" --num-to-leave=5 --force
+
+  s3_bucket="$(ebenv "$_ebenv" 'S3_BUCKET_NAME')"
+  settings_module="$(ebenv "$_ebenv" 'DJANGO_SETTINGS_MODULE')"
+  DJANGO_SETTINGS_MODULE="$settings_module" S3_BUCKET_NAME="$s3_bucket" pipenv run python manage.py collectstatic --no-input
+
+  rollbar_env=$(ebenv "$_ebenv" 'ROLLBAR_ENV')
+  if [ -n "$rollbar_env" ]; then
+    curl https://api.rollbar.com/api/1/deploy/ \
+      --silent \
+      -F access_token="$(ebenv "$_ebenv" 'ROLLBAR_ACCESS_TOKEN')" \
+      -F environment="$rollbar_env" \
+      -F revision="$(git log -n 1 --pretty=format:%H)" \
+      -F local_username="$(git config --get github.user)" \
+      > /dev/null
+  else
+    echo "Could not determine rollbar environment"
+  fi
+done
+
+echo 'Cleaning up our requirements files'
+rm -rf requirements.txt
+rm -rf vcs-requirements.txt
+
+cd "$dir" || exit
+exit 0

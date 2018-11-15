@@ -1,0 +1,45 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+if [ "$(id -u)" -eq 0 ]; then
+  echo "Don't run me with sudo, please."
+  exit 1
+fi
+
+# Store the current directory and switch to the project root.
+dir=$(pwd)
+cd "$(dirname "$0")/.." || exit
+
+trap ctrl_c INT TERM
+ctrl_c() {
+  echo "*** Returning you to $dir"
+  cd "$dir" || exit
+  exit 0
+}
+
+if ! command -v pipenv >/dev/null 2>&1; then
+  echo "Looks like you don't have \`pipenv\` installed. If you're on a Mac, do \`brew install pipenv\` and run this script again."
+  exit 0
+fi
+
+if ! command -v npm >/dev/null 2>&1; then
+  echo "Couldn't find npm. Please install node/npm (https://nodejs.org/en/download/), and run this script again."
+  exit 0
+fi
+
+echo 'Installing requirements...'
+pipenv install --dev
+npm install --from-lock-file
+
+printf 'Initializing database...'
+pipenv run python manage.py migrate -v 0
+printf 'done.\n'
+
+echo "OK cool. Now let's create your user account."
+pipenv run python manage.py createsuperuser
+
+echo "Awesome, you're all set. Run \`pipenv run python manage.py runserver\` to start the app. Happy devving!"
+
+cd "$dir" || exit
+exit 0

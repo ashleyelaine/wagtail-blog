@@ -1,0 +1,26 @@
+files:
+  ignore:
+    - 'assets/scss/settings/_theme.scss'
+
+rules:
+  class-name-format:
+    - 1
+    -
+      convention: hyphenatedbem
+  nesting-depth:
+    - 1
+    -
+      max-depth: 4
+  no-ids: 0
+  no-url-protocols: 0
+  no-vendor-prefixes: 0
+  placeholder-in-extend: 0
+  property-sort-order: 0
+  no-important: 0
+  no-color-literals: 0
+
+  # Currently disabled to allow for defining multiple fallback rules when
+  # browsers don't support a given feature (viewport, for example).
+  #
+  # Remove when https://github.com/sasstools/sass-lint/pull/677 lands.
+  no-duplicate-properties: 0

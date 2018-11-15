@@ -1,0 +1,9 @@
+$btn-default-color: gray(300);
+
+.button {
+  background-color: $btn-default-color;
+
+  &-primary {
+    background-color: theme-color('primary');
+  }
+}

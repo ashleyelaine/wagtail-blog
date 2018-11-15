@@ -1,0 +1,27 @@
+
+.idea
+*.pyc
+.pyc
+.DS_Store
+.vagrant
+.sass-cache
+*.log
+
+# Web build artifacts
+/rev-manifest.json
+node_modules
+_gh_pages
+/static/
+
+# Testing artifacts
+/.coverage
+/htmlcov/
+
+# User-uploaded files.
+/media/
+
+# Elastic Beanstalk
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+!.elasticbeanstalk/config.yml

@@ -1,0 +1,35 @@
+#!/bin/bash
+set -uo pipefail
+IFS=$'\n\t'
+
+# Store the current directory and switch to the project root.
+dir=$(pwd)
+cd "$(dirname "$0")/.." || exit
+
+trap ctrl_c INT TERM
+ctrl_c() {
+  echo "*** Returning you to $dir"
+  cd "$dir" || exit
+  exit 0
+}
+
+echo 'Running the test suite...'
+pipenv run python manage.py behave --keepdb --format progress
+pipenv run python manage.py test --keepdb --reverse
+
+echo
+echo 'Checking code style with flake8...'
+if ! pipenv run flake8 . ; then
+  echo 'Code style checks failed.'
+fi
+
+echo
+echo 'Checking safety of installed dependencies...'
+pipenv check
+
+echo
+echo 'Running frontend code style checks...'
+gulp lint
+
+cd "$dir" || exit
+exit 0

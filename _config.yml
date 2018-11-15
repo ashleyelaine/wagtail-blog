@@ -1,0 +1,33 @@
+# Dependencies
+markdown:         kramdown
+highlighter:      rouge
+
+kramdown:
+  auto_ids: true
+
+# Permalinksk
+permalink:        pretty
+
+# Server
+source:           assets/styleguide/docs
+destination:      assets/styleguide/_gh_pages
+host:             0.0.0.0
+port:             9001
+baseurl:          ""
+encoding:         UTF-8
+exclude:          ['node_modules', 'assets/scss/']
+
+gems:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+
+cdn:
+  # See https://www.srihash.org for info on how to generate the hashes
+  css:            https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css
+  css_hash:       "sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+  js:             https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js
+  js_hash:        "sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+  jquery:         https://code.jquery.com/jquery-3.1.1.slim.min.js
+  jquery_hash:    "sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+  tether:         https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js
+  tether_hash:    "sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
