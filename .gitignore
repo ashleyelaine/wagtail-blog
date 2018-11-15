@@ -6,6 +6,7 @@
 .vagrant
 .sass-cache
 *.log
+settings.json
 
 # Web build artifacts
 /rev-manifest.json
