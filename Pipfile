@@ -1,14 +1,11 @@
 [[source]]
-
 url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
 
-
 [packages]
-
 collectfast = "*"
-django = ">=2.1.3"
+django = "*"
 pillow = "*"
 dj-database-url = "*"
 dj-static = "*"
@@ -21,10 +18,9 @@ django-storages = "*"
 gunicorn = "*"
 "psycopg2-binary" = "*"
 rollbar = "*"
-
+wagtail = "*"
 
 [dev-packages]
-
 behave-django = "*"
 bpython = "*"
 coverage = "*"
@@ -45,13 +41,9 @@ faker = "*"
 nplusone = "*"
 splinter = { extras = ["django"] }
 unittest-xml-reporting = "*"
-django = ">=2.1.3"
-
+django = "*"
 
 [requires]
-
 python_version = "3.6"
 
-
 [pipenv]
-

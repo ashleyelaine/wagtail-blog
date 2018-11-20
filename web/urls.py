@@ -5,19 +5,12 @@ from django.conf import settings
 
 from . import views
 
-from django.contrib.sitemaps.views import sitemap
-from .sitemap import DEFAULT_SITEMAPS
+from wagtail.contrib.sitemaps.views import sitemap
 
 
 urlpatterns = [
-    url(r'^$', views.home, name='home'),
-
-    url(r'^sitemap\.xml$', sitemap, {'sitemaps': DEFAULT_SITEMAPS}),
-
+    url('^sitemap.xml$', sitemap),
 ]
-
-urlpatterns += staticfiles_urlpatterns()
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = views.do404
 handler500 = views.do500
