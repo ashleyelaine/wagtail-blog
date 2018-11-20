@@ -29,14 +29,14 @@ module.exports = {
       'assets/fonts/**/*',
     ],
     fonts_watch: ['assets/fonts'],
-    fonts_dest: './static',
+    fonts_dest: './static/fonts',
 
     html_src: ['**/templates/**/*.html'],
     html_watch: ['**/templates/**/*.html'],
 
     images_src: ['./assets/images/**/*'],
     images_watch: ['./assets/images/**/*'],
-    images_dest: './static',
+    images_dest: './static/images',
 
     scripts_vendor: [
       'node_modules/jquery/dist/jquery.min.js',

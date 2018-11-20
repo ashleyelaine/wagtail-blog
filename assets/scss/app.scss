@@ -1,27 +1,30 @@
-// Settings
-// ------------------------------------
+// VENDOR
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import '../../node_modules/bootstrap/scss/functions';
 
-// THEME
-//
-// This should contains from colors to overriding Bootstrap variables.
-// ------------------------------------
-// @import 'settings/theme';
+
+// FONTS
+$fa-font-path: './fonts';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/solid';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/regular';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/brands';
+@import url('https://fonts.googleapis.com/css?family=Arvo|Nunito+Sans:400,700|Open+Sans:400,600,700');
+
+
+// SETTINGS
 @import 'settings/variables';
+
 
 // GLOBAL
 @import 'globals/links';
-//@import 'generics/font_face';
-//@import 'generics/form';
-//@import 'generics/table';
 
 
 // COMPONENTS
-// Always start your class name *with the* component name, much easier to locate them later in the html
 @import 'components/button';
 @import 'components/header';
 
 
 // PAGES
-// This is where page specific styles live such as homepage, about etc...
 @import 'pages/base';
 @import 'pages/home';
