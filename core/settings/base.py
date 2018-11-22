@@ -36,13 +36,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'django.contrib.sitemaps',
-    'storages',
-    'corsheaders',
-    'bootstrap4',
-
-    'members',
-    'web',
-
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
     'wagtail.embeds',
@@ -55,8 +48,15 @@ INSTALLED_APPS = (
     'wagtail.admin',
     'wagtail.core',
 
+    'storages',
+    'corsheaders',
+    'bootstrap4',
     'modelcluster',
     'taggit',
+
+    'members',
+    'web',
+    'blog',
 )
 
 MIDDLEWARE = (
