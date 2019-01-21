@@ -1,6 +1,6 @@
 from django.db import models
 
-from wagtail.admin.edit_handlers import FieldPanel
+from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel
 from wagtail.snippets.models import register_snippet
 from wagtail.core.fields import StreamField, RichTextField
 
@@ -14,7 +14,7 @@ class Post(models.Model):
 
     panels = [
         FieldPanel('title'),
-        FieldPanel('content'),
+        StreamFieldPanel('content'),
     ]
 
     def __str__(self):

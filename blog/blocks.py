@@ -15,7 +15,7 @@ class ContentBlock(StructBlock):
 
     class Meta:
         icon = 'pilcrow'
-        template = 'base/blocks/content_block.html'
+        template = 'blocks/content_block.html'
         label = 'Content'
 
 
