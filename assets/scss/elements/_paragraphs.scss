@@ -1,0 +1,30 @@
+p {
+  margin-bottom: 20px;
+}
+
+ul {
+  margin-bottom: 20px;
+
+  li {
+    ul {
+      li {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+.right {
+  float: right;
+  align-self: flex-end;
+}

@@ -25,7 +25,6 @@ TESTING = is_testing()
 ALLOWED_HOSTS = ['*']
 INTERNAL_IPS = ['127.0.0.1']
 
-SITE_ID = 1
 
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -36,8 +35,21 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'django.contrib.sitemaps',
+    'storages',
+    'corsheaders',
+    'bootstrap4',
+
+    'members',
+    'base',
+    'web',
+
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
+    'wagtail.contrib.styleguide',
+    'wagtail.contrib.settings',
+    'wagtail.contrib.modeladmin',
+    'wagtail.contrib.routable_page',
+    'wagtail.contrib.postgres_search',
     'wagtail.embeds',
     'wagtail.sites',
     'wagtail.users',
@@ -48,15 +60,11 @@ INSTALLED_APPS = (
     'wagtail.admin',
     'wagtail.core',
 
-    'storages',
-    'corsheaders',
-    'bootstrap4',
     'modelcluster',
     'taggit',
-
-    'members',
-    'web',
-    'blog',
+    'captcha',
+    'wagtailcaptcha',
+    'wagtailcodeblock',
 )
 
 MIDDLEWARE = (
@@ -72,6 +80,8 @@ MIDDLEWARE = (
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 )
 
+SITE_ID = 1
+
 ROOT_URLCONF = 'core.urls'
 
 TEMPLATES = [
@@ -85,10 +95,28 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.template.context_processors.static',
                 'django.contrib.auth.context_processors.auth',
+                'wagtail.contrib.settings.context_processors.settings',
             ],
         },
     },
 ]
+
+WAGTAIL_SITE_NAME = 'uname'
+WAGTAILSEARCH_BACKENDS = {
+    'default': {
+        'BACKEND': 'wagtail.contrib.postgres_search.backend',
+        'AUTO_UPDATE': True,
+    }
+}
+WAGTAIL_CODE_BLOCK_THEME = 'okaidia'
+WAGTAIL_CODE_BLOCK_LANGUAGES = (
+    ('css', 'CSS'),
+    ('html', 'HTML'),
+    ('javascript', 'Javascript'),
+    ('json', 'JSON'),
+    ('python', 'Python'),
+    ('scss', 'SCSS'),
+)
 
 AUTH_USER_MODEL = 'members.Account'
 
@@ -114,13 +142,7 @@ CACHES = {
         'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
         'LOCATION': 'unique-snowflake',
     },
-    'collectfast': {
-        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
-        'LOCATION': 'collectfast',
-    }
 }
-
-COLLECTFAST_CACHE = 'collectfast'
 
 
 STATICFILES_FINDERS = (
@@ -131,4 +153,16 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-WAGTAIL_SITE_NAME = 'uname'
+
+ROLLBAR = {
+    'enabled': False,
+}
+
+CSRF_COOKIE_SECURE = False
+
+RECAPTCHA_PUBLIC_KEY = os.environ.get('RECAPTCHA_PUBLIC_KEY', '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI')
+RECAPTCHA_PRIVATE_KEY = os.environ.get('RECAPTCHA_PRIVATE_KEY', '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe')
+SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
+NOCAPTCHA = True
+
+GOOGLE_ANALYTICS_ID = os.environ.get('GOOGLE_ANALYTICS_ID')

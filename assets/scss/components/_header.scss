@@ -1,3 +1,46 @@
-.header-container {
-  background: $blue;
+.header {
+  background: $gray-300;
+
+  // LOGO
+  .logo {
+    border: 0;
+    text-decoration: none;
+
+    img {
+      width: 250px;
+
+      @media(max-width: $mobile) {
+        width: 200px;
+      }
+    }
+
+    &:hover {
+      border: 0;
+    }
+  }
+
+  // SEARCH
+  .header-search {
+    .form-group {
+      margin-bottom: 0;
+      width: auto;
+
+      .form-control {
+        font-size: 14px;
+        width: 200px;
+      }
+    }
+
+    .btn {
+      font-size: 16px;
+      background: none;
+      color: $black;
+      box-shadow: none;
+      padding: 9px;
+
+      &:hover {
+        color: $accent;
+      }
+    }
+  }
 }

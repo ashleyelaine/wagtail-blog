@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags bootstrap4 %}
+
+{% block body_class %}form-page{% endblock body_class %}
+
+{% block content %}
+  <section class="page-header-block">
+    <div class="container">
+      <h1>
+        {% if page.page_title_override %}
+          {{ page.page_title_override }}
+        {% else %}
+          {{ page.title }}
+        {% endif %}
+      </h1>
+    </div>
+  </section>
+
+  <section class="block sub-heading-block">
+    <div class="container">
+      {% if page.intro %}
+        <h2>{{ page.intro|safe }}</h2>
+      {% endif %}
+      {% if page.intro_content %}
+        {{ page.intro_content|safe }}
+      {% endif %}
+    </div>
+  </section>
+
+  <section class="block form-block">
+    <div class="container">
+      <form action="{% pageurl page %}" method="POST">
+        {% bootstrap_form form %}
+        {% csrf_token %}
+        {% buttons %}
+          {% bootstrap_button _("Submit") button_type="submit" button_class="btn-primary btn-block" %}
+        {% endbuttons %}
+      </form>
+    </div>
+  </section>
+
+  {% for block in page.page_content %}
+    {% include_block block %}
+  {% endfor %}
+{% endblock %}

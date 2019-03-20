@@ -1,0 +1,16 @@
+.footer {
+  text-align: center;
+  padding: 40px 0;
+  background: $gray-300;
+
+  .logo {
+    text-decoration: none;
+  }
+
+  .terms {
+    a {
+      display: inline-block;
+      margin: 0 5px;
+    }
+  }
+}

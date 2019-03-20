@@ -1,7 +1,21 @@
-{% load staticfiles %}
-
-<footer class="page-footer">
+<footer class="footer">
   <div class="container">
-    <p><small>&copy; {% now "Y" %} Ashley Rocks!</small></p>
+    <div class="branding">
+      <a class="navbar-brand logo" href="/">
+        {% if settings.base.GlobalSettings.logo %}
+          <img src="{{ settings.base.GlobalSettings.logo.url }}" alt="{{ settings.base.GlobalSettings.logo_text }}">
+        {% else %}
+          {{ settings.base.GlobalSettings.logo_text }}
+        {% endif %}
+      </a>
+    </div>
+    <div class="copyright">
+      <div class="copyright">&copy; {% now "Y" %} All Rights Reserved
+      </div>
+      <div class="terms">
+        <a href="{% url 'terms' %}">Terms of Service</a>
+        <a href="{% url 'privacy' %}">Privacy Policy</a>
+      </div>
+    </div>
   </div>
 </footer>

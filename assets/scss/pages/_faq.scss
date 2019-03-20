@@ -1,0 +1,121 @@
+.faq {
+  .page-header-block {
+    margin-bottom: 50px;
+  }
+
+  h5 {
+    font-family: $basefont;
+    margin: 0;
+    padding: 14px 18px 13px;
+    color: $black;
+    font-size: 1.4rem;
+
+    @media(max-width: $tablet) {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.questions {
+  margin-bottom: 50px;
+}
+
+.accordian {
+  border-top: 2px solid $white;
+
+  &:last-of-type {
+    margin-bottom: 20px;
+  }
+
+  button {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    text-align: left;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .drawer-content {
+    display: none;
+    margin-left: 18px;
+    padding: 0 50px 5px 0;
+    line-height: 1.2em;
+
+    .rich-text {
+      padding-top: 20px;
+    }
+
+    p {
+      margin-bottom: 0;
+      padding-bottom: 15px;
+    }
+  }
+
+  .accordian-handle {
+    padding-right: 50px;
+    position: relative;
+    background: $gray-200;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  @mixin plus-minus($width, $line-width, $color) {
+    box-sizing: border-box;
+    transition: transform .5s;
+    width: $width;
+    height: $width;
+    transform: rotate(180deg);
+    position: absolute;
+    display: inline-block;
+    right: 15px;
+    top: 13px;
+
+    &.active {
+      transform: rotate(0deg);
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: $width;
+      height: 0;
+      border-bottom: solid $line-width $color;
+      position: absolute;
+      bottom: $width / 2 - $line-width / 2;
+      transform: rotate(90deg);
+      transition: width .3s;
+    }
+
+    &.active {
+      &::before {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-bottom: solid $line-width $color;
+        position: absolute;
+        bottom: $width / 2 - $line-width / 2;
+        transform: rotate(90deg);
+      }
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: $width;
+      height: 0;
+      border-bottom: solid $line-width $color;
+      position: absolute;
+      bottom: $width / 2 - $line-width / 2;
+    }
+  }
+
+  .icon {
+    @include plus-minus(24px, 2px, $black);
+  }
+}

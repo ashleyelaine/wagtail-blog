@@ -1,0 +1,42 @@
+.skiplinks {
+  a {
+    position: absolute !important;
+    left: -999em;
+
+    &:hover,
+    &:visited {
+      position: absolute !important;
+      left: -999em;
+    }
+
+    &:active,
+    &:focus {
+      position: absolute;
+      z-index: 999999;
+      left: 10px;
+    }
+  }
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+body {
+  &.user-is-tabbing {
+    button,
+    .btn,
+    a {
+      &:focus {
+        outline: 5px auto $gray-800 !important;
+      }
+    }
+  }
+}

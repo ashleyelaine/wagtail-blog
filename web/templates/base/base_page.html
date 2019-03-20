@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% load staticfiles wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}generic{% endblock body_class %}
+
+{% block content %}
+  <section class="page-header-block">
+    <div class="container">
+      <h1>
+        {% if page.page_title_override %}
+          {{ page.page_title_override }}
+        {% else %}
+          {{ page.title }}
+        {% endif %}
+      </h1>
+    </div>
+  </section>
+  {% for block in page.page_content %}
+    {% include_block block %}
+  {% endfor %}
+  {% for resource in page.resources.all %}
+    {% include_block resource %}
+  {% endfor %}
+{% endblock %}

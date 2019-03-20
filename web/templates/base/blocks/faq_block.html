@@ -1,0 +1,8 @@
+{% load wagtailcore_tags %}
+
+<div class="accordian">
+  <h5 class="accordian-handle"><button aria-label="{{ self.question }}: click to expand answer">{{ self.question }} <span class="icon"></span></button></h5>
+  <div class="drawer-content">
+    {{ self.answer|richtext }}
+  </div>
+</div>

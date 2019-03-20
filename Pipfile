@@ -5,7 +5,7 @@ name = "pypi"
 
 [packages]
 collectfast = "*"
-django = "*"
+django = ">=2.1"
 pillow = "*"
 dj-database-url = "*"
 dj-static = "*"
@@ -19,6 +19,9 @@ gunicorn = "*"
 "psycopg2-binary" = "*"
 rollbar = "*"
 wagtail = "*"
+wagtail-django-recaptcha = "*"
+django-recaptcha = "*"
+wagtailcodeblock = "*"
 
 [dev-packages]
 behave-django = "*"
@@ -39,11 +42,11 @@ faker = "*"
 "flake8-quotes" = "*"
 "flake8-tuple" = "*"
 nplusone = "*"
-splinter = { extras = ["django"] }
+splinter = "*"
 unittest-xml-reporting = "*"
-django = "*"
+django = ">=2.1"
 
 [requires]
-python_version = "3.6"
+python_version = "3.7"
 
 [pipenv]

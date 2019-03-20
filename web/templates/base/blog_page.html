@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% block content %}
+    <section class="page-header-block">
+    <div class="container">
+      <h1>
+        {% if page.page_title_override %}
+          {{ page.page_title_override }}
+        {% else %}
+          {{ page.title }}
+        {% endif %}
+      </h1>
+    </div>
+  </section>
+  <section class="posts">
+    <div class="container">
+      {% for post in posts %}
+        <h2><a href="{% pageurl post %}">{{ post.title }}</a></h2>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}

@@ -2,29 +2,30 @@
 @import '../../node_modules/bootstrap/scss/bootstrap';
 @import '../../node_modules/bootstrap/scss/functions';
 
-
-// FONTS
-$fa-font-path: './fonts';
-@import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
-@import '../../node_modules/@fortawesome/fontawesome-free/scss/solid';
-@import '../../node_modules/@fortawesome/fontawesome-free/scss/regular';
-@import '../../node_modules/@fortawesome/fontawesome-free/scss/brands';
-@import url('https://fonts.googleapis.com/css?family=Arvo|Nunito+Sans:400,700|Open+Sans:400,600,700');
-
-
 // SETTINGS
-@import 'settings/variables';
+@import 'settings/fonts';
+@import 'settings/colors';
+@import 'settings/breakpoints';
 
-
-// GLOBAL
-@import 'globals/links';
-
+// ELEMENTS
+@import 'elements/links';
+@import 'elements/buttons';
+@import 'elements/headings';
+@import 'elements/blockquote';
+@import 'elements/images';
+@import 'elements/paragraphs';
+@import 'elements/forms';
 
 // COMPONENTS
-@import 'components/button';
 @import 'components/header';
-
+@import 'components/navigation';
+@import 'components/footer';
+@import 'components/pagination';
+@import 'components/wagtail-blocks';
+@import 'components/code-block';
+@import 'components/accessibility';
 
 // PAGES
 @import 'pages/base';
 @import 'pages/home';
+@import 'pages/faq';

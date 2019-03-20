@@ -3,5 +3,14 @@
 {% block page_title %}Page Not Found{% endblock %}
 
 {% block content %}
-<p>Page {{ request.path }} not found</p>
+<section class="page-header-block">
+  <div class="container">
+    <h1>Page Not Found</h1>
+    <br>
+  </div>
+</section>
+<div class="container">
+  <h4>Oops, the page you are looking for may have changed or moved.</h4><br>
+  <a class="btn btn-primary" href="/">Home</a>
+</div>
 {% endblock %}

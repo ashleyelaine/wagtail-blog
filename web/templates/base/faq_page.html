@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% load staticfiles wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}faq{% endblock body_class %}
+
+{% block content %}
+  <section class="page-header-block">
+    <div class="container">
+      <h1>
+        {% if page.page_title_override %}
+          {{ page.page_title_override }}
+        {% else %}
+          {{ page.title }}
+        {% endif %}
+      </h1>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="questions">
+      <h4>{{ page.intro|richtext }}</h4>
+      {% for block in page.faqs %}
+        {% include_block block %}
+      {% endfor %}
+    </div>
+  </div>
+
+  {% for block in page.page_content %}
+    {% include_block block %}
+  {% endfor %}
+{% endblock %}

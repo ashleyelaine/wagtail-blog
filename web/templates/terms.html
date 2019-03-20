@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+{% load i18n staticfiles %}
+
+{% block title %}{% trans "Example Terms" %}{% endblock %}
+
+{% block body_class %}pp-tos{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1>{% trans "Example Terms" %}</h1>
+      <hr>
+    </div>
+  </div>
+  <p><em>{% trans "Last Updated: June 2018" %}</em></p>
+
+  <h3>{% trans "General Provisions" %}</h3>
+  <ol>
+    <li>{% trans "The following terms have the meanings ascribed to them in this section:" %}
+      <ul>
+        <li>
+          {% trans "“<b>Application”</b> means the web-based application XXXXX." %}
+        </li>
+        <li>
+          <b>{% trans "“Service”</b> means accessing the Site to use the Application." %}
+        </li>
+        <li>
+          <b>{% trans "“Site” </b> means the unique Uniform Resource Locator (URL) hosted by University on which Users access the Application and use the Service." %}
+        </li>
+        <li>
+          <b>{% trans "“Student Data” </b> means the data described in section III (1) of these Terms of Service. All Student Data is also deemed User-Provided Data." %}
+        </li>
+        <li>
+          <b>{% trans "“University,” “We,</b> or <b>“Us”</b> means Regents of the University of Minnesota." %}
+        </li>
+        <li>
+          <b>{% trans "“User”</b> or <b>“You” </b> means the web-based application XXXX." %}
+        </li>
+        <li>
+          <b>{% trans "“User-Provided Data” </b> means the data described in section III (1) of these Terms of Service." %}
+        </li>
+      </ul>
+    </li>
+    <li>{% trans "By accessing the Site, you are agreeing to be bound by these Terms of Service." %} </li>
+    <li>{% trans "We may change the provisions of these Terms of Service at any time.  We may make a change effective immediately.  We will make commercially reasonable efforts to notify you of changes from time to time; however, we do not promise to notify you before making a change. By accessing the Site after any such change, you are agreeing to be bound by these Terms of Service, as changed." %}</li>
+  </ol>
+
+  <h3>{% trans "Site Use" %}</h3>
+  <ol>
+    <li>{% trans "We restrict use of the Service to Users. We grant you a limited, non-exclusive right to use the Service solely for your internal business and educational purposes.  We prohibit Users from sharing with others their passwords or other credentials to authorize use of the Service. You must use commercially reasonable efforts to safeguard your password to access the Site.  We may suspend or terminate your ability to use the Service if you have violated these Terms of Service or any other policy governing the use of the Service." %}</li>
+    <li>{% trans "By using the Service, (including, without limitation, by uploading User-Provided Data to the Site) you represent and warrant to us that your using the Service complies with all applicable laws, regulations, rules, administrative and court orders." %}</li>
+    <li>{% trans "You must comply with the Site’s Privacy Policy and any other policy governing the use of the Service. " %}</li>
+    <li>{% trans "We may change the Services, including, without limitation, changing the Application functionality or interface, at any time.  We do not promise to notify you before making such a change." %}</li>
+    <li>{% blocktrans %}We will use commercially reasonable efforts to maintain the Application and the Site in a secure environment.  We use Secure Socket Layer (SSL) technology to control access to the Site.  We store User-Provided Data on servers hosted by Amazon Web Services. To learn more about Amazon’s security protocols, please review the following website: <a target="_blank" href="https://d0.awsstatic.com/whitepapers/aws-security-whitepaper.pdf">https://d0.awsstatic.com/whitepapers/aws-security-whitepaper.pdf</a>.  We may change our security practices or policies for the accessing the Site.  We do not promise to notify you before making such a change.{% endblocktrans %}</li>
+    <li>{% trans "You shall not reverse engineer, decompile, decrypt, disassemble or otherwise attempt to derive the source code for the Application, and you shall not use the Service other than as permitted under these Terms of Service." %}</li>
+  </ol>
+
+  <h3>{% trans "Data Submission and Use Policy" %}</h3>
+  <ol>
+    <li>{% trans "Users may upload information (“User-Provided Data”) to the Site describing the User and others. We expect this information may describe individuals who are K-12 students (“Student Data”), including their names, gender, ethnicity, disability status, attendance, behavior, and course performance. Users may freely review, edit or delete information they upload to the Site.  You are solely responsible for the information you upload to the Site." %}</li>
+    <li>{% trans "We do not claim any ownership interest in User-Provided Data." %}
+      <ul>
+        <li>{% trans "You grant us a non-exclusive, royalty-free, irrevocable, world-wide perpetual right and license to gather, store, reproduce, distribute or publicly display all User-Provided Data you upload to the Site in order to provide you and other Users use of the Service or as otherwise permitted in these Terms of Service. You grant us the right to modify User-Provided Data you upload to the Site to create a derivative work based on it but only in connection with modifying the information for storage or display in a different medium or format in order to provide you and other Users use of the Service or as otherwise permitted in these Terms of Service." %}</li>
+        <li>{% trans "We may and we may permit other academic institutions to use, disclose to a third party or to publish certain User-Provided Data (excluding certain Student Data as described below) in academic research projects.  We will not and will not permit others to use, disclose to a third party or to publish Student Data that is identifiable to an individual (e.g., names of students, mentors, teachers, schools, and school districts) in an academic research project. We may use, disclose to a third party or publish User-Provided Data that describes student attendance, academic progress or performance, or school, mentor, teacher interventions and interactions that is not identifiable to an individual. We will obtain all consents and approvals necessary to conduct and publish the results of a research project using any such User-Provided Data.  " %}</li>
+        <li>{% trans "We may contract with one or more third party providers to host and permit access to the Site and to store and permit access to User-Provided Data. We do not promise to notify you of the terms of our agreement with a third party provider nor of a third party provider’s performance of its obligations to us. You consent to our granting one or more third parties a right to store, reproduce, distribute or publicly display information you submit to the Site.   We will restrict each third party provider from using such information except as we permit or in order to provide use of the Application or access to the Site for you and other services to Users. " %}</li>
+      </ul>
+    </li>
+    <li>{% trans "We do not inspect or review the information that you upload to the Site for accuracy or completeness. We are not responsible for the accuracy, completeness or reliability of that information. " %}</li>  
+    <li>{% trans "You may not upload to the Site information that is defamatory or libelous, that violates another’s intellectual property rights or rights of privacy or publicly or that is abusive, obscene or otherwise unacceptable." %}
+      <ul>
+        <li>{% trans "You may not upload to the Site personal information on an individual unless the individual or the individual’s parent or legal guardian has consented to the delivery of the information to us and our use and disclosure of the information as permitted under these Terms of Service and the Site’s Privacy Policy.  You must promptly notify us, in writing, if the individual or the individual’s parent or legal guardian revokes consent to the delivery of the information to us or our use and disclosure of the information." %}</li>
+        <li>{% trans "You may not upload to the Site information in which you do not have a legal right to submit to the Site. You may not upload to the Site information in violation of the federal Children’s Online Privacy Protection Act (“COPPA”) and Family Educational Rights and Privacy Act (“FERPA”)." %}</li>
+        <li>{% trans "We may remove any information that you upload to the Site that in our opinion violates, in any way, these Terms of Service or applicable law. " %}</li>
+      </ul>    
+    </li>
+    <li>{% trans "We will not use any User-Provided Data in violation of these Terms of Service, the Site’s Privacy Policy or any other policy governing the use of and access to the Site. " %}</li>
+    <li>{% trans "Upon termination of the agreement granting you access to the Site, we will use commercially reasonable efforts to delete all Student Data (including accompanying metadata) you have uploaded to the Site within 90 days after the date of termination." %}</li>
+  </ol>
+
+  <h3>{% trans "Service Commitment" %}</h3>
+  <ol>
+    <li>{% trans "We will use commercially reasonable efforts to ensure that the Application is available to Users at least 99.95% each year, exclusive of outages due to scheduled maintenance and outages caused by force majeure as described in section VIII of these Terms of Service. " %}</li>  
+    <li>{% trans "We will use commercially reasonable efforts to respond to initial reports of outages within four hours. Non-critical feature enhancements and bug fixes will be handled in priority and development cycles." %}</li>
+    <li>{% trans "We routinely schedule maintenance on the Application and the Site daily, from 8:00 p.m. to 4:00 a.m. Central Time, Monday through Sunday. We may perform emergency maintenance on the Application or the Site whenever a mission-critical maintenance situation arises.   During these scheduled and emergency maintenance periods, you may not be able to use the Service temporarily.     We will not refund fees paid due to your inability to use the Service during any scheduled or emergency maintenance periods." %}</li>  
+  </ol>
+
+  <h3>{% trans "Intellectual Property" %}</h3>
+  <ol>
+    <li>{% trans "You are solely liable for claims brought by third parties alleging that your uploading of information to the Site or use of the Service violates the parties’ intellectual property or other rights. We will not defend or indemnify you for any claims. " %}</li>  
+    <li>{% trans "You do not have and have not been granted any right, title, interest or license in the Site, the content submitted to the Site by others, or the software and related documentation for the Site, except for the license granted in section II (1) of these Terms of Service." %}</li>
+  </ol>
+
+  <h3>{% trans "Term and Termination" %}</h3>
+  <ol>
+    <li>{% trans "We license access to the Site on an annual basis. We do not automatically renew a User’s right of access.   Upon termination, we will de-authorize your password and otherwise deny you access to the Site.  We describe in section III (6) of these Terms of Service the steps we will take upon termination to delete information you have uploaded to the Site." %}</li>  
+  </ol>
+
+  <h3>{% trans "Representations, Warranties and Limitations of Liability" %}</h3>
+  <ol>
+    <li>{% trans "We represent and warrant that the Application will materially comply with its published specifications.  Except for the express warranties described in these Terms of Service, we make no representations or warranties about the Application, the Site or the Services. You access the Site, use the Application and the Services offered on the Site at your sole risk. We do not promise that you can access the Site at all times or on any device or platform." %}</li>  
+    <li><b>{% trans "WE OFFER AND YOU ACCEPT USE OF THE SERVICES “AS IS” AND “WHEN AND AS AVAILABLE”." %}</b></li>
+    <li><b>{% trans "EXCEPT FOR THE EXPRESS WARRANTIES SET FORTH IN THESE TERMS OF SERVICE, ALL WARRANTIES, EXPRESS AND IMPLIED, CONCERNING USE OF THE SERVICES, INCLUDING, WITHOUT LIMITATION, WARRANTIES OF NON-INFRINGEMENT, OF MERCHANTABILITY AND OF FITNESS FOR A PARTICULAR PURPOSE, ARE HEREBY DISCLAIMED AND EXCLUDED TO THE FULLEST EXTENT PERMITTED BY LAW.  NO WARRANTY IS MADE THAT USE OF THE SERVICES WILL NOT BE INTERRUPTED, TIMELY, SECURE, OR ERROR FREE.  " %}</b></li>
+    <li><b>{% trans "IN ANY ACTION OR SUIT BROUGHT AGAINST US ARISING OUT OF YOUR USE OF THE SERVICES, LOST PROFITS, LOST BUSINESS OR RESEARCH OPPORTUNITY, WORK STOPPAGE, LOST DATA OR ANY OTHER RELIANCE OR EXPECTANCY, DIRECT OR INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES, OF ANY KIND SHALL NOT BE AWARDED. " %}</b></li>
+    <li><b>{% trans "FOR BREACH OF THESE TERMS OF SERVICE AND THE AGREEMENT TO PROVIDE THE SERVICES, YOUR EXCLUSIVE REMEDY AND OUR SOLE OBLIGATION, AND AT OUR SOLE DISCRETION, SHALL BE THE CORRECTION OF THE DEFICIENT SERVICES OR A REFUND OF THE FEE PAID FOR YOUR USE OF THE SERVICES. " %}</b></li>
+    <li><b>{% trans "TO THE EXTENT PERMITTED BY LAW, THE TOTAL LIABILITY FOR THE BREACH OR NONPERFORMANCE OF THESE TERMS OF SERVICE AND THE AGREEMENT TO PROVIDE USE OF THE SERVICES SHALL NOT EXCEED THE AMOUNT YOU PAID FOR SUCH SERVICES IN THE SIX (6) MONTHS IMMEDIATELY PRECEDING THE COMMENCEMENT DATE OF SUIT OR AN ACTION ALLEGING BREACH OF SUCH AGREEMENT. THIS LIMITATION APPLIES TO CONTRACT, TORT, AND ANY OTHER CLAIM OF WHATEVER NATURE." %}</b></li>
+  </ol>
+
+  <h3>{% trans "Force Majeure" %}</h3>
+  <ol>
+    <li>{% trans "We shall not be liable for failure to perform or delay in performance of any of our obligations under the Terms of Service or an agreement to provide the Services where such failure or delay results from any act of God, military operation, catastrophic event directly related to terrorist activity, national emergency, or utility, or the order, requisition, request or recommendation of any government agency or acting government authority, or any party’s compliance therewith, or government probation, regulation, or priority, or any change in laws or regulations which prevent any party from providing services required by the Terms of Service or any other cause beyond our reasonable control whether similar or dissimilar to the foregoing causes." %}</li>  
+  </ol>
+
+  <h3>{% trans "Export Controls" %}</h3>
+  <ol>
+    <li>{% trans "You shall comply with U.S. export laws and regulations pertaining to the export of technical data, services and commodities, including the International Traffic in Arms Regulations (22 C.F.R., parts 120-130), the Export Administration Regulations (15 C.F.R., parts 730-744), the regulations administered by the Treasury Department’s Office of Foreign Assets Control (31 C.F.R., parts 501-598) and the Anti-Boycott Regulations (15 C.F.R 760).   You shall obtain any necessary U.S. government license or other authorization required pursuant to the U.S. export control laws and regulations for the export or re-export of any commodity, service or technical data covered by this Agreement." %}</li>  
+    <li>{% trans "You shall not deliver to us, in any way, including by uploading information to the Site, export-controlled technical data, technology, commodities, or software on the U.S. Munitions List, 22 C.F.R. pt. 121, or the Commerce Control List, 15 C.F.R. pt. 774, without the prior written consent of University’s Export Controls Officer (J. Patrick Briscoe, bris0022@umn.edu, 612-625-3860).  We may decline export controlled information or tasks requiring production of such information.  If we cannot provide you access to the Site without our having access to export-controlled items, either we or you may terminate the agreement granting you access to the Site. We will refund the fee paid to grant you such access." %}</li>
+    <li>{% trans "We and you acknowledge and agree that the deliverables to you under these Terms of Service (a) are not specifically designed or modified for military purposes or specifications, and (b) will not be used in connection with the development or use of any missiles or chemical, biological, or nuclear weapons." %}</li>  
+  </ol>
+
+  <h3>{% trans "Release" %}</h3>
+  <ol>
+    <li>{% trans "You hereby release and forever discharge us (and our officers, employees, agents, successors, and assigns) from, and hereby waive and relinquish, each and every past, present and future dispute, claim, controversy, demand, right, obligation, liability, action and cause of action of every kind and nature (including personal injuries, death, and property damage), that has arisen or arises directly or indirectly out of, or that relates directly or indirectly to, your use of the Service." %}</li>  
+    <li>{% trans "IF YOU ARE A CALIFORNIA RESIDENT, YOU HEREBY WAIVE CALIFORNIA CIVIL CODE SECTION 1542 IN CONNECTION WITH THE FOREGOING, WHICH STATES: “A GENERAL RELEASE DOES NOT EXTEND TO CLAIMS WHICH THE CREDITOR DOES NOT KNOW OR SUSPECT TO EXIST IN HIS OR HER FAVOR AT THE TIME OF EXECUTING THE RELEASE, WHICH IF KNOWN BY HIM OR HER MUST HAVE MATERIALLY AFFECTED HIS OR HER SETTLEMENT WITH THE DEBTOR.”" %}</li>
+  </ol>
+
+  <h3>{% trans "Disclosures, California Residents." %}</h3>
+  <ol>
+    <li>{% trans "If you are a California resident, you may report complaints to the Complaint Assistance Unit of the Division of Consumer Product of the California Department of Consumer Affairs by contacting them in writing at 400 R Street, Sacramento, CA 95814, or by telephone at (800) 952-5210." %}</li> 
+  </ol>
+
+  <h3>{% trans "General Terms " %}</h3>
+  <ol>
+    <li>{% trans "The laws of the state of Minnesota shall govern the interpretation and enforcement of these Terms of Service. All causes of action arising out of these Terms of Service shall be brought and maintained in the courts of the state of Minnesota." %}</li>  
+    <li>{% trans "These Terms of Service are intended as the final and binding expression of the parties’ contract and agreement and as the complete and exclusive statement of the terms thereof. These Terms of Service cancel, supersede and revoke all prior negotiations, representations and agreements among the parties, whether oral or written, relating to the subject matter of these Terms of Service. No provision of these Terms of Service affects the terms of the Site’s Privacy Policy.  " %}</li>
+    <li>{% trans "We and you are acting as independent contractors and independent employers. Nothing in these Terms of Service creates or is to be construed as creating a partnership, joint venture, or agency relationship between us. Neither of us has the authority to act for or bind the other in any respect." %}</li>  
+  </ol>
+  <br><br>
+</div>
+{% endblock %}
+

@@ -1,0 +1,25 @@
+.pagination {
+  justify-content: center;
+  margin-top: 15px;
+
+  .page-item {
+    &.active {
+      .page-link {
+        background-color: $black;
+        color: $white;
+        border-color: $black;
+      }
+    }
+
+    &:focus,
+    &:hover {
+      outline: 0;
+    }
+
+    .page-link {
+      color: $black;
+      box-shadow: none;
+      text-decoration: none;
+    }
+  }
+}

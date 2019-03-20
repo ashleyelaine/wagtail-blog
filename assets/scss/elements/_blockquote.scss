@@ -1,0 +1,12 @@
+blockquote {
+  color: $black;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  line-height: 1.15em;
+  text-align: center;
+  font-family: $basefont;
+
+  @media(max-width: $tablet) {
+    font-size: 2rem;
+  }
+}

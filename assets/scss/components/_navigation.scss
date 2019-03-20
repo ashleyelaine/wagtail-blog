@@ -1,0 +1,210 @@
+// NAVIGATION
+.nav {
+  @media(max-width: $desktop) {
+    padding: 15px 0;
+  }
+}
+
+.navbar {
+  position: static;
+  padding: 0;
+
+  @media(max-width: $desktop) {
+    padding: 10px 0;
+  }
+
+  .navbar-toggler {
+    font-size: 30px;
+    padding: 0 5px;
+
+    &.collapsed {
+      .icon-bar {
+        &:nth-of-type(1) {
+          -webkit-transform: rotate(0);
+          -ms-transform: rotate(0);
+          transform: rotate(0);
+        }
+
+        &:nth-of-type(2) {
+          opacity: 1;
+          filter: alpha(opacity=100);
+        }
+
+        &:nth-of-type(3) {
+          -webkit-transform: rotate(0);
+          -ms-transform: rotate(0);
+          transform: rotate(0);
+        }
+      }
+    }
+
+    .icon-bar {
+      background: #000;
+      display: block;
+      margin: 5px 0;
+      width: 30px;
+      height: 3px;
+      -webkit-transition: all .2s;
+      transition: all .2s;
+
+      &:nth-of-type(1) {
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-transform-origin: 10% 10%;
+        -ms-transform-origin: 10% 10%;
+        transform-origin: 10% 10%;
+      }
+
+      &:nth-of-type(2) {
+        opacity: 0;
+        filter: alpha(opacity=0);
+      }
+
+      &:nth-of-type(3) {
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform-origin: 10% 90%;
+        -ms-transform-origin: 10% 90%;
+        transform-origin: 10% 90%;
+      }
+    }
+  }
+
+  .nav {
+    display: flex;
+    width: 100%;
+  }
+
+  li {
+    margin-left: 25px;
+    padding: 20px 0;
+    position: relative;
+
+    @media(max-width: 1180px) {
+      margin-left: 15px;
+    }
+
+    @media(max-width: $desktop) {
+      display: block;
+      margin: 0;
+      width: 100%;
+      padding: 0;
+    }
+
+    &.has-submenu {
+      margin-right: 5px;
+    }
+
+    &.right-align {
+      margin-left: auto;
+    }
+
+    .menu-link {
+      color: $black;
+      font-size: 1rem;
+      font-weight: $font-weight-normal;
+      text-transform: uppercase;
+      border-color: transparent;
+      line-height: 1.2em;
+      text-decoration: none;
+      transition: color .2s;
+      display: inline-block;
+
+      &:hover,
+      &:focus {
+        color: $accent;
+      }
+
+      @media(max-width: 1080px) {
+        font-size: 15px;
+      }
+
+      @media(max-width: $desktop) {
+        font-size: 1rem;
+        display: block;
+        padding: 3px 0;
+      }
+    }
+
+    &.active {
+      .menu-link {
+        font-weight: $font-weight-bolder;
+      }
+    }
+
+    // SUB NAV
+    .dropdown-menu {
+      background: $gray-200;
+      border-color: $gray-400;
+      top: 47px;
+      padding: 5px 10px;
+      left: -10px;
+      width: 200px;
+      margin-top: 0;
+      border-radius: 0;
+
+      .menu-link {
+        font-weight: $font-weight-normal;
+      }
+
+      li {
+        padding: 6px 0;
+        margin-left: 0;
+        display: block;
+        padding: 3px 0;
+
+        &:first-of-type {
+          margin-left: 0;
+        }
+
+        &.active {
+          .menu-link {
+            font-weight: $font-weight-bolder;
+          }
+        }
+      }
+
+      @media(max-width: $desktop) {
+        display: block !important;
+        position: static;
+        border: 0;
+        background: transparent;
+        padding: 0 0 0 15px;
+        text-align: left;
+
+        li {
+          padding: 2px 0;
+
+          ::before {
+            content: '- ';
+          }
+        }
+      }
+    }
+  }
+
+  .caret-custom {
+    color: $black;
+    padding-left: 4px;
+
+    @media(max-width: $desktop) {
+      display: none;
+    }
+
+    &::after {
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+      border-left: 0;
+      font-family: 'Font Awesome\ 5 Free';
+      font-weight: 700;
+      content: '\f0d7';
+      font-size: 14px;
+      display: inline-block;
+      vertical-align: top;
+      padding-top: 3px;
+    }
+  }
+}
