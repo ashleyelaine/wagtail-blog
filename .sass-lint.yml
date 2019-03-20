@@ -19,6 +19,7 @@ rules:
   no-important: 0
   no-color-literals: 0
   no-url-domains: 0
+  no-transition-all: 0
 
   # Currently disabled to allow for defining multiple fallback rules when
   # browsers don't support a given feature (viewport, for example).

@@ -26,16 +26,20 @@
     <link rel="shortcut icon" href="{% static 'favicon.ico' %}" />
 
     {% block styles %}
+      <link href="https://fonts.googleapis.com/css?family=Arimo:400,600,700|Open+Sans:400,600,700|ZCOOL+QingKe+HuangYou" rel="stylesheet">
       <link rel="stylesheet" href="{% static 'app.css' %}" media="all" />
     {% endblock %}
   </head>
 
   <body class="{% block body_class %}{% endblock %}">
     {% include "includes/skiplinks.html" %}
+    {% include "includes/header.html" %}
+
+    <aside>
+      <p class="center">#python</p>
+    </aside>
 
     <main class="wrapper">
-
-      {% include "includes/header.html" %}
 
       {% if page_title or title %}
         <section class="page-header">

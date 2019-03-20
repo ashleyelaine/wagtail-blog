@@ -1,6 +1,5 @@
 // VENDOR
 @import '../../node_modules/bootstrap/scss/bootstrap';
-@import '../../node_modules/bootstrap/scss/functions';
 
 // SETTINGS
 @import 'settings/fonts';
@@ -19,6 +18,7 @@
 // COMPONENTS
 @import 'components/header';
 @import 'components/navigation';
+@import 'components/aside';
 @import 'components/footer';
 @import 'components/pagination';
 @import 'components/wagtail-blocks';

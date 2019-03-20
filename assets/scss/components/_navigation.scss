@@ -79,7 +79,7 @@
 
   li {
     margin-left: 25px;
-    padding: 20px 0;
+    padding: 2px 0 0;
     position: relative;
 
     @media(max-width: 1180px) {
@@ -102,10 +102,9 @@
     }
 
     .menu-link {
-      color: $black;
+      color: $white;
       font-size: 1rem;
       font-weight: $font-weight-normal;
-      text-transform: uppercase;
       border-color: transparent;
       line-height: 1.2em;
       text-decoration: none;

@@ -1,39 +1,37 @@
 {% load staticfiles navigation_tags %}
 
 <header class="header">
-  <div class="container">
-    <nav class="navbar navbar-expand-lg">
-      <a class="navbar-brand logo" href="/">
-        {% if settings.base.GlobalSettings.logo %}
-          <img src="{{ settings.base.GlobalSettings.logo.url }}" alt="{{ settings.base.GlobalSettings.logo_text }}">
-        {% else %}
-          {{ settings.base.GlobalSettings.logo_text }}
-        {% endif %}
-      </a>
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand logo" href="/">
+      {% if settings.base.GlobalSettings.logo %}
+        <img src="{{ settings.base.GlobalSettings.logo.url }}" alt="{{ settings.base.GlobalSettings.logo_text }}">
+      {% else %}
+        {{ settings.base.GlobalSettings.logo_text }}
+      {% endif %}
+    </a>
 
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      
-      <div id="mainNav" class="collapse navbar-collapse" role="navigation" aria-label="Primary site navigation">
-        <ul class="nav nav-pills">
-          {# main_menu is defined in web/templatetags/navigation_tags.py #}
-          {% get_site_root as site_root %}
-          <li {% if request.get_full_path == site_root.url %}class="active"{% endif %}><a class="menu-link" href="{{ site_root.url }}">{{ site_root.title }}</a></li>
-          {% top_menu parent=site_root calling_page=sπelf %}
-        </ul>
-      </div>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    
+    <div id="mainNav" class="collapse navbar-collapse" role="navigation" aria-label="Primary site navigation">
+      <ul class="nav nav-pills">
+        {# main_menu is defined in web/templatetags/navigation_tags.py #}
+        <!-- {% get_site_root as site_root %}
+        <li {% if request.get_full_path == site_root.url %}class="active"{% endif %}><a class="menu-link" href="{{ site_root.url }}">{{ site_root.title }}</a></li> -->
+        {% top_menu parent=site_root calling_page=sπelf %}
+      </ul>
+    </div>
 
-      <div class="header-search">
-        <form action="{% url 'search' %}" method="get">
-          <div class="form-group">
-            <input class="form-control" type="text" placeholder="Search" name="query" value="">
-          </div>
-          <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
-        </form>
-      </div>
-    </nav>
-  </div>
+    <div class="header-search">
+      <form action="{% url 'search' %}" method="get">
+        <div class="form-group">
+          <input class="form-control" type="text" placeholder="Search" name="query" value="">
+        </div>
+        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+      </form>
+    </div>
+  </nav>
 </header>

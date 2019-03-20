@@ -3,17 +3,16 @@ $fa-font-path: './fonts';
 @import '../../node_modules/@fortawesome/fontawesome-free/scss/solid';
 @import '../../node_modules/@fortawesome/fontawesome-free/scss/regular';
 @import '../../node_modules/@fortawesome/fontawesome-free/scss/brands';
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
 
 
 // Base Fonts
 $opensans: 'Open Sans', sans-serif;
+$arimo: 'Arimo', sans-serif;
+$zcool: 'ZCOOL QingKe HuangYou', cursive;
 
-$headingfont: $opensans;
+$logofont: $zcool;
+$headingfont: $arimo;
 $basefont: $opensans;
-
-
-// Theme Fonts
 
 
 // Font Weights
