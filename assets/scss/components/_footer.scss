@@ -5,12 +5,13 @@
 
   .logo {
     text-decoration: none;
+    font-family: $logofont;
+    font-size: 30px;
+    color: $gray-900;
+    padding-bottom: 10px;
   }
 
-  .terms {
-    a {
-      display: inline-block;
-      margin: 0 5px;
-    }
+  .copyright {
+    font-size: 14px;
   }
 }

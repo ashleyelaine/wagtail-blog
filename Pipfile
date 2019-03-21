@@ -45,6 +45,7 @@ nplusone = "*"
 splinter = "*"
 unittest-xml-reporting = "*"
 django = ">=2.1"
+pylint = "*"
 
 [requires]
 python_version = "3.7"
