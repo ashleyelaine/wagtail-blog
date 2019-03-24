@@ -1,0 +1,7 @@
+{% for category in categories %}
+  <p class="center">
+    <a href="/category/{{ category.slug }}">
+      #{{ category.name }}
+    </a>
+  </p>
+{% endfor %}

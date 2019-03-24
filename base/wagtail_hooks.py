@@ -25,16 +25,6 @@ class BlogCategoryAdmin(ModelAdmin):
     list_display = ('name', 'slug')
 
 
-class BlogTagAdmin(ModelAdmin):
-    model = Tag
-    menu_label = 'Tags'
-    menu_icon = 'plus'
-    menu_order = 300
-    add_to_settings_menu = False
-    exclude_from_explorer = False
-    list_display = ('name', 'slug')
-
-
 class PostPageAdmin(ModelAdmin):
     model = PostPage
     menu_label = 'Posts'
@@ -48,7 +38,7 @@ class BlogAdminGroup(ModelAdminGroup):
     menu_label = 'Blog'
     menu_icon = 'grip'
     menu_order = 200
-    items = (PostPageAdmin, BlogCategoryAdmin, BlogTagAdmin)
+    items = (PostPageAdmin, BlogCategoryAdmin)
 
 
 modeladmin_register(BlogAdminGroup)

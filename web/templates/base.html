@@ -1,4 +1,4 @@
-{% load staticfiles wagtailcore_tags ga_tags %}
+{% load staticfiles wagtailcore_tags ga_tags blog_tags %}
 
 <!doctype html>
 <html lang="en">
@@ -36,7 +36,7 @@
     {% include "includes/header.html" %}
 
     <aside>
-      <p class="center">#python</p>
+      {% categories %}
     </aside>
 
     <main class="wrapper">
