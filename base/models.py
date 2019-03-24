@@ -53,13 +53,51 @@ class BlogPage(RoutablePageMixin, Page):
     ]
 
     def get_posts(self):
-        return PostPage.objects.descendant_of(self).live()
+        return PostPage.objects.descendant_of(self).live().order_by('-date')
 
     def get_context(self, request, *args, **kwargs):
         context = super(BlogPage, self).get_context(request, *args, **kwargs)
-        context['posts'] = self.posts
+
+        # all_posts = PostPage.objects.descendant_of(self).live().order_by('-date')
+
+        paginator = Paginator(self.posts, 2)
+        page = request.GET.get("page")
+        try:
+            posts = paginator.page(page)
+        except PageNotAnInteger:
+            posts = paginator.page(1)
+        except EmptyPage:
+            posts = paginator.page(paginator.num_pages)
+
+        context['posts'] = posts
         context['blog_page'] = self
         return context
+
+    # def get_context(self, request, *args, **kwargs):
+    #     context = super(BlogPage, self).get_context(request, *args, **kwargs)
+    #     # Get all posts
+    #     all_posts = PostPage.objects.descendant_of(self).live().order_by('-date')
+    #     # Paginate all posts by 2 per page
+    #     paginator = Paginator(all_posts, 2)
+    #     # Try to get the ?page=x value
+    #     page = request.GET.get("page")
+    #     try:
+    #         # If the page exists and the ?page=x is an int
+    #         posts = paginator.page(page)
+    #     except PageNotAnInteger:
+    #         # If the ?page=x is not an int; show the first page
+    #         posts = paginator.page(1)
+    #     except EmptyPage:
+    #         # If the ?page=x is out of range (too high most likely)
+    #         # Then return the last page
+    #         posts = paginator.page(paginator.num_pages)
+
+    #     # "posts" will have child pages; you'll need to use .specific in the template
+    #     # in order to access child properties, such as youtube_video_id and subtitle
+    #     context["posts"] = posts
+    #     context['blog_page'] = self
+    #     return context
+
 
     @route(r'^category/(?P<category>[-\w]+)/$')
     def post_by_category(self, request, category, *args, **kwargs):
