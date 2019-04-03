@@ -27,18 +27,6 @@
         </div>
          <hr>
       {% endif %}
-      {% with categories=page.categories.all %}
-        {% if categories %}
-          <h3>Categories</h3>
-          <ul>
-            {% for category in categories %}
-              <li style="display: inline">
-                <a href="{% routablepageurl blog_page "post_by_category" category.slug %}">{{ category.name }}</a>
-              </li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-      {% endwith %}
       <hr>
     </div>
   </section>

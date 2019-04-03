@@ -1,13 +1,12 @@
 from django import template
-from base.snippets import BlogCategory
+from base.models import PostPage
 
 register = template.Library()
 
 
-# Category snippets
-@register.inclusion_tag('tags/categories.html', takes_context=True)
-def categories(context):
+@register.inclusion_tag('tags/tags.html', takes_context=True)
+def tags(context):
     return {
-        'categories': BlogCategory.objects.all(),
+        'tags': PostPage.tags.most_common()[:10],
         'request': context['request'],
     }

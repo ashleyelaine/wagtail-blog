@@ -1,0 +1,7 @@
+{% for tag in tags %}
+  <p class="center">
+    <a href="/tag/{{ tag.slug }}">
+      #{{ tag.name }}
+    </a>
+  </p>
+{% endfor %}

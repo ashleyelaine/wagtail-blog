@@ -1,8 +1,9 @@
-from django import forms
 from django.db import models
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 
-from modelcluster.fields import ParentalKey, ParentalManyToManyField
+from modelcluster.fields import ParentalKey
+from modelcluster.tags import ClusterTaggableManager
+from taggit.models import TaggedItemBase
 import datetime
 
 from wagtail.core.models import Page
@@ -17,8 +18,7 @@ from wagtail.contrib.routable_page.models import RoutablePageMixin, route
 from wagtail.search import index
 
 from base.settings import GlobalSettings
-from base.blocks import BaseStreamBlock, FAQBlock
-from base.snippets import BlogCategory
+from base.blocks import BaseStreamBlock
 
 __all__ = ['GlobalSettings']
 
@@ -57,11 +57,8 @@ class BlogPage(RoutablePageMixin, Page):
 
     def get_context(self, request, *args, **kwargs):
         context = super(BlogPage, self).get_context(request, *args, **kwargs)
-
-        # all_posts = PostPage.objects.descendant_of(self).live().order_by('-date')
-
         paginator = Paginator(self.posts, 2)
-        page = request.GET.get("page")
+        page = request.GET.get('page')
         try:
             posts = paginator.page(page)
         except PageNotAnInteger:
@@ -73,43 +70,21 @@ class BlogPage(RoutablePageMixin, Page):
         context['blog_page'] = self
         return context
 
-    # def get_context(self, request, *args, **kwargs):
-    #     context = super(BlogPage, self).get_context(request, *args, **kwargs)
-    #     # Get all posts
-    #     all_posts = PostPage.objects.descendant_of(self).live().order_by('-date')
-    #     # Paginate all posts by 2 per page
-    #     paginator = Paginator(all_posts, 2)
-    #     # Try to get the ?page=x value
-    #     page = request.GET.get("page")
-    #     try:
-    #         # If the page exists and the ?page=x is an int
-    #         posts = paginator.page(page)
-    #     except PageNotAnInteger:
-    #         # If the ?page=x is not an int; show the first page
-    #         posts = paginator.page(1)
-    #     except EmptyPage:
-    #         # If the ?page=x is out of range (too high most likely)
-    #         # Then return the last page
-    #         posts = paginator.page(paginator.num_pages)
-
-    #     # "posts" will have child pages; you'll need to use .specific in the template
-    #     # in order to access child properties, such as youtube_video_id and subtitle
-    #     context["posts"] = posts
-    #     context['blog_page'] = self
-    #     return context
-
-
-    @route(r'^category/(?P<category>[-\w]+)/$')
-    def post_by_category(self, request, category, *args, **kwargs):
-        self.search_type = 'category'
-        self.search_term = category
-        self.posts = self.get_posts().filter(categories__slug=category)
+    @route(r'^tag/(?P<tag>[-\w]+)/$')
+    def post_by_tag(self, request, tag, *args, **kwargs):
+        self.search_type = 'tag'
+        self.search_term = tag
+        self.posts = self.get_posts().filter(tags__slug=tag)
         return Page.serve(self, request, *args, **kwargs)
 
     @route(r'^$')
     def post_list(self, request, *args, **kwargs):
         self.posts = self.get_posts()
         return Page.serve(self, request, *args, **kwargs)
+
+
+class PostPageTag(TaggedItemBase):
+    content_object = ParentalKey('PostPage', on_delete=models.CASCADE, related_name='post_tags')
 
 
 class PostPage(Page):
@@ -119,7 +94,7 @@ class PostPage(Page):
 
     intro = models.TextField(blank=True)
     date = models.DateTimeField(verbose_name='Post date', default=datetime.datetime.today)
-    categories = ParentalManyToManyField(BlogCategory, blank=True)
+    tags = ClusterTaggableManager(through=PostPageTag, blank=True)
     page_content = StreamField(BaseStreamBlock(), blank=True)
     seo_keywords = models.CharField(max_length=255, blank=True, help_text='Optional. Separate each keyword with a comma.')
     socials = models.BooleanField(verbose_name='Social Icons?', default=True)
@@ -127,7 +102,7 @@ class PostPage(Page):
 
     content_panels = Page.content_panels + [
         FieldPanel('intro'),
-        FieldPanel('categories', widget=forms.CheckboxSelectMultiple),
+        FieldPanel('tags'),
         StreamFieldPanel('page_content'),
     ]
 
@@ -143,7 +118,7 @@ class PostPage(Page):
 
     search_fields = Page.search_fields + [
         index.SearchField('intro'),
-        index.SearchField('categories'),
+        index.SearchField('tags'),
         index.SearchField('page_content'),
     ]
 

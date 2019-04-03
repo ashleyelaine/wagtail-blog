@@ -4,9 +4,9 @@ from wagtail.contrib.modeladmin.options import (
     ModelAdmin, ModelAdminGroup, modeladmin_register)
 from wagtail.core import hooks
 
+from .filters import TaggitListFilter
 from taggit.models import Tag
 
-from .snippets import BlogCategory
 from .models import PostPage
 
 
@@ -15,11 +15,11 @@ def hide_snippets_menu_item(request, menu_items):
     menu_items[:] = [item for item in menu_items if item.name != 'snippets']
 
 
-class BlogCategoryAdmin(ModelAdmin):
-    model = BlogCategory
-    menu_label = 'Categories'
+class BlogTagAdmin(ModelAdmin):
+    model = Tag
+    menu_label = 'Tags'
     menu_icon = 'plus'
-    menu_order = 200
+    menu_order = 300
     add_to_settings_menu = False
     exclude_from_explorer = False
     list_display = ('name', 'slug')
@@ -32,13 +32,22 @@ class PostPageAdmin(ModelAdmin):
     menu_order = 300
     add_to_settings_menu = False
     exclude_from_explorer = False
+    list_display = ('title', 'tag_list')
+    list_filter = [TaggitListFilter]
+    search_fields = ('title',)
+
+    def get_queryset(self, request):
+        return super(PostPageAdmin, self).get_queryset(request).prefetch_related('tags')
+
+    def tag_list(self, obj):
+        return u', '.join(o.name for o in obj.tags.all())
 
 
 class BlogAdminGroup(ModelAdminGroup):
     menu_label = 'Blog'
     menu_icon = 'grip'
     menu_order = 200
-    items = (PostPageAdmin, BlogCategoryAdmin)
+    items = (PostPageAdmin, BlogTagAdmin)
 
 
 modeladmin_register(BlogAdminGroup)
