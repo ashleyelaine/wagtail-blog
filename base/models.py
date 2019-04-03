@@ -118,7 +118,9 @@ class PostPage(Page):
 
     search_fields = Page.search_fields + [
         index.SearchField('intro'),
-        index.SearchField('tags'),
+        index.RelatedFields('tags', [
+            index.SearchField('name'),
+        ]),
         index.SearchField('page_content'),
     ]
 
