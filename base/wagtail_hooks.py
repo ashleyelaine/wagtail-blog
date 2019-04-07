@@ -32,6 +32,7 @@ class PostPageAdmin(ModelAdmin):
     menu_order = 300
     add_to_settings_menu = False
     exclude_from_explorer = False
+    ordering = ['-date']
     list_display = ('title', 'tag_list')
     list_filter = [TaggitListFilter]
     search_fields = ('title',)

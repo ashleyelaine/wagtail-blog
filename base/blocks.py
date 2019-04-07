@@ -10,16 +10,6 @@ from wagtailcodeblock.blocks import CodeBlock
 from base.choices import LINK_TARGET_CHOICES
 
 
-class FAQBlock(StructBlock):
-    question = CharBlock(classname='title', required=True)
-    answer = RichTextBlock()
-
-    class Meta:
-        icon = 'help'
-        template = 'base/blocks/faq_block.html'
-        label = 'FAQ'
-
-
 class SubHeadingBlock(StructBlock):
     sub_heading = TextBlock(required=True)
 
@@ -49,8 +39,17 @@ class CtaBlock(StructBlock):
         label = 'CTA'
 
 
-class CodeBlock(StructBlock):
+class CodeBlockBlock(StructBlock):
     code = CodeBlock(label='Code')
+
+
+class HTMLBlock(StructBlock):
+    html = TextBlock(classname='code', required=True)
+
+    class Meta:
+        icon = 'code'
+        template = 'base/blocks/html_block.html'
+        label = 'HTML'
 
 
 # STREAM BLOCKS
@@ -61,6 +60,7 @@ class BaseStreamBlock(StreamBlock):
     sub_heading_block = SubHeadingBlock()
     content_block = ContentBlock()
     cta_block = CtaBlock()
-    code_block = CodeBlock()
+    code_block = CodeBlockBlock()
+    html_block = HTMLBlock()
 
     required = False
