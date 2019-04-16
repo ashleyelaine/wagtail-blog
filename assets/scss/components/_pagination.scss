@@ -16,10 +16,25 @@
       outline: 0;
     }
 
+    &:first-child {
+      .page-link {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+      }
+    }
+
+    &:last-child {
+      .page-link {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+    }
+
     .page-link {
       color: $black;
       box-shadow: none;
       text-decoration: none;
+      border: 0;
     }
   }
 }

@@ -57,7 +57,7 @@ class BlogPage(RoutablePageMixin, Page):
 
     def get_context(self, request, *args, **kwargs):
         context = super(BlogPage, self).get_context(request, *args, **kwargs)
-        paginator = Paginator(self.posts, 2)
+        paginator = Paginator(self.posts, 6)
         page = request.GET.get('page')
         try:
             posts = paginator.page(page)

@@ -8,10 +8,13 @@ from wagtail.admin.edit_handlers import TabbedInterface, ObjectList, FieldPanel
 class GlobalSettings(BaseSetting):
     logo = models.FileField(upload_to='images/', null=True, blank=True)
     logo_text = models.CharField(max_length=255, null=True, blank=True, help_text='Add logo as text or use for logo alt text.')
+    logo_sub_text = models.CharField(max_length=255, null=True, blank=True, help_text='Add logo sub text.')
+
 
     first_tab_panels = [
         FieldPanel('logo'),
         FieldPanel('logo_text'),
+        FieldPanel('logo_sub_text'),
     ]
 
     edit_handler = TabbedInterface([

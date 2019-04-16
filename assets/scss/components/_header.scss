@@ -1,22 +1,22 @@
 .header {
-  background: $navy;
+  background: $blackish;
   position: fixed;
   width: 100%;
   z-index: 9;
+  padding: 7px 0;
 
   // LOGO
   .logo {
     border: 0;
     text-decoration: none;
-    font-family: $zcool;
+    font-family: $logofont;
     font-weight: $font-weight-normal;
     font-size: 50px;
     color: $white;
-    background: $navy;
-    padding: 0 20px 10px;
+    background: $blackish;
     width: 250px;
     text-align: center;
-    line-height: 1em;
+    padding: 5px 0 0;
 
     img {
       width: 250px;
@@ -24,6 +24,16 @@
       @media(max-width: $mobile) {
         width: 200px;
       }
+    }
+
+    .logo-sub-text {
+      font-size: 27%;
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      padding-top: 12px;
+      position: relative;
+      left: 4px;
     }
 
     &:hover {
@@ -42,6 +52,8 @@
       .form-control {
         font-size: 14px;
         width: 200px;
+        border-radius: 20px;
+        border: 0;
       }
     }
 
