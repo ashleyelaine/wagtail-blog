@@ -1,7 +1,7 @@
-{% for tag in tags %}
-  <p class="center">
-    <a href="/tag/{{ tag.slug }}">
-      #{{ tag.name }}
-    </a>
-  </p>
-{% endfor %}
+<div class="menu-tags">
+  {% for tag in tags %}
+      <a href="/tag/{{ tag.slug }}">
+        #{{ tag.name }}
+      </a>
+  {% endfor %}
+</div>

@@ -1,0 +1,23 @@
+.posts {
+  article {
+    margin-bottom: 50px;
+    padding-right: 50px;
+  }
+}
+
+.tag {
+  color: $accent;
+  padding: 3px 6px;
+  border: 1px solid $accent;
+  font-size: 14px;
+  transition: none;
+  margin-right: 5px;
+
+  &:hover {
+    color: $accent;
+    background: $white;
+    text-decoration: none;
+  }
+}
+
+

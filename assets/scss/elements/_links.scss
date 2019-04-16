@@ -9,5 +9,6 @@ a {
   &:hover,
   &:active {
     color: $accent;
+    text-decoration: none;
   }
 }

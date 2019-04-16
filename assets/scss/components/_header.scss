@@ -1,5 +1,5 @@
 .header {
-  background: $gray-900;
+  background: $navy;
   position: fixed;
   width: 100%;
   z-index: 9;
@@ -12,7 +12,7 @@
     font-weight: $font-weight-normal;
     font-size: 50px;
     color: $white;
-    background: $gray-900;
+    background: $navy;
     padding: 0 20px 10px;
     width: 250px;
     text-align: center;
@@ -33,7 +33,7 @@
 
   // SEARCH
   .header-search {
-    padding: 0 20px;
+    padding: 0 60px 0 20px;
 
     .form-group {
       margin-bottom: 0;
