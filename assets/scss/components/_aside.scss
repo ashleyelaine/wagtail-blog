@@ -4,19 +4,48 @@ aside {
   width: 250px;
   top: 65px;
   background: $ltgray;
-  padding: 44px 20px;
+  padding: 43px 20px;
+  z-index: 1;
 
   .menu-tags {
     text-align: center;
 
     a {
-      display: block;
-      margin: 0 0 10px;
+      display: inline-block;
+      margin: 0 0 3px;
       color: $black;
-      font-size: 16px;
+      font-size: 17px;
+      padding: 4px 8px;
+      border: 1px solid $ltgray;
 
       &:hover {
         color: $accent;
+        border: 1px solid $accent;
+      }
+    }
+  }
+
+  .aside-toggler {
+    position: absolute;
+    right: -30px;
+    top: 0;
+    display: flex;
+    background: $ltgray;
+    padding: 10px 8px;
+
+    span {
+      background: $black;
+      height: 25px;
+      width: 3px;
+      margin: 0 2px;
+      transition: .2s;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      span {
+        background: $accent2;
       }
     }
   }

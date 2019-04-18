@@ -1,5 +1,5 @@
 a {
-  color: $gray-800;
+  color: $accent;
   font-weight: $font-weight-bold;
   display: inline-block;
   text-decoration: none;
@@ -8,7 +8,8 @@ a {
 
   &:hover,
   &:active {
-    color: $accent;
+    color: $accent2;
     text-decoration: none;
+    border-bottom: 2px dotted $accent2;
   }
 }

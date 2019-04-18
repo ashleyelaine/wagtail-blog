@@ -1,5 +1,5 @@
 .header {
-  background: $blackish;
+  background: $black;
   position: fixed;
   width: 100%;
   z-index: 9;
@@ -13,10 +13,11 @@
     font-weight: $font-weight-normal;
     font-size: 50px;
     color: $white;
-    background: $blackish;
+    background: $black;
     width: 250px;
     text-align: center;
     padding: 5px 0 0;
+    margin-right: 0;
 
     img {
       width: 250px;
@@ -43,7 +44,7 @@
 
   // SEARCH
   .header-search {
-    padding: 0 60px 0 20px;
+    padding: 2px 60px 0 20px;
 
     .form-group {
       margin-bottom: 0;
@@ -54,6 +55,7 @@
         width: 200px;
         border-radius: 20px;
         border: 0;
+        padding: 5px 15px;
       }
     }
 
@@ -62,7 +64,7 @@
       background: none;
       color: $white;
       box-shadow: none;
-      padding: 7px;
+      padding: 5px 7px;
 
       &:hover {
         color: $accent;

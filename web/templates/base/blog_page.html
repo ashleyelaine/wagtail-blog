@@ -5,6 +5,11 @@
 {% block content %}
   <section class="posts">
     <div class="container">
+      {% if page.search_term %}
+        <h1>Posts about: </h1> 
+      {% else %}
+        <h1>Latest Posts</h1>
+      {% endif %}
       {% for post in posts %}
         <article class="post-listing">
           <h2><a href="{% pageurl post %}">{{ post.title }}</a></h2>

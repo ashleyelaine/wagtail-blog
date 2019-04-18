@@ -10,13 +10,15 @@
   padding: 3px 6px;
   border: 1px solid $accent;
   font-size: 14px;
-  transition: none;
+  transition: .2s;
   margin-right: 5px;
+  letter-spacing: 1px;
 
   &:hover {
-    color: $accent;
-    background: $white;
+    color: $white;
+    background: $accent2;
     text-decoration: none;
+    border: 1px solid $accent2;
   }
 }
 

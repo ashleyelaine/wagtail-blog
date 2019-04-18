@@ -1,7 +1,9 @@
 <div class="menu-tags">
   {% for tag in tags %}
+    <div class="menu-tag">
       <a href="/tag/{{ tag.slug }}">
         #{{ tag.name }}
       </a>
+    </div>
   {% endfor %}
 </div>

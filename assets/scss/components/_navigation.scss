@@ -78,7 +78,7 @@
   }
 
   li {
-    margin-left: 25px;
+    margin-right: 25px;
     padding: 2px 0 0;
     position: relative;
 
@@ -106,16 +106,17 @@
       font-size: 1rem;
       font-weight: $font-weight-normal;
       font-family: $arimo;
-      border-color: transparent;
       line-height: 1.2em;
       text-decoration: none;
       transition: color .2s;
       display: inline-block;
-      text-transform: lowercase;
+      letter-spacing: 1px;
+      border-bottom: 2px dotted $black;
 
       &:hover,
       &:focus {
-        color: $accent;
+        color: $accent2;
+        border-bottom: 2px dotted $accent2;
       }
 
       @media(max-width: 1080px) {
