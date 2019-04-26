@@ -75,6 +75,7 @@ class BlogPage(RoutablePageMixin, Page):
         self.search_type = 'tag'
         self.search_term = tag
         self.posts = self.get_posts().filter(tags__slug=tag)
+        self.tag = PostPage.tags.filter(slug=tag).first()
         return Page.serve(self, request, *args, **kwargs)
 
     @route(r'^$')

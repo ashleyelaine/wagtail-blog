@@ -6,7 +6,7 @@
   <section class="posts">
     <div class="container">
       {% if page.search_term %}
-        <h1>Posts about: </h1> 
+        <h1>Posts about: {{ page.tag }}</h1> 
       {% else %}
         <h1>Latest Posts</h1>
       {% endif %}

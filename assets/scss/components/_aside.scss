@@ -6,6 +6,12 @@ aside {
   background: $ltgray;
   padding: 43px 20px;
   z-index: 1;
+  transition: .8s;
+  left: 0;
+
+  &.closed {
+    left: -240px;
+  }
 
   .menu-tags {
     text-align: center;
@@ -35,7 +41,7 @@ aside {
 
     span {
       background: $black;
-      height: 25px;
+      height: 23px;
       width: 3px;
       margin: 0 2px;
       transition: .2s;
