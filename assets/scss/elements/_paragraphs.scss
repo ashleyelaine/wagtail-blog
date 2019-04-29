@@ -1,6 +1,10 @@
 p {
   margin-bottom: 20px;
   line-height: 1.4rem;
+
+  &.post-snippet {
+    margin-bottom: 10px;
+  }
 }
 
 ul {

@@ -19,5 +19,6 @@
   // Aside menu
   $('.aside-toggler').click(function() {
     $('aside').toggleClass('closed');
+    $('.wrapper').toggleClass('wide');
   });
 })(jQuery);
