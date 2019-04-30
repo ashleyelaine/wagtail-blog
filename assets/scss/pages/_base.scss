@@ -21,6 +21,10 @@ body {
   &.on {
     opacity: 1;
   }
+
+  @media(max-width: $tablet) {
+    margin-left: 0;
+  }
 }
 
 .page-content {
@@ -29,7 +33,16 @@ body {
 
 .container {
   max-width: 1200px;
-  padding: 0 80px;
+  padding: 0 50px;
+  transition: .8s;
+
+  &.wide {
+    max-width: 1080px;
+  }
+
+  @media(max-width: $tablet) {
+    padding: 0 20px;
+  }
 }
 
 .center {

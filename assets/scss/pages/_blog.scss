@@ -25,10 +25,21 @@
 
 .post-date {
   text-transform: uppercase;
+  font-weight: $font-weight-bold;
+  color: $black;
 }
 
 .post-content {
   margin: 30px 0;
 }
 
+.addthis_inline_share_toolbox {
+  text-align: center;
+  margin: 60px 0 20px;
 
+  .at-style-responsive {
+    .at-share-btn {
+      margin: 0 7px;
+    }
+  }
+}

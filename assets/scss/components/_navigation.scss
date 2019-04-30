@@ -7,11 +7,7 @@
 
 .navbar {
   position: static;
-  padding: 0;
-
-  @media(max-width: $desktop) {
-    padding: 10px 0;
-  }
+  padding: 0 20px;
 
   .navbar-toggler {
     font-size: 30px;
@@ -39,7 +35,7 @@
     }
 
     .icon-bar {
-      background: #000;
+      background: $white;
       display: block;
       margin: 5px 0;
       width: 30px;
@@ -82,10 +78,6 @@
     padding: 2px 0 0;
     position: relative;
 
-    @media(max-width: 1180px) {
-      margin-left: 15px;
-    }
-
     @media(max-width: $desktop) {
       display: block;
       margin: 0;
@@ -112,6 +104,7 @@
       display: inline-block;
       letter-spacing: 1px;
       border-bottom: 2px dotted $black;
+      text-transform: lowercase;
 
       &:hover,
       &:focus {
@@ -119,14 +112,10 @@
         border-bottom: 2px dotted $accent2;
       }
 
-      @media(max-width: 1080px) {
-        font-size: 15px;
-      }
-
       @media(max-width: $desktop) {
         font-size: 1rem;
-        display: block;
-        padding: 3px 0;
+        display: inline-block;
+        padding: 5px 0;
       }
     }
 
@@ -208,5 +197,20 @@
       vertical-align: top;
       padding-top: 3px;
     }
+  }
+}
+
+.mobile-tags {
+  a {
+    color: $white;
+  }
+
+  .menu-tags {
+    margin-bottom: 10px;
+  }
+
+  .menu-tag {
+    display: inline-block;
+    margin: 0 10px 10px 0;
   }
 }

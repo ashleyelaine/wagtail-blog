@@ -1,4 +1,4 @@
-{% load staticfiles navigation_tags %}
+{% load staticfiles navigation_tags blog_tags %}
 
 <header class="header">
   <nav class="navbar navbar-expand-lg">
@@ -24,15 +24,19 @@
         <li {% if request.get_full_path == site_root.url %}class="active"{% endif %}><a class="menu-link" href="{{ site_root.url }}">{{ site_root.title }}</a></li> -->
         {% top_menu parent=site_root calling_page=sπelf %}
       </ul>
-    </div>
 
-    <div class="header-search">
-      <form action="{% url 'search' %}" method="get">
-        <div class="form-group">
-          <input class="form-control" type="text" placeholder="Search" name="query" value="">
+      <div class="mobile mobile-tags">
+          {% tags %}
+      </div>
+      
+      <div class="header-search">
+          <form action="{% url 'search' %}" method="get">
+            <div class="form-group">
+              <input class="form-control" type="text" placeholder="Search" name="query" value="">
+            </div>
+            <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+          </form>
         </div>
-        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
-      </form>
     </div>
   </nav>
 </header>

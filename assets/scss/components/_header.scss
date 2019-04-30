@@ -14,17 +14,18 @@
     font-size: 50px;
     color: $white;
     background: $black;
-    width: 250px;
+    width: 230px;
     text-align: center;
     padding: 5px 0 0;
     margin-right: 0;
 
-    img {
-      width: 250px;
+    @media(max-width: $desktop) {
+      width: auto;
+    }
 
-      @media(max-width: $mobile) {
-        width: 200px;
-      }
+    img {
+      width: 230px;
+      max-width: 100%;
     }
 
     .logo-sub-text {
@@ -44,15 +45,26 @@
 
   // SEARCH
   .header-search {
-    padding: 2px 60px 0 20px;
+    padding: 2px 0 0;
+    text-align: right;
+    width: 300px;
+
+    @media(max-width: $desktop) {
+      text-align: center;
+      padding-bottom: 10px;
+      width: 100%;
+    }
 
     .form-group {
       margin-bottom: 0;
-      width: auto;
+      width: 80%;
+
+      @media(max-width: $desktop) {
+        width: 220px;
+      }
 
       .form-control {
         font-size: 14px;
-        width: 200px;
         border-radius: 20px;
         border: 0;
         padding: 5px 15px;

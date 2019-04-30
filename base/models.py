@@ -99,7 +99,7 @@ class PostPage(Page):
     page_content = StreamField(BaseStreamBlock(), blank=True)
     seo_keywords = models.CharField(max_length=255, blank=True, help_text='Optional. Separate each keyword with a comma.')
     socials = models.BooleanField(verbose_name='Social Icons?', default=True)
-    addthis_pubid = models.CharField(verbose_name='AddThis PubId', max_length=25, null=True, blank=True, help_text='This is the string that is AFTER `#pubid=`. Ex: ra-5a61fe428f3a39a8', default='5c8fad3d8f2fec06')
+    addthis_pubid = models.CharField(verbose_name='AddThis PubId', max_length=25, null=True, blank=True, help_text='This is the string that is AFTER `#pubid=`. Ex: ra-5bbcb76243b82dd4', default='5bbcb76243b82dd4')
 
     content_panels = Page.content_panels + [
         FieldPanel('intro'),

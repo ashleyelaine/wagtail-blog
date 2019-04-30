@@ -9,6 +9,10 @@ aside {
   transition: .8s;
   left: 0;
 
+  @media(max-width: $tablet) {
+    display: none;
+  }
+
   &.closed {
     left: -240px;
   }

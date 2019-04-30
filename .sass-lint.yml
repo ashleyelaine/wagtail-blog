@@ -4,7 +4,7 @@ files:
 
 rules:
   class-name-format:
-    - 1
+    - 0
     -
       convention: hyphenatedbem
   nesting-depth:
