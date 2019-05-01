@@ -10,7 +10,6 @@ class GlobalSettings(BaseSetting):
     logo_text = models.CharField(max_length=255, null=True, blank=True, help_text='Add logo as text or use for logo alt text.')
     logo_sub_text = models.CharField(max_length=255, null=True, blank=True, help_text='Add logo sub text.')
 
-
     first_tab_panels = [
         FieldPanel('logo'),
         FieldPanel('logo_text'),
