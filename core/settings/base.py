@@ -96,6 +96,7 @@ TEMPLATES = [
                 'django.template.context_processors.static',
                 'django.contrib.auth.context_processors.auth',
                 'wagtail.contrib.settings.context_processors.settings',
+                'django.contrib.messages.context_processors.messages',
             ],
         },
     },

@@ -22,7 +22,7 @@ def search(request):
     })
 
 
-def do404(request):
+def do404(request, exception):
     return render(request, '404.html', request)
 
 
