@@ -1,3 +1,14 @@
 /assets
 /bin/
+/.coverage*
+/.env
+/features/
+/.git*
+/gulp*
+/htmlcov/
 /media
+/node_modules/
+/package*.json
+/Pipenv*
+/static/
+*/tests/
