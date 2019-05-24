@@ -4,6 +4,10 @@ branch-defaults:
     group_suffix: null
   master:
     environment: uname-production
+environment-defaults:
+  uname-production:
+    branch: null
+    repository: null
 global:
   application_name: uname
   branch: null
