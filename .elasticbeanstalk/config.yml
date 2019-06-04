@@ -1,11 +1,10 @@
 branch-defaults:
   development:
-    environment: null
-    group_suffix: null
+    environment: uname-development
   master:
     environment: uname-production
 environment-defaults:
-  uname-production:
+  uname-development:
     branch: null
     repository: null
 global:
