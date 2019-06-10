@@ -83,18 +83,18 @@ for environment in $environments; do
   settings_module="$(ebenv "$_ebenv" 'DJANGO_SETTINGS_MODULE')"
   DJANGO_SETTINGS_MODULE="$settings_module" S3_BUCKET_NAME="$s3_bucket" pipenv run python manage.py collectstatic --no-input
 
-  rollbar_env=$(ebenv "$_ebenv" 'ROLLBAR_ENV')
-  if [ -n "$rollbar_env" ]; then
-    curl https://api.rollbar.com/api/1/deploy/ \
-      --silent \
-      -F access_token="$(ebenv "$_ebenv" 'ROLLBAR_ACCESS_TOKEN')" \
-      -F environment="$rollbar_env" \
-      -F revision="$(git log -n 1 --pretty=format:%H)" \
-      -F local_username="$(git config --get github.user)" \
-      > /dev/null
-  else
-    echo "Could not determine rollbar environment"
-  fi
+  # rollbar_env=$(ebenv "$_ebenv" 'ROLLBAR_ENV')
+  # if [ -n "$rollbar_env" ]; then
+  #   curl https://api.rollbar.com/api/1/deploy/ \
+  #     --silent \
+  #     -F access_token="$(ebenv "$_ebenv" 'ROLLBAR_ACCESS_TOKEN')" \
+  #     -F environment="$rollbar_env" \
+  #     -F revision="$(git log -n 1 --pretty=format:%H)" \
+  #     -F local_username="$(git config --get github.user)" \
+  #     > /dev/null
+  # else
+  #   echo "Could not determine rollbar environment"
+  # fi
 done
 
 echo 'Cleaning up our requirements files'
