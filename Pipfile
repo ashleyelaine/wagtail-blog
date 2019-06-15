@@ -22,6 +22,7 @@ wagtail = "*"
 wagtail-django-recaptcha = "*"
 django-recaptcha = "*"
 wagtailcodeblock = "*"
+"boto3" = "*"
 
 [dev-packages]
 behave-django = "*"
