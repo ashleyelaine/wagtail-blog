@@ -3,8 +3,7 @@
 from .production import *
 import os
 import dj_database_url
-# from storages.backends.s3boto import S3BotoStorage
-import boto3
+from storages.backends.s3boto3 import S3Boto3Storage
 
 
 INSTALLED_APPS = ('collectfast', ) + INSTALLED_APPS + ('django_ses',)
@@ -35,13 +34,13 @@ STATIC_URL = '/assets/'
 MEDIA_URL = '/uploads/'
 
 
-class StaticStorage(boto3):
+class StaticStorage(S3Boto3Storage):
     querystring_auth = False
     bucket_name = '%s-assets' % os.environ.get('S3_BUCKET_NAME')
     preload_metadata = True
 
 
-class MediaStorage(boto3):
+class MediaStorage(S3Boto3Storage):
     bucket_name = '%s-media' % os.environ.get('S3_BUCKET_NAME')
     default_acl = 'private'
 
