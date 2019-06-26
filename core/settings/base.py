@@ -167,3 +167,5 @@ SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
 NOCAPTCHA = True
 
 GOOGLE_ANALYTICS_ID = os.environ.get('GOOGLE_ANALYTICS_ID')
+
+PIPENV_VERBOSITY=-1

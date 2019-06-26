@@ -37,7 +37,7 @@ body {
   transition: .8s;
 
   &.wide {
-    max-width: 1080px;
+    max-width: 1050px;
   }
 
   @media(max-width: $tablet) {
