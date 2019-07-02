@@ -109,7 +109,7 @@ WAGTAILSEARCH_BACKENDS = {
         'AUTO_UPDATE': True,
     }
 }
-WAGTAIL_CODE_BLOCK_THEME = 'okaidia'
+WAGTAIL_CODE_BLOCK_THEME = None
 WAGTAIL_CODE_BLOCK_LANGUAGES = (
     ('css', 'CSS'),
     ('html', 'HTML'),

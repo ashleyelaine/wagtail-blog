@@ -5,21 +5,23 @@
   }
 }
 
-.tag {
-  color: $accent;
-  padding: 3px 6px;
-  border: 1px solid $white;
-  font-size: 15px;
-  transition: .2s;
-  margin: 0 5px 5px 0;
-  letter-spacing: 1px;
-  display: inline-block;
-  font-weight: 600;
+.tags {
+  .tag {
+    color: $accent;
+    padding: 3px 6px;
+    border: 1px solid $white;
+    font-size: 15px;
+    transition: .2s;
+    margin: 0 5px 5px 0;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-weight: 600;
 
-  &:hover {
-    color: $accent2;
-    text-decoration: none;
-    border: 1px solid $accent2;
+    &:hover {
+      color: $accent2;
+      text-decoration: none;
+      border: 1px solid $accent2;
+    }
   }
 }
 

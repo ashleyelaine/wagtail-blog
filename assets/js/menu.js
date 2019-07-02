@@ -18,7 +18,13 @@
 
   // Aside menu
   $('.aside-toggler').click(function() {
+    if ($(this).hasClass('closed')) {
+      Cookies.set('aside', 'open');
+    } else {
+      Cookies.set('aside', 'closed');
+    }
+    $(this).toggleClass('closed');
     $('aside').toggleClass('closed');
-    $('.wrapper, .container').toggleClass('wide');
+    $('.wrapper').toggleClass('wide');
   });
 })(jQuery);

@@ -2,6 +2,8 @@
   a {
     position: absolute !important;
     left: -999em;
+    background: $white;
+    font-weight: bold;
 
     &:hover,
     &:visited {
@@ -14,6 +16,7 @@
       position: absolute;
       z-index: 999999;
       left: 10px;
+      top: 10px;
     }
   }
 }
@@ -35,7 +38,7 @@ body {
     .btn,
     a {
       &:focus {
-        outline: 5px auto $gray-800 !important;
+        outline: 5px auto $accent2 !important;
       }
     }
   }

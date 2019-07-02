@@ -5,12 +5,13 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.4.0",
     "gulp-cssmin": "^0.2.0",
-    "hoverintent": "^2.1.0"
+    "hoverintent": "^2.1.0",
+    "js-cookie": "^2.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
-    "bootstrap": "^4.0.0-alpha.6",
-    "browser-sync": "^2.18.11",
+    "bootstrap": "^4.3.1",
+    "browser-sync": "^2.26.7",
     "browserify": "^13.3.0",
     "browsersync": "0.0.1-security",
     "del": "^2.2.2",
@@ -38,7 +39,7 @@
     "gulp-using": "^0.1.1",
     "gulp-util": "^3.0.8",
     "jasmine": "^2.5.3",
-    "jquery": "^3.2.1",
+    "jquery": "^3.4.1",
     "karma": "^1.4.0",
     "karma-browserify": "^5.1.0",
     "karma-chrome-launcher": "^2.0.0",
@@ -51,7 +52,7 @@
     "popper.js": "^1.14.3",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.9.0",
+    "watchify": "^3.11.1",
     "yargs": "^6.6.0"
   },
   "scripts": {

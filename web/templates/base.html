@@ -35,8 +35,8 @@
     {% include "includes/skiplinks.html" %}
     {% include "includes/header.html" %}
 
-    <aside>
-      <div class="aside-toggler">
+    <aside class="{% if request.COOKIES.aside == 'closed' %}closed{% endif %}">
+      <div class="aside-toggler {% if request.COOKIES.aside == 'closed' %}closed {% else %} open{% endif %}">
         <span></span>
         <span></span>
         <span></span>
@@ -44,8 +44,7 @@
       {% tags %}
     </aside>
 
-    <main class="wrapper">
-
+    <main class="wrapper {% if request.COOKIES.aside == 'closed' %}wide{% endif %}">
       {% if page_title or title %}
         <section class="page-header">
           <h2>{% firstof page_title title %}</h2>
