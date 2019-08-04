@@ -23,6 +23,8 @@ AWS_DEFAULT_ACL = None
 AWS_S3_SECURE_URLS = os.environ.get('S3_SECURE_URLS', '1') == '1'
 AWS_S3_USE_SSL = AWS_S3_SECURE_URLS
 AWS_S3_URL_PROTOCOL = 'https:' if AWS_S3_SECURE_URLS else 'http:'
+AWS_S3_REGION_NAME = 'us-east-2'
+AWS_S3_SIGNATURE_VERSION = 's3v4'
 
 CACHES['collectfast'] = {
     'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
