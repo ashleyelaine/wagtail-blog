@@ -7,10 +7,13 @@ p {
   }
 }
 
-ul {
-  margin-bottom: 20px;
+ul, 
+ol {
+  margin-bottom: 15px;
 
   li {
+    padding-bottom: 10px;
+
     ul {
       li {
         padding-bottom: 0;
@@ -26,7 +29,7 @@ hr {
 
 b,
 strong {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .right {
