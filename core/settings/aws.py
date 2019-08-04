@@ -45,7 +45,7 @@ class StaticStorage(S3Boto3Storage):
 
 class MediaStorage(S3Boto3Storage):
     bucket_name = '%s-media' % os.environ.get('S3_BUCKET_NAME')
-    default_acl = 'private'
+    default_acl = 'public-read'
 
 
 DEFAULT_FILE_STORAGE = 'core.settings.aws.MediaStorage'
