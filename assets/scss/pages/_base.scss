@@ -17,9 +17,9 @@ body {
   &.wide {
     margin-left: 10px;
 
-    .container {
-      max-width: 1050px;
-    }
+    // .container {
+    //   max-width: 1050px;
+    // }
   }
 
   &.on {
@@ -38,7 +38,7 @@ body {
 .container {
   max-width: 1200px;
   padding: 0 50px;
-  transition: .8s;
+  // transition: .8s;
 
   @media(max-width: $tablet) {
     padding: 0 20px;
