@@ -117,6 +117,7 @@ WAGTAIL_CODE_BLOCK_LANGUAGES = (
     ('json', 'JSON'),
     ('python', 'Python'),
     ('scss', 'SCSS'),
+    ('bash', 'Bash + Shell'),
 )
 
 AUTH_USER_MODEL = 'members.Account'
