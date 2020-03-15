@@ -1,0 +1,1729 @@
+[
+{
+    "model": "sites.site",
+    "pk": 1,
+    "fields": {
+        "domain": "example.com",
+        "name": "example.com"
+    }
+},
+{
+    "model": "base.basepage",
+    "pk": 8,
+    "fields": {
+        "page_title_override": "",
+        "page_content": "[{\"type\": \"content_block\", \"value\": {\"content\": \"<p>I like writing, coding, learning, and pushing myself to be better everyday. I discovered web development in college while studying architecture and felt like I had finally found something I was really passionate about.</p><p>Mostly I want to write about things I&#x27;ve learned in my career so far to keep track of useful tips and tricks. My focus areas are currently Front End, UI/UX Design, Python, Wagtail, JavaScript, and AWS. I consider myself a &quot;full-stack&quot; developer with knowledge and understanding of all stages of the development life cycle. I have been a professional developer for 7 years.</p><p>Enjoy!</p>\"}, \"id\": \"4e7e8690-8259-4642-81aa-50c8ff81c00d\"}]"
+    }
+},
+{
+    "model": "base.blogpage",
+    "pk": 3,
+    "fields": {
+        "page_title_override": "",
+        "intro": "",
+        "page_content": "[]"
+    }
+},
+{
+    "model": "base.postpagetag",
+    "pk": 8,
+    "fields": {
+        "tag": 1,
+        "content_object": 4
+    }
+},
+{
+    "model": "base.postpagetag",
+    "pk": 9,
+    "fields": {
+        "tag": 2,
+        "content_object": 4
+    }
+},
+{
+    "model": "base.postpagetag",
+    "pk": 10,
+    "fields": {
+        "tag": 3,
+        "content_object": 4
+    }
+},
+{
+    "model": "base.postpagetag",
+    "pk": 13,
+    "fields": {
+        "tag": 2,
+        "content_object": 10
+    }
+},
+{
+    "model": "base.postpagetag",
+    "pk": 14,
+    "fields": {
+        "tag": 4,
+        "content_object": 10
+    }
+},
+{
+    "model": "base.postpagetag",
+    "pk": 15,
+    "fields": {
+        "tag": 2,
+        "content_object": 11
+    }
+},
+{
+    "model": "base.postpagetag",
+    "pk": 16,
+    "fields": {
+        "tag": 5,
+        "content_object": 11
+    }
+},
+{
+    "model": "base.postpagetag",
+    "pk": 17,
+    "fields": {
+        "tag": 6,
+        "content_object": 11
+    }
+},
+{
+    "model": "base.postpagetag",
+    "pk": 18,
+    "fields": {
+        "tag": 8,
+        "content_object": 12
+    }
+},
+{
+    "model": "base.postpagetag",
+    "pk": 19,
+    "fields": {
+        "tag": 9,
+        "content_object": 12
+    }
+},
+{
+    "model": "base.postpagetag",
+    "pk": 20,
+    "fields": {
+        "tag": 10,
+        "content_object": 12
+    }
+},
+{
+    "model": "base.postpagetag",
+    "pk": 21,
+    "fields": {
+        "tag": 7,
+        "content_object": 12
+    }
+},
+{
+    "model": "base.postpagetag",
+    "pk": 22,
+    "fields": {
+        "tag": 1,
+        "content_object": 13
+    }
+},
+{
+    "model": "base.postpagetag",
+    "pk": 23,
+    "fields": {
+        "tag": 3,
+        "content_object": 13
+    }
+},
+{
+    "model": "base.postpage",
+    "pk": 4,
+    "fields": {
+        "intro": "",
+        "date": "2019-06-27T14:51:00Z",
+        "page_content": "[{\"type\": \"content_block\", \"value\": {\"content\": \"<p>There&#x27;s no excuse for ignoring the need to make your site accessible. As a developer it&#x27;s your responsibility to figure out how to incorporate accessibility into your workflows. You have the power! Here are a few easy ways to get started:</p>\"}, \"id\": \"e1c6308d-dc0c-460e-82cd-58dab70c85a4\"}, {\"type\": \"sub_heading_block\", \"value\": {\"sub_heading\": \"1. Add skip links\"}, \"id\": \"1fb664fd-533b-4b6a-b598-7edac4ee1cdb\"}, {\"type\": \"content_block\", \"value\": {\"content\": \"<p>Skip links are an excellent way to help keyboard users navigate your site more efficiently. They are the very first links a tabbing user will find available to them, so make them count! The two I always use are: <b>Skip to Content</b> and <b>Skip to Navigation</b>. The third one I have used on larger sites is: <b>Skip to Sitemap</b>. This would allow the user to get an overview of all the available pages without needed to filter through much content.</p><p>The code for adding skip links is super straightforward and easy to implement on any site. They will only display when focused on, but you can style them to match your design.</p>\"}, \"id\": \"1a1ffaab-8106-4e7e-968d-0fdb47332de7\"}, {\"type\": \"html_block\", \"value\": {\"html\": \"<pre>HTML</pre>\"}, \"id\": \"d621c94f-0d83-49d5-b619-c1c0a58167da\"}, {\"type\": \"code_block\", \"value\": {\"code\": {\"language\": \"html\", \"code\": \"<div id=\\\"skiplinks\\\" class=\\\"skiplinks\\\" role=\\\"navigation\\\">\\r\\n  <a class=\\\"skip-content\\\" href=\\\"#main-content\\\">Skip to Content</a><br>\\r\\n  <a class=\\\"skip-nav\\\" href=\\\"#main-nav\\\">Skip to Navigation</a>\\r\\n</div>\"}}, \"id\": \"f26c095c-3023-4fbe-aaff-b463302679d9\"}, {\"type\": \"html_block\", \"value\": {\"html\": \"<pre>SCSS</pre>\"}, \"id\": \"61f74981-50e2-4f91-9138-8977b3cd1824\"}, {\"type\": \"code_block\", \"value\": {\"code\": {\"language\": \"scss\", \"code\": \".skiplinks {\\r\\n  a {\\r\\n    position: absolute !important;\\r\\n    left: -999em;\\r\\n    &:hover,\\r\\n    &:visited {\\r\\n      position: absolute !important;\\r\\n      left: -999em;\\r\\n    }\\r\\n    &:active,\\r\\n    &:focus {\\r\\n      position: absolute;\\r\\n      z-index: 999999;\\r\\n      left: 10px;\\r\\n    }\\r\\n  }\\r\\n}\"}}, \"id\": \"62742571-b8da-489d-af88-8d9ee0e7e451\"}, {\"type\": \"content_block\", \"value\": {\"content\": \"<p>Then just make sure your content container and nav container id&#x27;s match with your anchor links and you are good to go!</p>\"}, \"id\": \"8b094841-2d3a-4b75-a5c1-e537a38264ce\"}, {\"type\": \"sub_heading_block\", \"value\": {\"sub_heading\": \"2. Remove the focus outline for non-tabbing users <i>only</i>\"}, \"id\": \"a17096e6-8e8b-420b-86cb-1c3a79de2fcf\"}, {\"type\": \"html_block\", \"value\": {\"html\": \"<pre>Javascript</pre>\"}, \"id\": \"1e5097fd-5eb4-4333-851d-e5b1f479cef8\"}, {\"type\": \"code_block\", \"value\": {\"code\": {\"language\": \"javascript\", \"code\": \"// RECOGNIZE A KEYBOARD USER\\r\\nfunction handleFirstTab(e) {\\r\\n  if (e.keyCode === 9) { // the \\\"I am a keyboard user\\\" key\\r\\n    document.body.classList.add('user-is-tabbing');\\r\\n    window.removeEventListener('keydown', handleFirstTab);\\r\\n  }\\r\\n}\\r\\n\\r\\nwindow.addEventListener('keydown', handleFirstTab);\"}}, \"id\": \"262308af-447d-41a4-801a-c9932678ca17\"}, {\"type\": \"html_block\", \"value\": {\"html\": \"<pre>SCSS</pre>\"}, \"id\": \"94678076-3a88-4a99-936d-9d04ee8146a5\"}, {\"type\": \"code_block\", \"value\": {\"code\": {\"language\": \"scss\", \"code\": \"body {\\r\\n  &.user-is-tabbing {\\r\\n    button,\\r\\n    .btn,\\r\\n    a {\\r\\n      &:focus {\\r\\n        outline: 5px auto $accent2 !important;\\r\\n      }\\r\\n    }\\r\\n  }\\r\\n}\"}}, \"id\": \"bd705d21-9d59-4842-9267-3576202b0a0c\"}, {\"type\": \"sub_heading_block\", \"value\": {\"sub_heading\": \"3. Limit your main menu to 6 items or less\"}, \"id\": \"a3eb749e-aea4-4754-b28d-6abe291c5a88\"}, {\"type\": \"content_block\", \"value\": {\"content\": \"<p>Depending on the size of your site, this may seem daunting or even impossible. But really ask yourself, what are people here do to? Try to focus on the basics.</p><p>If you must do a dropdown menu, please make sure that is is accessible via the keyboard. Here is an example of how that can be done:</p>\"}, \"id\": \"839b5db3-5642-4be0-bce4-61b7ac78201e\"}, {\"type\": \"html_block\", \"value\": {\"html\": \"<pre>Javascript</pre>\"}, \"id\": \"586d4b32-22ed-4974-a370-7d6dffff6c5e\"}, {\"type\": \"code_block\", \"value\": {\"code\": {\"language\": \"javascript\", \"code\": \"$('.allow-toggle').focusin(function() {\\r\\n  $(this).parents('.has-submenu').find('.dropdown-menu').css('display', 'block');\\r\\n});\\r\\n\\r\\n$('.dropdown-menu li:last-of-type .menu-link').focusout(function() {\\r\\n  $(this).parents('.dropdown-menu').css('display', 'none');\\r\\n});\"}}, \"id\": \"e01ae03c-f436-4d53-81e7-154a096acdc8\"}, {\"type\": \"html_block\", \"value\": {\"html\": \"<pre>HTML</pre>\"}, \"id\": \"13082169-f211-48aa-8e54-fdea64d81922\"}, {\"type\": \"code_block\", \"value\": {\"code\": {\"language\": \"html\", \"code\": \"<div id=\\\"mainNav\\\" class=\\\"collapse navbar-collapse\\\" role=\\\"navigation\\\" aria-label=\\\"Primary site navigation\\\">\\r\\n  <ul class=\\\"nav\\\">\\r\\n    <li class=\\\"presentation about has-submenu\\\">\\r\\n      <a href=\\\"/about/\\\" class=\\\"menu-link allow-toggle\\\">About</a>\\r\\n      <ul class=\\\"dropdown-menu\\\" role=\\\"menu\\\">\\r\\n        <li class=\\\"child-page\\\"><a class=\\\"menu-link\\\" href=\\\"/about/child-page/\\\" role=\\\"menuitem\\\">Child Page</a></li>\\r\\n      </ul>\\r\\n    </li>\\r\\n  </ul>\\r\\n</div>\"}}, \"id\": \"57911822-4863-4747-8f03-72e0272a6fb1\"}]",
+        "seo_keywords": "",
+        "socials": true,
+        "addthis_pubid": "5bbcb76243b82dd4"
+    }
+},
+{
+    "model": "base.postpage",
+    "pk": 7,
+    "fields": {
+        "intro": "",
+        "date": "2019-09-05T18:52:00Z",
+        "page_content": "[{\"type\": \"html_block\", \"value\": {\"html\": \"<link rel=\\\"stylesheet\\\" href=\\\"https://uname-production-assets.s3.amazonaws.com/wagtailadmin/css/core.css\\\" type=\\\"text/css\\\" />\\r\\n<link rel=\\\"stylesheet\\\" href=\\\"/static/wagtailstyleguide/css/styleguide.css\\\" type=\\\"text/css\\\" /><section id=\\\"icons\\\" class=\\\"icons\\\">\\r\\n            <h2>Icons</h2>\\r\\n\\r\\n            <ul class=\\\"unlist\\\">\\r\\n                <li class=\\\"icon icon-arrow-down-big\\\">arrow-down-big</li>\\r\\n                <li class=\\\"icon icon-arrow-down\\\">arrow-down</li>\\r\\n                <li class=\\\"icon icon-arrow-left\\\">arrow-left</li>\\r\\n                <li class=\\\"icon icon-arrow-right\\\">arrow-right</li>\\r\\n                <li class=\\\"icon icon-arrow-up-big\\\">arrow-up-big</li>\\r\\n                <li class=\\\"icon icon-arrow-up\\\">arrow-up</li>\\r\\n                <li class=\\\"icon icon-arrows-up-down\\\">arrows-up-down</li>\\r\\n                <li class=\\\"icon icon-bin\\\">bin</li>\\r\\n                <li class=\\\"icon icon-bold\\\">bold</li>\\r\\n                <li class=\\\"icon icon-chain-broken\\\">chain-broken</li>\\r\\n                <li class=\\\"icon icon-code\\\">code</li>\\r\\n                <li class=\\\"icon icon-cog\\\">cog</li>\\r\\n                <li class=\\\"icon icon-cogs\\\">cogs</li>\\r\\n                <li class=\\\"icon icon-collapse-down\\\">collapse-down</li>\\r\\n                <li class=\\\"icon icon-collapse-up\\\">collapse-up</li>\\r\\n                <li class=\\\"icon icon-cross\\\">cross</li>\\r\\n                <li class=\\\"icon icon-date\\\">date</li>\\r\\n                <li class=\\\"icon icon-doc-empty-inverse\\\">doc-empty-inverse</li>\\r\\n                <li class=\\\"icon icon-doc-empty\\\">doc-empty</li>\\r\\n                <li class=\\\"icon icon-doc-full-inverse\\\">doc-full-inverse</li>\\r\\n                <li class=\\\"icon icon-doc-full\\\">doc-full</li>\\r\\n                <li class=\\\"icon icon-download\\\">download</li>\\r\\n                <li class=\\\"icon icon-edit\\\">edit</li>\\r\\n                <li class=\\\"icon icon-folder-inverse\\\">folder-inverse</li>\\r\\n                <li class=\\\"icon icon-folder-open-1\\\">folder-open-1</li>\\r\\n                <li class=\\\"icon icon-folder-open-inverse\\\">folder-open-inverse</li>\\r\\n                <li class=\\\"icon icon-folder\\\">folder</li>\\r\\n                <li class=\\\"icon icon-form\\\">form</li>\\r\\n                <li class=\\\"icon icon-grip\\\">grip</li>\\r\\n                <li class=\\\"icon icon-group\\\">group</li>\\r\\n                <li class=\\\"icon icon-help\\\">help</li>\\r\\n                <li class=\\\"icon icon-help-inverse\\\">help-inverse</li>\\r\\n                <li class=\\\"icon icon-home\\\">home</li>\\r\\n                <li class=\\\"icon icon-horizontalrule\\\">horizontalrule</li>\\r\\n                <li class=\\\"icon icon-image\\\">image</li>\\r\\n                <li class=\\\"icon icon-italic\\\">italic</li>\\r\\n                <li class=\\\"icon icon-link\\\">link</li>\\r\\n                <li class=\\\"icon icon-list-ol\\\">list-ol</li>\\r\\n                <li class=\\\"icon icon-list-ul\\\">list-ul</li>\\r\\n                <li class=\\\"icon icon-locked\\\">locked</li>\\r\\n                <li class=\\\"icon icon-logout\\\">logout</li>\\r\\n                <li class=\\\"icon icon-mail\\\">mail</li>\\r\\n                <li class=\\\"icon icon-media\\\">media</li>\\r\\n                <li class=\\\"icon icon-no-view\\\">no-view</li>\\r\\n                <li class=\\\"icon icon-openquote\\\">openquote</li>\\r\\n                <li class=\\\"icon icon-order-down\\\">order-down</li>\\r\\n                <li class=\\\"icon icon-order-up\\\">order-up</li>\\r\\n                <li class=\\\"icon icon-order\\\">order</li>\\r\\n                <li class=\\\"icon icon-password\\\">password</li>\\r\\n                <li class=\\\"icon icon-pick\\\">pick</li>\\r\\n                <li class=\\\"icon icon-pilcrow\\\">pilcrow</li>\\r\\n                <li class=\\\"icon icon-placeholder\\\">placeholder</li>\\r\\n                <li class=\\\"icon icon-plus-inverse\\\">plus-inverse</li>\\r\\n                <li class=\\\"icon icon-plus\\\">plus</li>\\r\\n                <li class=\\\"icon icon-radio-empty\\\">radio-empty</li>\\r\\n                <li class=\\\"icon icon-radio-full\\\">radio-full</li>\\r\\n                <li class=\\\"icon icon-redirect\\\">redirect</li>\\r\\n                <li class=\\\"icon icon-repeat\\\">repeat</li>\\r\\n                <li class=\\\"icon icon-search\\\">search</li>\\r\\n                <li class=\\\"icon icon-site\\\">site</li>\\r\\n                <li class=\\\"icon icon-snippet\\\">snippet</li>\\r\\n                <li class=\\\"spinner\\\"><div class=\\\"icon icon-spinner\\\">spinner</div> spinner</li>\\r\\n                <li class=\\\"icon icon-strikethrough\\\">strikethrough</li>\\r\\n                <li class=\\\"icon icon-subscript\\\">subscript</li>\\r\\n                <li class=\\\"icon icon-success\\\">success</li>\\r\\n                <li class=\\\"icon icon-superscript\\\">superscript</li>\\r\\n                <li class=\\\"icon icon-table\\\">table</li>\\r\\n                <li class=\\\"icon icon-tag\\\">tag</li>\\r\\n                <li class=\\\"icon icon-tick-inverse\\\">tick-inverse</li>\\r\\n                <li class=\\\"icon icon-tick\\\">tick</li>\\r\\n                <li class=\\\"icon icon-time\\\">time</li>\\r\\n                <li class=\\\"icon icon-title\\\">title</li>\\r\\n                <li class=\\\"icon icon-undo\\\">undo</li>\\r\\n                <li class=\\\"icon icon-unlocked\\\">unlocked</li>\\r\\n                <li class=\\\"icon icon-user\\\">user</li>\\r\\n                <li class=\\\"icon icon-view\\\">view</li>\\r\\n                <li class=\\\"icon icon-wagtail-inverse\\\">wagtail-inverse</li>\\r\\n                <li class=\\\"icon icon-wagtail\\\">wagtail</li>\\r\\n                <li class=\\\"icon icon-warning\\\">warning</li>\\r\\n            </ul>\\r\\n\\r\\n        </section>\"}, \"id\": \"fa1cc16a-895f-40bf-ba5a-206047368f6a\"}]",
+        "seo_keywords": "",
+        "socials": true,
+        "addthis_pubid": "5bbcb76243b82dd4"
+    }
+},
+{
+    "model": "base.postpage",
+    "pk": 9,
+    "fields": {
+        "intro": "",
+        "date": "2019-06-26T16:40:00Z",
+        "page_content": "[{\"type\": \"content_block\", \"value\": {\"content\": \"<p>I like writing, coding, and pushing myself to be better everyday. I discovered web development in college while studying architecture and felt like I had finally found my true calling. I would have dropped architecture, but I was already going into my senior year, so I figured I should just graduate and hope that someone would hire me. This was 2012, so getting a job in architecture also going to be nearly impossible. Anyway, after coding for more than a year at my work-study job, I was hired as an <i>HTML Programmer</i>. Yeah. You don&#x27;t hear that title anymore.</p><p>Mostly I want to write about things I&#x27;ve learned in my career so far and keep track of useful tips and tricks. I don&#x27;t claim to be an expert in anything and will probably write about things that will change, or are not how someone else would do them. But that&#x27;s life as a developer, there&#x27;s no one way of doing things.</p><p>So anyway, that&#x27;s a little bit about me.</p>\"}, \"id\": \"637b2531-87e1-4576-a94c-450e1bf45524\"}]",
+        "seo_keywords": "",
+        "socials": true,
+        "addthis_pubid": "5bbcb76243b82dd4"
+    }
+},
+{
+    "model": "base.postpage",
+    "pk": 10,
+    "fields": {
+        "intro": "",
+        "date": "2019-08-02T16:03:00Z",
+        "page_content": "[{\"type\": \"content_block\", \"value\": {\"content\": \"<p>I love organization. My favorite projects are ones where you can easily find and remember where each piece of code is. File structure can be a highly contentious and debatable topic on any dev team. However, having a standard structure for your projects will help keep everyone on the same page and reduce confusion. Here is my favorite way to structure SASS files.</p><p>I break up my scss folder into 4 sub-folders:</p><p></p><embed alt=\\\"Sass_Structure.png\\\" embedtype=\\\"image\\\" format=\\\"left\\\" id=\\\"2\\\"/><ul><li><b>Components -</b> larger sections of the project that will be reusable across the site</li><li><b>Elements</b> - specific html elements</li><li><b>Pages</b> - page template styles</li><li><b>Settings</b> - variables and global settings</li></ul>\"}, \"id\": \"c25f9bdf-ea4b-4e35-8139-ad8bb8ec1796\"}, {\"type\": \"html_block\", \"value\": {\"html\": \"All files are imported to <code>app.scss</code> , then compiled for the static style sheet. Yay for organization!\"}, \"id\": \"4f65f67b-d95c-4349-b351-b40dd97c62d5\"}, {\"type\": \"content_block\", \"value\": {\"content\": \"<p></p><embed alt=\\\"SASS_folder_structure.png\\\" embedtype=\\\"image\\\" format=\\\"left\\\" id=\\\"3\\\"/><p></p>\"}, \"id\": \"52919023-ea3f-4904-a58b-4e9bdecfc56a\"}]",
+        "seo_keywords": "",
+        "socials": true,
+        "addthis_pubid": "5bbcb76243b82dd4"
+    }
+},
+{
+    "model": "base.postpage",
+    "pk": 11,
+    "fields": {
+        "intro": "",
+        "date": "2019-08-07T16:46:00Z",
+        "page_content": "[{\"type\": \"content_block\", \"value\": {\"content\": \"<p>For most of my career I have been an almost exclusive user of <a href=\\\"https://fontawesome.com\\\">Font Awesome</a>. More recently I started to feel like I needed something fresh to work with. I did some research and landed on testing out <a href=\\\"https://material.io/resources/icons/?style=baseline\\\">Google&#x27;s Material Design Icons</a> on my next project.</p><p>It&#x27;s super easy to get started because you can just include them as a Google Font like so:</p>\"}, \"id\": \"43d0d8dd-0216-46b7-a782-af9e92ef6d42\"}, {\"type\": \"code_block\", \"value\": {\"code\": {\"language\": \"html\", \"code\": \"<link href=\\\"https://fonts.googleapis.com/icon family=Material+Icons\\\" rel=\\\"stylesheet\\\">\"}}, \"id\": \"1af0b556-8b8f-4121-ab65-0a259331dff5\"}, {\"type\": \"content_block\", \"value\": {\"content\": \"<p>If you would rather include them a different way, the <a href=\\\"https://google.github.io/material-design-icons/\\\">developer guide</a> explains how to directly download, use npm or bower, and more!</p><p>After using them in my HTML I realized I also wanted to use them in my CSS as :before and :after elements. Here&#x27;s a fun way you can do that:</p>\"}, \"id\": \"7fed986b-667c-4058-9a08-49834b68cbf8\"}, {\"type\": \"code_block\", \"value\": {\"code\": {\"language\": \"css\", \"code\": \".material-icons {\\r\\n  direction: ltr;\\r\\n  display: inline-block;\\r\\n  font-family: 'Material Icons';\\r\\n  font-size: 24px;\\r\\n  font-style: normal;\\r\\n  font-weight: normal;\\r\\n  letter-spacing: normal;\\r\\n  line-height: 1;\\r\\n  text-transform: none;\\r\\n  white-space: nowrap;\\r\\n  word-wrap: normal;\\r\\n  -webkit-font-feature-settings: 'liga';\\r\\n  -webkit-font-smoothing: antialiased;\\r\\n}\"}}, \"id\": \"6637e45f-996a-4859-98ef-d030efef80fd\"}, {\"type\": \"content_block\", \"value\": {\"content\": \"<p>Then using SASS you can extend it and set the content using pseudo css elements:</p>\"}, \"id\": \"85953891-18a9-4657-b138-a819f9951595\"}, {\"type\": \"code_block\", \"value\": {\"code\": {\"language\": \"scss\", \"code\": \"ul\\r\\n  &:before {\\r\\n    @extend .material-icons;\\r\\n    content: 'label';\\r\\n  }\\r\\n}\"}}, \"id\": \"10cef7b8-831f-496b-a484-75d45ea0bd5f\"}, {\"type\": \"content_block\", \"value\": {\"content\": \"<p>I love how clean and modern these icons are and I&#x27;m excited to spice up my designs a little bit with something more than just Font Awesome (which I still use and love). Happy Devving!</p>\"}, \"id\": \"236cd7fb-f375-4cfb-879e-af5bde696c9f\"}]",
+        "seo_keywords": "",
+        "socials": true,
+        "addthis_pubid": "5bbcb76243b82dd4"
+    }
+},
+{
+    "model": "base.postpage",
+    "pk": 12,
+    "fields": {
+        "intro": "",
+        "date": "2019-09-04T22:32:00Z",
+        "page_content": "[{\"type\": \"content_block\", \"value\": {\"content\": \"<p>Maybe it&#x27;s just the front-ender in me, but I don&#x27;t like memorizing or typing out long shell commands. Thankfully, there&#x27;s a fun and easy way for me to customize my shell experience using <a href=\\\"https://en.wikipedia.org/wiki/Alias_(command)\\\">aliases</a>. Today I&#x27;m going to share my #1 alias that I use multiple times everyday. If you&#x27;re a <a href=\\\"https://www.djangoproject.com/\\\">Django</a> developer and use <a href=\\\"https://pipenv-fork.readthedocs.io/en/latest/\\\">Pipenv</a> then this will be the perfect one for you.</p><p>Open up your ~/.<i>bash_profile (</i>or the file you are using for your local bash scripts, in my case is is my <i>~/.zshrc</i> file) and add the following:</p>\"}, \"id\": \"2e11f9f2-fa39-4099-bd5b-3eddd72a63de\"}, {\"type\": \"code_block\", \"value\": {\"code\": {\"language\": \"bash\", \"code\": \"alias pippy=\\\"pipenv run python manage.py\\\"\"}}, \"id\": \"7fe644ea-53ab-4d8c-a540-62e575e36e27\"}, {\"type\": \"html_block\", \"value\": {\"html\": \"<small>If you're unsure where to find your <i>~/.bash_profile</i>, you can open Finder (on a mac) to my home directory then use  <code>Cmd + Shift + .</code> to show hidden files. Your <i>~/.bash_profile</i> should then appear along with all other hidden files. Double click to open in an editor.</small>\"}, \"id\": \"00da375d-6a61-4038-88ec-80f9b53885b4\"}, {\"type\": \"sub_heading_block\", \"value\": {\"sub_heading\": \"Voil\\u00e0\"}, \"id\": \"2a9702a5-11d7-4b53-aec2-dc54b3d02991\"}, {\"type\": \"content_block\", \"value\": {\"content\": \"<p>Now you are able to use commands such as:</p>\"}, \"id\": \"006a39cf-f8b3-46c8-9658-ab964c48530f\"}, {\"type\": \"code_block\", \"value\": {\"code\": {\"language\": \"bash\", \"code\": \"pippy runserver\\r\\npippy createsuperuser\\r\\npippy makemigrations\\r\\npippy migrate\"}}, \"id\": \"ef7e3a3b-3a8a-44ef-97b7-c1d1bc565fb5\"}, {\"type\": \"content_block\", \"value\": {\"content\": \"<p>So much easier and faster.</p>\"}, \"id\": \"6cd72d19-672c-4f41-881a-b187073c6fbb\"}]",
+        "seo_keywords": "",
+        "socials": true,
+        "addthis_pubid": "5bbcb76243b82dd4"
+    }
+},
+{
+    "model": "base.postpage",
+    "pk": 13,
+    "fields": {
+        "intro": "",
+        "date": "2019-09-18T13:44:00Z",
+        "page_content": "[{\"type\": \"content_block\", \"value\": {\"content\": \"<p>Here is a little snippet of Javascript that I like to add to each of my projects to help improve accessibility. The issue with external links is they take a user to a completely new website, that may or may not have made accessibility a priority. Therefore, it&#x27;s important to alert the screen reader user that they are leaving your website when selecting an external link. This way they won&#x27;t unknowingly end up on a different site with which you have no control over. The easiest way to do this (in my opinion) is the following:</p>\"}, \"id\": \"275ff394-9174-4905-8c56-9ad09f10b569\"}, {\"type\": \"code_block\", \"value\": {\"code\": {\"language\": \"javascript\", \"code\": \"setTimeout(function() {\\r\\n    $('a[target=\\\"_blank\\\"]').addClass('external-link');\\r\\n    $('.external-link').append(' <span class=\\\"sr-only\\\"> External link - Opens in new window</span>');\\r\\n}, 100);\"}}, \"id\": \"b9b33d41-892a-432a-a129-f1e54a97d90a\"}, {\"type\": \"html_block\", \"value\": {\"html\": \"<p>The very short timeout is added just to make sure all the links are loaded on the page before adding the necessary class. The <code>sr-only</code> class is built into <a target=\\\"_blank\\\" href=\\\"https://getbootstrap.com/docs/4.0/utilities/screenreaders/\\\">Bootstrap</a>, so if you aren't using Bootstrap you should also add the following to your css:</p>\"}, \"id\": \"ba1f1c52-6f33-46a7-9393-defeb6156b4b\"}, {\"type\": \"code_block\", \"value\": {\"code\": {\"language\": \"scss\", \"code\": \".sr-only {\\r\\n  border: 0;\\r\\n  clip: rect(0, 0, 0, 0);\\r\\n  height: 1px;\\r\\n  margin: -1px;\\r\\n  overflow: hidden;\\r\\n  padding: 0;\\r\\n  position: absolute;\\r\\n  width: 1px;\\r\\n}\"}}, \"id\": \"60bc577d-5421-40cb-ae16-12cabd68da6c\"}]",
+        "seo_keywords": "",
+        "socials": true,
+        "addthis_pubid": "5bbcb76243b82dd4"
+    }
+},
+{
+    "model": "base.formfield",
+    "pk": 1,
+    "fields": {
+        "sort_order": 0,
+        "label": "First Name",
+        "field_type": "singleline",
+        "required": true,
+        "choices": "",
+        "default_value": "",
+        "help_text": "",
+        "page": 5
+    }
+},
+{
+    "model": "base.formfield",
+    "pk": 2,
+    "fields": {
+        "sort_order": 1,
+        "label": "Last Name",
+        "field_type": "singleline",
+        "required": true,
+        "choices": "",
+        "default_value": "",
+        "help_text": "",
+        "page": 5
+    }
+},
+{
+    "model": "base.formfield",
+    "pk": 3,
+    "fields": {
+        "sort_order": 2,
+        "label": "Email",
+        "field_type": "email",
+        "required": true,
+        "choices": "",
+        "default_value": "",
+        "help_text": "",
+        "page": 5
+    }
+},
+{
+    "model": "base.formfield",
+    "pk": 4,
+    "fields": {
+        "sort_order": 3,
+        "label": "Comments",
+        "field_type": "multiline",
+        "required": true,
+        "choices": "",
+        "default_value": "",
+        "help_text": "",
+        "page": 5
+    }
+},
+{
+    "model": "base.formpage",
+    "pk": 5,
+    "fields": {
+        "to_address": "",
+        "from_address": "",
+        "subject": "",
+        "page_title_override": "",
+        "intro": "",
+        "intro_content": "",
+        "thank_you_text": "<p>Thank you for your submission.</p>",
+        "page_content": "[]"
+    }
+},
+{
+    "model": "postgres_search.indexentry",
+    "pk": 1,
+    "fields": {
+        "content_type": [
+            "base",
+            "blogpage"
+        ],
+        "object_id": "3",
+        "autocomplete": "'home':1B",
+        "body": ""
+    }
+},
+{
+    "model": "postgres_search.indexentry",
+    "pk": 8,
+    "fields": {
+        "content_type": [
+            "wagtailimages",
+            "image"
+        ],
+        "object_id": "1",
+        "autocomplete": "'img_6499.jpeg':1A",
+        "body": ""
+    }
+},
+{
+    "model": "postgres_search.indexentry",
+    "pk": 10,
+    "fields": {
+        "content_type": [
+            "base",
+            "postpage"
+        ],
+        "object_id": "4",
+        "autocomplete": "'3':1B 'access':9B 'easi':2B 'make':5B 'site':7B 'way':3B",
+        "body": "'-999':180,188 '1':48 '10px':199 '2':223 '3':280 '5px':276 '6':286 '9':245 '999999':197 'absolut':177,185,193 'accent2':278 'access':1,17,31,333 'activ':190 'ad':135 'add':49 'allow':113,350 'allow-toggl':349 'alway':88 'anchor':215 'ask':306 'auto':277 'avail':78,123 'basic':319 'block':365 'bodi':266 'btn':272 'button':271 'child':390 'code':133 'contain':206,209 'content':93,131,168,205 'count':84 'css':363,384 'daunt':300 'depend':290 'design':163 'develop':20 'display':151,364,385 'document.body.classlist.add':253 'done':346 'dropdown':325,361,367,382 'dropdown-menu':360,366,381 'e':242 'e.keycode':244 'easi':43,142 'effici':66 'em':181,189 'end':3 'even':302 'exampl':340 'excel':56 'excus':8 'figur':26 'filter':128 'find':77,359 'first':71 'focus':153,191,226,274,316 'focusin':352 'focusout':377 'front':2 'function':240,353,378 'get':46,117 'go':222 'good':220 'handlefirsttab':241,260,263 'has-submenu':356 'help':59 'hover':182 'html':164,165,387,388 'id':210 'ignor':10 'implement':144 'import':178,186,279 'imposs':303 'incorpor':30 'index':196 'item':287 'javascript':4,234,235,347,348 'key':252 'keyboard':60,238,250,336 'keydown':259,262 'larger':105 'last':371 'last-of-typ':370 'left':179,187,198 'less':289 'li':369 'limit':281 'link':51,53,72,137,216,376 'main':283 'make':14,82,202,328 'match':161,212 'may':298 'menu':284,326,362,368,375,383 'menu-link':374 'much':130 'must':322 'nav':208 'navig':62,97,171 'need':12,126 'non':230 'non-tab':229 'none':386 'one':100 'outlin':227,275 'overview':119 'page':124,391 'parent':355,380 'peopl':310 'pleas':327 'posit':176,184,192 'power':38 'realli':305 'recogn':236 'remov':224 'respons':24 'scss':172,173,264,265 'seem':299 'site':16,64,106,147,296 'sitemap':110 'size':293 'skip':50,52,91,95,108,136,166,169 'skiplink':174 'start':47 'straightforward':140 'style':158 'submenu':358 'super':139 'sure':203,329 'tab':74,231,257,270 'third':99 'toggl':351 'tri':314 'two':86 'type':373 'use':89,103 'user':61,75,115,232,239,251,255,268 'user-is-tab':254,267 'via':334 'visit':183 'way':44,57 'window.addeventlistener':261 'window.removeeventlistener':258 'without':125 'workflow':34 'would':112 'z':195 'z-index':194"
+    }
+},
+{
+    "model": "postgres_search.indexentry",
+    "pk": 13,
+    "fields": {
+        "content_type": [
+            "base",
+            "formpage"
+        ],
+        "object_id": "5",
+        "autocomplete": "'contact':1B",
+        "body": ""
+    }
+},
+{
+    "model": "postgres_search.indexentry",
+    "pk": 46,
+    "fields": {
+        "content_type": [
+            "base",
+            "postpage"
+        ],
+        "object_id": "7",
+        "autocomplete": "'icon':2B 'wagtail':1B",
+        "body": "'1':64 'arrow':3,7,10,13,16,20,23 'arrow-down':6 'arrow-down-big':2 'arrow-left':9 'arrow-right':12 'arrow-up':19 'arrow-up-big':15 'arrows-up-down':22 'big':5,18 'bin':26 'bold':27 'broken':30 'chain':29 'chain-broken':28 'code':31 'cog':32,33 'collaps':35,38 'collapse-down':34 'collapse-up':37 'cross':40 'date':41 'doc':43,47,50,54 'doc-empti':46 'doc-empty-invers':42 'doc-ful':53 'doc-full-invers':49 'download':56 'edit':57 'empti':44,48,113 'folder':59,62,66,69 'folder-invers':58 'folder-open':61 'folder-open-invers':65 'form':70 'full':51,55,116 'grip':71 'group':72 'help':73,75 'help-invers':74 'home':77 'horizontalrul':78 'icon':1 'imag':79 'invers':45,52,60,68,76,109,132,142 'ital':80 'left':11 'link':81 'list':83,86 'list-ol':82 'list-ul':85 'lock':88 'logout':89 'mail':90 'media':91 'no-view':92 'ol':84 'open':63,67 'openquot':95 'order':97,100,102 'order-down':96 'order-up':99 'password':103 'pick':104 'pilcrow':105 'placehold':106 'plus':108,110 'plus-invers':107 'radio':112,115 'radio-empti':111 'radio-ful':114 'redirect':117 'repeat':118 'right':14 'search':119 'site':120 'snippet':121 'spinner':122,123 'strikethrough':124 'subscript':125 'success':126 'superscript':127 'tabl':128 'tag':129 'tick':131,133 'tick-invers':130 'time':134 'titl':135 'ul':87 'undo':136 'unlock':137 'user':138 'view':94,139 'wagtail':141,143 'wagtail-invers':140 'warn':144"
+    }
+},
+{
+    "model": "postgres_search.indexentry",
+    "pk": 56,
+    "fields": {
+        "content_type": [
+            "base",
+            "basepage"
+        ],
+        "object_id": "8",
+        "autocomplete": "",
+        "body": "'7':99 'architectur':21 'area':60 'aw':71 'better':11 'career':47 'code':4 'colleg':18 'consid':73 'current':62 'cycl':91 'design':66 'develop':16,79,89,97 'discov':14 'end':64 'enjoy':101 'everyday':12 'far':49 'felt':23 'final':27 'focus':59 'found':28 'front':63 'full':77 'full-stack':76 'javascript':69 'keep':51 'knowledg':81 'learn':5,44 'life':90 'like':2,24 'most':35 'passion':33 'profession':96 'push':7 'python':67 'realli':32 'someth':29 'stack':78 'stage':86 'studi':20 'thing':41 'tip':55 'track':52 'trick':57 'ui/ux':65 'understand':83 'use':54 've':43 'wagtail':68 'want':37 'web':15 'write':3,39 'year':100"
+    }
+},
+{
+    "model": "postgres_search.indexentry",
+    "pk": 59,
+    "fields": {
+        "content_type": [
+            "base",
+            "postpage"
+        ],
+        "object_id": "9",
+        "autocomplete": "'introduct':1B",
+        "body": "'2012':61 'alreadi':39 'also':68 'anymor':102 'anyth':135 'anyway':74,170 'architectur':20,35,67 'better':10 'bit':175 'call':30 'career':115 'chang':144 'claim':129 'code':4,76 'colleg':17 'develop':15,160 'discov':13 'drop':34 'els':150 'everyday':11 'expert':133 'far':117 'felt':22 'figur':47 'final':26 'found':27 'get':63 'go':40,69 'graduat':51 'hear':99 'hire':57,90 'hope':53 'html':93 'imposs':73 'job':65,87 'keep':119 'learn':112 'life':157 'like':2,23 'littl':174 'most':103 'near':72 'one':164 'probabl':138 'programm':94 'push':6 'senior':43 'someon':55,149 'studi':19,86 'thing':109,141,168 'tip':123 'titl':101 'track':120 'trick':125 'true':29 'use':122 've':111 'want':105 'way':165 'web':14 'work':85 'work-studi':84 'would':32,56,151 'write':3,107,139 'yeah':95 'year':44,81"
+    }
+},
+{
+    "model": "postgres_search.indexentry",
+    "pk": 64,
+    "fields": {
+        "content_type": [
+            "wagtailcore",
+            "page"
+        ],
+        "object_id": "1",
+        "autocomplete": "'root':1B",
+        "body": ""
+    }
+},
+{
+    "model": "postgres_search.indexentry",
+    "pk": 69,
+    "fields": {
+        "content_type": [
+            "wagtailimages",
+            "image"
+        ],
+        "object_id": "2",
+        "autocomplete": "'sass_structure.png':1A",
+        "body": ""
+    }
+},
+{
+    "model": "postgres_search.indexentry",
+    "pk": 71,
+    "fields": {
+        "content_type": [
+            "wagtailimages",
+            "image"
+        ],
+        "object_id": "3",
+        "autocomplete": "'sass_folder_structure.png':1A",
+        "body": ""
+    }
+},
+{
+    "model": "postgres_search.indexentry",
+    "pk": 73,
+    "fields": {
+        "content_type": [
+            "base",
+            "postpage"
+        ],
+        "object_id": "10",
+        "autocomplete": "'file':4B 'sass':3B 'structur':1B",
+        "body": "'4':74 'across':88 'app.scss':109 'break':68 'code':23 'compil':111 'compon':78 'confus':57 'contenti':31 'debat':33 'dev':37 'easili':15 'element':91,94 'end':2 'everyon':50 'favorit':8,61 'file':25,66,105 'find':16 'folder':72,77 'front':1 'global':102 'help':48 'high':30 'howev':39 'html':93 'import':107 'keep':49 'larger':79 'love':5 'one':11 'organ':6,119 'page':54,95,96 'piec':21 'project':9,46,83 'reduc':56 'rememb':18 'reusabl':87 'sass':3,65 'scss':71 'section':80 'set':99,103 'sheet':116 'site':90 'specif':92 'standard':42 'static':114 'structur':26,43,64 'style':98,115 'sub':76 'sub-fold':75 'team':38 'templat':97 'topic':34 'variabl':100 'way':62 'yay':117"
+    }
+},
+{
+    "model": "postgres_search.indexentry",
+    "pk": 79,
+    "fields": {
+        "content_type": [
+            "base",
+            "postpage"
+        ],
+        "object_id": "11",
+        "autocomplete": "'css':6B 'design':3B 'icon':4B 'materi':2B 'show':1B",
+        "body": "'1':161 '24px':145 'almost':15 'also':105 'antialias':184 'awesom':20,236 'bit':229 'block':136 'bower':93 'career':10 'clean':212 'content':195,207 'css':3,112,127,198 'design':47,226 'develop':83 'devv':244 'differ':80 'direct':88,131 'display':133 'download':89 'easi':56 'element':117,199 'end':2 'excit':221 'exclus':16 'experi':5 'explain':85 'extend':190,203 'famili':139 'featur':177 'feel':26 'font':19,69,138,143,147,151,176,182,235 'font-famili':137 'font-siz':142 'font-styl':146 'font-weight':150 'fresh':31 'front':1 'fun':121 'get':58 'googl':44,68 'guid':84 'happi':243 'height':160 'html':72,101 'icon':48,130,141,206,216 'includ':64,77 'inlin':135 'inline-block':134 'label':208 'land':40 'letter':155 'letter-spac':154 'liga':179 'like':27,70 'line':159 'line-height':158 'littl':228 'love':210,242 'ltr':132 'm':220 'materi':46,129,140,205 'material-icon':128,204 'modern':214 'need':29 'next':51 'none':165 'normal':149,153,157,173 'nowrap':169 'npm':91 'project':52 'pseudo':197 'rather':76 'realiz':103 'recent':22 'research':38 'sass':187 'scss':200 'set':178,193 'size':144 'smooth':183 'someth':30,231 'space':156,168 'spice':223 'start':24,59 'still':239 'style':148 'super':55 'test':42 'text':163 'text-transform':162 'transform':164 'ul':201 'use':90,97,108,186,196,240 'user':4,17 'want':106 'way':81,122 'webkit':175,181 'webkit-font-feature-set':174 'webkit-font-smooth':180 'weight':152 'white':167 'white-spac':166 'word':171 'word-wrap':170 'work':33 'would':75 'wrap':172"
+    }
+},
+{
+    "model": "postgres_search.indexentry",
+    "pk": 82,
+    "fields": {
+        "content_type": [
+            "base",
+            "postpage"
+        ],
+        "object_id": "12",
+        "autocomplete": "'alia':3B 'command':7B 'creat':1B 'django':6B 'pipenv':5B",
+        "body": "'1':51 'abl':163 'add':102 'alia':52,107 'alias':43 'along':146 'appear':145 'bash':2,80,91,105,169 'case':95 'click':153 'cmd':135 'command':26,166 'createsuperus':174 'custom':38 'develop':64 'directori':132 'django':4,63 'doubl':152 'easi':33 'easier':181 'editor':158 'ender':12 'everyday':58 'experi':41 'faster':183 'file':84,100,140,151 'find':119 'finder':125 'follow':104 'front':11 'front-end':10 'fun':31 'go':47 'hidden':139,150 'home':131 'like':19 'local':90 'long':24 'm':46 'mac':128 'makemigr':176 'manage.py':112 'mayb':5 'memor':20 'migrat':178 'much':180 'multipl':56 'one':74 'open':77,124,155 'perfect':73 'pipenv':1,67,109 'pippi':108,171,173,175,177 'profil':81 'python':3,111 're':61,115 'run':110 'runserv':172 'script':92 'share':49 'shell':25,40,106,170 'shift':136 'show':138 'thank':27 'time':57 'today':44 'type':22 'unsur':116 'use':42,55,66,87,134,165 'voila':159 'way':34 '~/.bash_profile':121,142 '~/.zshrc':99"
+    }
+},
+{
+    "model": "postgres_search.indexentry",
+    "pk": 85,
+    "fields": {
+        "content_type": [
+            "base",
+            "postpage"
+        ],
+        "object_id": "13",
+        "autocomplete": "'ad':1B 'alert':5B 'extern':3B 'link':4B",
+        "body": "'-1':185 '0':175,178,179,180,181,190 '100':121 '1px':183,194 'absolut':192 'access':1,23,46 'ad':127,141 'add':14,164 'addclass':107 'alert':54 'also':163 'append':114 'aren':157 'blank':106 'bootstrap':153,160 'border':174 'built':151 'class':144,149 'clip':176 'complet':36 'control':87 'css':169 'differ':80 'easiest':90 'end':76 'extern':27,68,109,112,115 'external-link':108,111 'follow':100,166 'function':103 'height':182 'help':21 'hidden':188 'import':52 'improv':22 'issu':25 'javascript':2,9,101 'leav':62 'like':12 'link':28,69,110,113,116,134 'littl':6 'load':136 'made':45 'make':130 'margin':184 'may':40,42 'necessari':143 'new':37,119 'open':117 'opinion':97 'overflow':187 'pad':189 'page':139 'posit':191 'prioriti':48 'project':19 'px':186 'reader':57 'rect':177 'screen':56 'scss':170 'select':66 'settimeout':102 'short':124 'site':81 'snippet':7 'sr':147,172 'sr-on':146,171 'sure':131 'take':31 'target':105 'therefor':49 'timeout':125 'unknow':75 'use':159 'user':33,58 'way':71,91 'websit':38,64 'width':193 'window':120 'won':73"
+    }
+},
+{
+    "model": "wagtailimages.image",
+    "pk": 1,
+    "fields": {
+        "collection": 1,
+        "title": "IMG_6499.jpeg",
+        "file": "original_images/IMG_6499.jpeg",
+        "width": 2320,
+        "height": 3088,
+        "created_at": "2019-05-22T02:02:38.247Z",
+        "uploaded_by_user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "focal_point_x": null,
+        "focal_point_y": null,
+        "focal_point_width": null,
+        "focal_point_height": null,
+        "file_size": 1479150,
+        "file_hash": "8eeb13301f31c7c7a5724ff46044468313ea0e3d"
+    }
+},
+{
+    "model": "wagtailimages.image",
+    "pk": 2,
+    "fields": {
+        "collection": 1,
+        "title": "Sass_Structure.png",
+        "file": "original_images/Sass_Structure.png",
+        "width": 220,
+        "height": 461,
+        "created_at": "2020-03-15T16:48:33.489Z",
+        "uploaded_by_user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "focal_point_x": null,
+        "focal_point_y": null,
+        "focal_point_width": null,
+        "focal_point_height": null,
+        "file_size": 29351,
+        "file_hash": "6bee79a6954daa5fd7ae283bac9f5405ccc6dd5b"
+    }
+},
+{
+    "model": "wagtailimages.image",
+    "pk": 3,
+    "fields": {
+        "collection": 1,
+        "title": "SASS_folder_structure.png",
+        "file": "original_images/SASS_folder_structure.png",
+        "width": 429,
+        "height": 558,
+        "created_at": "2020-03-15T16:49:09.404Z",
+        "uploaded_by_user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "focal_point_x": null,
+        "focal_point_y": null,
+        "focal_point_width": null,
+        "focal_point_height": null,
+        "file_size": 48400,
+        "file_hash": "9f193712b3014bccc92800c97a4729eef7cac070"
+    }
+},
+{
+    "model": "wagtailimages.rendition",
+    "pk": 1,
+    "fields": {
+        "filter_spec": "max-800x600",
+        "file": "images/IMG_6499.max-800x600.jpg",
+        "width": 450,
+        "height": 600,
+        "focal_point_key": "",
+        "image": 1
+    }
+},
+{
+    "model": "wagtailimages.rendition",
+    "pk": 2,
+    "fields": {
+        "filter_spec": "width-800",
+        "file": "images/IMG_6499.width-800.jpg",
+        "width": 800,
+        "height": 1064,
+        "focal_point_key": "",
+        "image": 1
+    }
+},
+{
+    "model": "wagtailimages.rendition",
+    "pk": 3,
+    "fields": {
+        "filter_spec": "max-165x165",
+        "file": "images/IMG_6499.max-165x165.jpg",
+        "width": 123,
+        "height": 165,
+        "focal_point_key": "",
+        "image": 1
+    }
+},
+{
+    "model": "wagtailimages.rendition",
+    "pk": 4,
+    "fields": {
+        "filter_spec": "max-800x600",
+        "file": "images/Sass_Structure.max-800x600.png",
+        "width": 220,
+        "height": 461,
+        "focal_point_key": "",
+        "image": 2
+    }
+},
+{
+    "model": "wagtailimages.rendition",
+    "pk": 5,
+    "fields": {
+        "filter_spec": "width-500",
+        "file": "images/Sass_Structure.width-500.png",
+        "width": 220,
+        "height": 461,
+        "focal_point_key": "",
+        "image": 2
+    }
+},
+{
+    "model": "wagtailimages.rendition",
+    "pk": 6,
+    "fields": {
+        "filter_spec": "max-165x165",
+        "file": "images/Sass_Structure.max-165x165.png",
+        "width": 78,
+        "height": 165,
+        "focal_point_key": "",
+        "image": 2
+    }
+},
+{
+    "model": "wagtailimages.rendition",
+    "pk": 7,
+    "fields": {
+        "filter_spec": "max-800x600",
+        "file": "images/SASS_folder_structure.max-800x600.png",
+        "width": 429,
+        "height": 558,
+        "focal_point_key": "",
+        "image": 3
+    }
+},
+{
+    "model": "wagtailimages.rendition",
+    "pk": 8,
+    "fields": {
+        "filter_spec": "width-500",
+        "file": "images/SASS_folder_structure.width-500.png",
+        "width": 429,
+        "height": 558,
+        "focal_point_key": "",
+        "image": 3
+    }
+},
+{
+    "model": "wagtailcore.site",
+    "pk": 1,
+    "fields": {
+        "hostname": "localhost",
+        "port": 80,
+        "site_name": "uname",
+        "root_page": 3,
+        "is_default_site": true
+    }
+},
+{
+    "model": "wagtailcore.page",
+    "pk": 1,
+    "fields": {
+        "path": "0001",
+        "depth": 1,
+        "numchild": 1,
+        "title": "Root",
+        "draft_title": "Root",
+        "slug": "root",
+        "content_type": [
+            "wagtailcore",
+            "page"
+        ],
+        "live": true,
+        "has_unpublished_changes": false,
+        "url_path": "/",
+        "owner": null,
+        "seo_title": "",
+        "show_in_menus": false,
+        "search_description": "",
+        "go_live_at": null,
+        "expire_at": null,
+        "expired": false,
+        "locked": false,
+        "first_published_at": null,
+        "last_published_at": null,
+        "latest_revision_created_at": null,
+        "live_revision": null
+    }
+},
+{
+    "model": "wagtailcore.page",
+    "pk": 3,
+    "fields": {
+        "path": "00010002",
+        "depth": 2,
+        "numchild": 9,
+        "title": "Home",
+        "draft_title": "Home",
+        "slug": "home",
+        "content_type": [
+            "base",
+            "blogpage"
+        ],
+        "live": true,
+        "has_unpublished_changes": false,
+        "url_path": "/home/",
+        "owner": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "seo_title": "",
+        "show_in_menus": false,
+        "search_description": "",
+        "go_live_at": null,
+        "expire_at": null,
+        "expired": false,
+        "locked": false,
+        "first_published_at": "2019-05-01T02:12:36.708Z",
+        "last_published_at": "2019-05-01T02:12:53.252Z",
+        "latest_revision_created_at": "2019-05-01T02:12:53.231Z",
+        "live_revision": 3
+    }
+},
+{
+    "model": "wagtailcore.page",
+    "pk": 4,
+    "fields": {
+        "path": "000100020001",
+        "depth": 3,
+        "numchild": 0,
+        "title": "3 easy ways to make your site more accessible",
+        "draft_title": "3 easy ways to make your site more accessible",
+        "slug": "3-easy-ways-make-your-site-more-accessible",
+        "content_type": [
+            "base",
+            "postpage"
+        ],
+        "live": true,
+        "has_unpublished_changes": false,
+        "url_path": "/home/3-easy-ways-make-your-site-more-accessible/",
+        "owner": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "seo_title": "",
+        "show_in_menus": false,
+        "search_description": "",
+        "go_live_at": null,
+        "expire_at": null,
+        "expired": false,
+        "locked": false,
+        "first_published_at": "2019-05-22T02:02:47.628Z",
+        "last_published_at": "2020-03-15T16:46:07.373Z",
+        "latest_revision_created_at": "2020-03-15T16:46:07.322Z",
+        "live_revision": 32
+    }
+},
+{
+    "model": "wagtailcore.page",
+    "pk": 5,
+    "fields": {
+        "path": "000100020002",
+        "depth": 3,
+        "numchild": 0,
+        "title": "Contact",
+        "draft_title": "Contact",
+        "slug": "contact",
+        "content_type": [
+            "base",
+            "formpage"
+        ],
+        "live": true,
+        "has_unpublished_changes": false,
+        "url_path": "/home/contact/",
+        "owner": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "seo_title": "",
+        "show_in_menus": true,
+        "search_description": "",
+        "go_live_at": null,
+        "expire_at": null,
+        "expired": false,
+        "locked": false,
+        "first_published_at": "2019-06-25T02:38:06.688Z",
+        "last_published_at": "2019-06-25T02:38:15.054Z",
+        "latest_revision_created_at": "2019-06-25T02:38:15.024Z",
+        "live_revision": 6
+    }
+},
+{
+    "model": "wagtailcore.page",
+    "pk": 7,
+    "fields": {
+        "path": "000100020004",
+        "depth": 3,
+        "numchild": 0,
+        "title": "Wagtail Icons",
+        "draft_title": "Wagtail Icons",
+        "slug": "wagtail-icons",
+        "content_type": [
+            "base",
+            "postpage"
+        ],
+        "live": true,
+        "has_unpublished_changes": false,
+        "url_path": "/home/wagtail-icons/",
+        "owner": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "seo_title": "",
+        "show_in_menus": false,
+        "search_description": "",
+        "go_live_at": null,
+        "expire_at": null,
+        "expired": false,
+        "locked": false,
+        "first_published_at": "2019-09-05T18:52:42.565Z",
+        "last_published_at": "2019-09-05T19:12:45.637Z",
+        "latest_revision_created_at": "2019-09-05T19:12:45.614Z",
+        "live_revision": 27
+    }
+},
+{
+    "model": "wagtailcore.page",
+    "pk": 8,
+    "fields": {
+        "path": "000100020005",
+        "depth": 3,
+        "numchild": 0,
+        "title": "About",
+        "draft_title": "About",
+        "slug": "about",
+        "content_type": [
+            "base",
+            "basepage"
+        ],
+        "live": true,
+        "has_unpublished_changes": false,
+        "url_path": "/home/about/",
+        "owner": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "seo_title": "",
+        "show_in_menus": true,
+        "search_description": "",
+        "go_live_at": null,
+        "expire_at": null,
+        "expired": false,
+        "locked": false,
+        "first_published_at": "2020-03-15T16:39:38.415Z",
+        "last_published_at": "2020-03-15T16:39:38.415Z",
+        "latest_revision_created_at": "2020-03-15T16:39:38.389Z",
+        "live_revision": 28
+    }
+},
+{
+    "model": "wagtailcore.page",
+    "pk": 9,
+    "fields": {
+        "path": "000100020006",
+        "depth": 3,
+        "numchild": 0,
+        "title": "Introduction",
+        "draft_title": "Introduction",
+        "slug": "introduction",
+        "content_type": [
+            "base",
+            "postpage"
+        ],
+        "live": true,
+        "has_unpublished_changes": false,
+        "url_path": "/home/introduction/",
+        "owner": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "seo_title": "",
+        "show_in_menus": false,
+        "search_description": "",
+        "go_live_at": null,
+        "expire_at": null,
+        "expired": false,
+        "locked": false,
+        "first_published_at": "2020-03-15T16:40:21.281Z",
+        "last_published_at": "2020-03-15T16:41:00.576Z",
+        "latest_revision_created_at": "2020-03-15T16:41:00.544Z",
+        "live_revision": 30
+    }
+},
+{
+    "model": "wagtailcore.page",
+    "pk": 10,
+    "fields": {
+        "path": "000100020007",
+        "depth": 3,
+        "numchild": 0,
+        "title": "Structuring your SASS files",
+        "draft_title": "Structuring your SASS files",
+        "slug": "structuring-your-sass-files",
+        "content_type": [
+            "base",
+            "postpage"
+        ],
+        "live": true,
+        "has_unpublished_changes": false,
+        "url_path": "/home/structuring-your-sass-files/",
+        "owner": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "seo_title": "",
+        "show_in_menus": false,
+        "search_description": "",
+        "go_live_at": null,
+        "expire_at": null,
+        "expired": false,
+        "locked": false,
+        "first_published_at": "2020-03-15T16:49:27.554Z",
+        "last_published_at": "2020-03-15T16:49:40.654Z",
+        "latest_revision_created_at": "2020-03-15T16:49:40.624Z",
+        "live_revision": 34
+    }
+},
+{
+    "model": "wagtailcore.page",
+    "pk": 11,
+    "fields": {
+        "path": "000100020008",
+        "depth": 3,
+        "numchild": 0,
+        "title": "Show Material Design Icons with CSS :after :before",
+        "draft_title": "Show Material Design Icons with CSS :after :before",
+        "slug": "show-material-design-icons-css-after",
+        "content_type": [
+            "base",
+            "postpage"
+        ],
+        "live": true,
+        "has_unpublished_changes": false,
+        "url_path": "/home/show-material-design-icons-css-after/",
+        "owner": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "seo_title": "",
+        "show_in_menus": false,
+        "search_description": "",
+        "go_live_at": null,
+        "expire_at": null,
+        "expired": false,
+        "locked": false,
+        "first_published_at": "2020-03-15T16:51:57.379Z",
+        "last_published_at": "2020-03-15T16:51:57.379Z",
+        "latest_revision_created_at": "2020-03-15T16:51:57.347Z",
+        "live_revision": 35
+    }
+},
+{
+    "model": "wagtailcore.page",
+    "pk": 12,
+    "fields": {
+        "path": "000100020009",
+        "depth": 3,
+        "numchild": 0,
+        "title": "Creating an alias for Pipenv + Django commands",
+        "draft_title": "Creating an alias for Pipenv + Django commands",
+        "slug": "creating-alias-pipenv-django-commands",
+        "content_type": [
+            "base",
+            "postpage"
+        ],
+        "live": true,
+        "has_unpublished_changes": false,
+        "url_path": "/home/creating-alias-pipenv-django-commands/",
+        "owner": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "seo_title": "",
+        "show_in_menus": false,
+        "search_description": "",
+        "go_live_at": null,
+        "expire_at": null,
+        "expired": false,
+        "locked": false,
+        "first_published_at": "2020-03-15T16:54:12.057Z",
+        "last_published_at": "2020-03-15T16:54:12.057Z",
+        "latest_revision_created_at": "2020-03-15T16:54:12.018Z",
+        "live_revision": 36
+    }
+},
+{
+    "model": "wagtailcore.page",
+    "pk": 13,
+    "fields": {
+        "path": "00010002000A",
+        "depth": 3,
+        "numchild": 0,
+        "title": "Adding an external link alert",
+        "draft_title": "Adding an external link alert",
+        "slug": "adding-external-link-alert",
+        "content_type": [
+            "base",
+            "postpage"
+        ],
+        "live": true,
+        "has_unpublished_changes": false,
+        "url_path": "/home/adding-external-link-alert/",
+        "owner": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "seo_title": "",
+        "show_in_menus": false,
+        "search_description": "",
+        "go_live_at": null,
+        "expire_at": null,
+        "expired": false,
+        "locked": false,
+        "first_published_at": "2020-03-15T16:55:32.913Z",
+        "last_published_at": "2020-03-15T16:55:32.913Z",
+        "latest_revision_created_at": "2020-03-15T16:55:32.879Z",
+        "live_revision": 37
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 1,
+    "fields": {
+        "page": 3,
+        "submitted_for_moderation": false,
+        "created_at": "2019-05-01T02:12:36.692Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 3, \"path\": \"00010002\", \"depth\": 2, \"numchild\": 0, \"title\": \"Home\", \"draft_title\": \"Home\", \"slug\": \"home-page\", \"content_type\": 13, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home-page/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"page_title_override\": \"\", \"intro\": \"\", \"page_content\": \"[]\"}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 3,
+    "fields": {
+        "page": 3,
+        "submitted_for_moderation": false,
+        "created_at": "2019-05-01T02:12:53.231Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 3, \"path\": \"00010002\", \"depth\": 2, \"numchild\": 0, \"title\": \"Home\", \"draft_title\": \"Home\", \"slug\": \"home\", \"content_type\": 13, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home-page/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-05-01T02:12:36.708Z\", \"last_published_at\": \"2019-05-01T02:12:36.708Z\", \"latest_revision_created_at\": \"2019-05-01T02:12:36.692Z\", \"live_revision\": 1, \"page_title_override\": \"\", \"intro\": \"\", \"page_content\": \"[]\"}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 4,
+    "fields": {
+        "page": 4,
+        "submitted_for_moderation": false,
+        "created_at": "2019-05-22T02:02:47.610Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 4, \"path\": \"000100020001\", \"depth\": 3, \"numchild\": 0, \"title\": \"New blog post\", \"draft_title\": \"New blog post\", \"slug\": \"new-blog-post\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/new-blog-post/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"intro\": \"\", \"date\": \"2019-05-22T02:02:00Z\", \"page_content\": \"[{\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p></p><embed alt=\\\\\\\"IMG_6499.jpeg\\\\\\\" embedtype=\\\\\\\"image\\\\\\\" format=\\\\\\\"fullwidth\\\\\\\" id=\\\\\\\"1\\\\\\\"/><p></p>\\\"}, \\\"id\\\": \\\"95d5dd17-ef5b-48b0-b6c5-1ba63c8ac4d0\\\"}]\", \"seo_keywords\": \"\", \"socials\": true, \"addthis_pubid\": \"5bbcb76243b82dd4\", \"post_tags\": []}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 5,
+    "fields": {
+        "page": 5,
+        "submitted_for_moderation": false,
+        "created_at": "2019-06-25T02:38:06.665Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 5, \"path\": \"000100020002\", \"depth\": 3, \"numchild\": 0, \"title\": \"Contact\", \"draft_title\": \"Contact\", \"slug\": \"contact\", \"content_type\": 15, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/contact/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"to_address\": \"\", \"from_address\": \"\", \"subject\": \"\", \"page_title_override\": \"\", \"intro\": \"\", \"intro_content\": \"\", \"thank_you_text\": \"<p>Thank you for your submission.</p>\", \"page_content\": \"[]\", \"form_fields\": [{\"pk\": 1, \"sort_order\": 0, \"label\": \"First Name\", \"field_type\": \"singleline\", \"required\": true, \"choices\": \"\", \"default_value\": \"\", \"help_text\": \"\", \"page\": 5}, {\"pk\": 2, \"sort_order\": 1, \"label\": \"Last Name\", \"field_type\": \"singleline\", \"required\": true, \"choices\": \"\", \"default_value\": \"\", \"help_text\": \"\", \"page\": 5}, {\"pk\": 3, \"sort_order\": 2, \"label\": \"Email\", \"field_type\": \"email\", \"required\": true, \"choices\": \"\", \"default_value\": \"\", \"help_text\": \"\", \"page\": 5}, {\"pk\": 4, \"sort_order\": 3, \"label\": \"Comments\", \"field_type\": \"multiline\", \"required\": true, \"choices\": \"\", \"default_value\": \"\", \"help_text\": \"\", \"page\": 5}]}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 6,
+    "fields": {
+        "page": 5,
+        "submitted_for_moderation": false,
+        "created_at": "2019-06-25T02:38:15.024Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 5, \"path\": \"000100020002\", \"depth\": 3, \"numchild\": 0, \"title\": \"Contact\", \"draft_title\": \"Contact\", \"slug\": \"contact\", \"content_type\": 15, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/contact/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": true, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-06-25T02:38:06.688Z\", \"last_published_at\": \"2019-06-25T02:38:06.688Z\", \"latest_revision_created_at\": \"2019-06-25T02:38:06.665Z\", \"live_revision\": 5, \"to_address\": \"\", \"from_address\": \"\", \"subject\": \"\", \"page_title_override\": \"\", \"intro\": \"\", \"intro_content\": \"\", \"thank_you_text\": \"<p>Thank you for your submission.</p>\", \"page_content\": \"[]\", \"form_fields\": [{\"pk\": 1, \"sort_order\": 0, \"label\": \"First Name\", \"field_type\": \"singleline\", \"required\": true, \"choices\": \"\", \"default_value\": \"\", \"help_text\": \"\", \"page\": 5}, {\"pk\": 2, \"sort_order\": 1, \"label\": \"Last Name\", \"field_type\": \"singleline\", \"required\": true, \"choices\": \"\", \"default_value\": \"\", \"help_text\": \"\", \"page\": 5}, {\"pk\": 3, \"sort_order\": 2, \"label\": \"Email\", \"field_type\": \"email\", \"required\": true, \"choices\": \"\", \"default_value\": \"\", \"help_text\": \"\", \"page\": 5}, {\"pk\": 4, \"sort_order\": 3, \"label\": \"Comments\", \"field_type\": \"multiline\", \"required\": true, \"choices\": \"\", \"default_value\": \"\", \"help_text\": \"\", \"page\": 5}]}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 7,
+    "fields": {
+        "page": 4,
+        "submitted_for_moderation": false,
+        "created_at": "2019-07-01T23:03:22.085Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 4, \"path\": \"000100020001\", \"depth\": 3, \"numchild\": 0, \"title\": \"A few simple (and elegant) ways to make your site more accessible\", \"draft_title\": \"New blog post\", \"slug\": \"new-blog-post\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/new-blog-post/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-05-22T02:02:47.628Z\", \"last_published_at\": \"2019-05-22T02:02:47.628Z\", \"latest_revision_created_at\": \"2019-05-22T02:02:47.610Z\", \"live_revision\": 4, \"intro\": \"\", \"date\": \"2019-05-22T02:02:00Z\", \"page_content\": \"[{\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>There&#x27;s no excuse for ignoring the need to make your site more accessible. As a developer it is your responsibility to figure out how to incorporate accessibility into your workflows. You have the power! Here are a few easy ways to get started:</p><ol><li>Add skip links</li></ol><p>Skip links are an excellent way to help keyboard users navigation your site more efficiently. They are the very first links a tabbing user will find available to them, so make them count! The two I always use are: Skip to Content and Skip to Navigation. The third one I have used on larger sites is: Skip to Sitemap. This would allow the user to get an overview of all the available pages without needed to filter through much content.</p><p>The code for adding skip links is super straightforward and easy to implement on any site. The will only display when focused on but you can style them to match your design.</p>\\\"}, \\\"id\\\": \\\"e1c6308d-dc0c-460e-82cd-58dab70c85a4\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"html\\\", \\\"code\\\": \\\"<div id=\\\\\\\"skiplinks\\\\\\\" class=\\\\\\\"skiplinks\\\\\\\" role=\\\\\\\"navigation\\\\\\\">\\\\r\\\\n  <a class=\\\\\\\"skip-content\\\\\\\" href=\\\\\\\"#main-content\\\\\\\">Skip to Content</a><br>\\\\r\\\\n  <a class=\\\\\\\"skip-nav\\\\\\\" href=\\\\\\\"#main-nav\\\\\\\">Skip to Navigation</a>\\\\r\\\\n</div>\\\"}}, \\\"id\\\": \\\"f26c095c-3023-4fbe-aaff-b463302679d9\\\"}]\", \"seo_keywords\": \"\", \"socials\": true, \"addthis_pubid\": \"5bbcb76243b82dd4\", \"post_tags\": []}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 8,
+    "fields": {
+        "page": 4,
+        "submitted_for_moderation": false,
+        "created_at": "2019-07-02T01:34:36.490Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 4, \"path\": \"000100020001\", \"depth\": 3, \"numchild\": 0, \"title\": \"A few simple (and elegant) ways to make your site more accessible\", \"draft_title\": \"A few simple (and elegant) ways to make your site more accessible\", \"slug\": \"new-blog-post\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/new-blog-post/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-05-22T02:02:47.628Z\", \"last_published_at\": \"2019-07-01T23:03:22.250Z\", \"latest_revision_created_at\": \"2019-07-01T23:03:22.085Z\", \"live_revision\": 7, \"intro\": \"\", \"date\": \"2019-05-22T02:02:00Z\", \"page_content\": \"[{\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>There&#x27;s no excuse for ignoring the need to make your site more accessible. As a developer it is your responsibility to figure out how to incorporate accessibility into your workflows. You have the power! Here are a few easy ways to get started:</p><h3>Add skip links</h3><p>Skip links are an excellent way to help keyboard users navigation your site more efficiently. They are the very first links a tabbing user will find available to them, so make them count! The two I always use are: Skip to Content and Skip to Navigation. The third one I have used on larger sites is: Skip to Sitemap. This would allow the user to get an overview of all the available pages without needed to filter through much content.</p><p>The code for adding skip links is super straightforward and easy to implement on any site. The will only display when focused on but you can style them to match your design.</p>\\\"}, \\\"id\\\": \\\"e1c6308d-dc0c-460e-82cd-58dab70c85a4\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"html\\\", \\\"code\\\": \\\"<div id=\\\\\\\"skiplinks\\\\\\\" class=\\\\\\\"skiplinks\\\\\\\" role=\\\\\\\"navigation\\\\\\\">\\\\r\\\\n  <a class=\\\\\\\"skip-content\\\\\\\" href=\\\\\\\"#main-content\\\\\\\">Skip to Content</a><br>\\\\r\\\\n  <a class=\\\\\\\"skip-nav\\\\\\\" href=\\\\\\\"#main-nav\\\\\\\">Skip to Navigation</a>\\\\r\\\\n</div>\\\"}}, \\\"id\\\": \\\"f26c095c-3023-4fbe-aaff-b463302679d9\\\"}]\", \"seo_keywords\": \"\", \"socials\": true, \"addthis_pubid\": \"5bbcb76243b82dd4\", \"post_tags\": []}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 9,
+    "fields": {
+        "page": 4,
+        "submitted_for_moderation": false,
+        "created_at": "2019-07-02T01:35:32.202Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 4, \"path\": \"000100020001\", \"depth\": 3, \"numchild\": 0, \"title\": \"A few simple (and elegant) ways to make your site more accessible\", \"draft_title\": \"A few simple (and elegant) ways to make your site more accessible\", \"slug\": \"new-blog-post\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/new-blog-post/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-05-22T02:02:47.628Z\", \"last_published_at\": \"2019-07-02T01:34:36.523Z\", \"latest_revision_created_at\": \"2019-07-02T01:34:36.490Z\", \"live_revision\": 8, \"intro\": \"\", \"date\": \"2019-05-22T02:02:00Z\", \"page_content\": \"[{\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>There&#x27;s no excuse for ignoring the need to make your site more accessible. As a developer it is your responsibility to figure out how to incorporate accessibility into your workflows. You have the power! Here are a few easy ways to get started:</p><h3>Add skip links</h3><p>Skip links are an excellent way to help keyboard users navigation your site more efficiently. They are the very first links a tabbing user will find available to them, so make them count! The two I always use are: Skip to Content and Skip to Navigation. The third one I have used on larger sites is: Skip to Sitemap. This would allow the user to get an overview of all the available pages without needed to filter through much content.</p><p>The code for adding skip links is super straightforward and easy to implement on any site. The will only display when focused on but you can style them to match your design.</p>\\\"}, \\\"id\\\": \\\"e1c6308d-dc0c-460e-82cd-58dab70c85a4\\\"}, {\\\"type\\\": \\\"sub_heading_block\\\", \\\"value\\\": {\\\"sub_heading\\\": \\\"1. Add Skiplinks\\\"}, \\\"id\\\": \\\"74606a42-c9a3-4d41-a395-756e5c08ae6a\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"html\\\", \\\"code\\\": \\\"<div id=\\\\\\\"skiplinks\\\\\\\" class=\\\\\\\"skiplinks\\\\\\\" role=\\\\\\\"navigation\\\\\\\">\\\\r\\\\n  <a class=\\\\\\\"skip-content\\\\\\\" href=\\\\\\\"#main-content\\\\\\\">Skip to Content</a><br>\\\\r\\\\n  <a class=\\\\\\\"skip-nav\\\\\\\" href=\\\\\\\"#main-nav\\\\\\\">Skip to Navigation</a>\\\\r\\\\n</div>\\\"}}, \\\"id\\\": \\\"f26c095c-3023-4fbe-aaff-b463302679d9\\\"}]\", \"seo_keywords\": \"\", \"socials\": true, \"addthis_pubid\": \"5bbcb76243b82dd4\", \"post_tags\": []}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 10,
+    "fields": {
+        "page": 4,
+        "submitted_for_moderation": false,
+        "created_at": "2019-07-02T01:38:28.363Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 4, \"path\": \"000100020001\", \"depth\": 3, \"numchild\": 0, \"title\": \"A few simple (and elegant) ways to make your site more accessible\", \"draft_title\": \"A few simple (and elegant) ways to make your site more accessible\", \"slug\": \"new-blog-post\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/new-blog-post/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-05-22T02:02:47.628Z\", \"last_published_at\": \"2019-07-02T01:35:32.228Z\", \"latest_revision_created_at\": \"2019-07-02T01:35:32.202Z\", \"live_revision\": 9, \"intro\": \"\", \"date\": \"2019-05-22T02:02:00Z\", \"page_content\": \"[{\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>There&#x27;s no excuse for ignoring the need to make your site more accessible. As a developer it is your responsibility to figure out how to incorporate accessibility into your workflows. You have the power! Here are a few easy ways to get started:</p>\\\"}, \\\"id\\\": \\\"e1c6308d-dc0c-460e-82cd-58dab70c85a4\\\"}, {\\\"type\\\": \\\"sub_heading_block\\\", \\\"value\\\": {\\\"sub_heading\\\": \\\"1. Add Skip Links\\\"}, \\\"id\\\": \\\"1fb664fd-533b-4b6a-b598-7edac4ee1cdb\\\"}, {\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>Skip links are an excellent way to help keyboard users navigation your site more efficiently. They are the very first links a tabbing user will find available to them, so make them count! The two I always use are: Skip to Content and Skip to Navigation. The third one I have used on larger sites is: Skip to Sitemap. This would allow the user to get an overview of all the available pages without needed to filter through much content.</p><p>The code for adding skip links is super straightforward and easy to implement on any site. The will only display when focused on but you can style them to match your design.</p>\\\"}, \\\"id\\\": \\\"1a1ffaab-8106-4e7e-968d-0fdb47332de7\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"html\\\", \\\"code\\\": \\\"<div id=\\\\\\\"skiplinks\\\\\\\" class=\\\\\\\"skiplinks\\\\\\\" role=\\\\\\\"navigation\\\\\\\">\\\\r\\\\n  <a class=\\\\\\\"skip-content\\\\\\\" href=\\\\\\\"#main-content\\\\\\\">Skip to Content</a><br>\\\\r\\\\n  <a class=\\\\\\\"skip-nav\\\\\\\" href=\\\\\\\"#main-nav\\\\\\\">Skip to Navigation</a>\\\\r\\\\n</div>\\\"}}, \\\"id\\\": \\\"f26c095c-3023-4fbe-aaff-b463302679d9\\\"}]\", \"seo_keywords\": \"\", \"socials\": true, \"addthis_pubid\": \"5bbcb76243b82dd4\", \"post_tags\": []}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 11,
+    "fields": {
+        "page": 4,
+        "submitted_for_moderation": false,
+        "created_at": "2019-07-02T01:45:51.622Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 4, \"path\": \"000100020001\", \"depth\": 3, \"numchild\": 0, \"title\": \"A few simple (and elegant) ways to make your site more accessible\", \"draft_title\": \"A few simple (and elegant) ways to make your site more accessible\", \"slug\": \"new-blog-post\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/new-blog-post/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-05-22T02:02:47.628Z\", \"last_published_at\": \"2019-07-02T01:38:28.396Z\", \"latest_revision_created_at\": \"2019-07-02T01:38:28.363Z\", \"live_revision\": 10, \"intro\": \"\", \"date\": \"2019-05-22T02:02:00Z\", \"page_content\": \"[{\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>There&#x27;s no excuse for ignoring the need to make your site more accessible. As a developer it is your responsibility to figure out how to incorporate accessibility into your workflows. You have the power! Here are a few easy ways to get started:</p>\\\"}, \\\"id\\\": \\\"e1c6308d-dc0c-460e-82cd-58dab70c85a4\\\"}, {\\\"type\\\": \\\"sub_heading_block\\\", \\\"value\\\": {\\\"sub_heading\\\": \\\"1. Add Skip Links\\\"}, \\\"id\\\": \\\"1fb664fd-533b-4b6a-b598-7edac4ee1cdb\\\"}, {\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>Skip links are an excellent way to help keyboard users navigation your site more efficiently. They are the very first links a tabbing user will find available to them, so make them count! The two I always use are: Skip to Content and Skip to Navigation. The third one I have used on larger sites is: Skip to Sitemap. This would allow the user to get an overview of all the available pages without needed to filter through much content.</p><p>The code for adding skip links is super straightforward and easy to implement on any site. The will only display when focused on but you can style them to match your design.</p>\\\"}, \\\"id\\\": \\\"1a1ffaab-8106-4e7e-968d-0fdb47332de7\\\"}, {\\\"type\\\": \\\"html_block\\\", \\\"value\\\": {\\\"html\\\": \\\"<pre>HTML</pre>\\\"}, \\\"id\\\": \\\"d621c94f-0d83-49d5-b619-c1c0a58167da\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"html\\\", \\\"code\\\": \\\"<div id=\\\\\\\"skiplinks\\\\\\\" class=\\\\\\\"skiplinks\\\\\\\" role=\\\\\\\"navigation\\\\\\\">\\\\r\\\\n  <a class=\\\\\\\"skip-content\\\\\\\" href=\\\\\\\"#main-content\\\\\\\">Skip to Content</a><br>\\\\r\\\\n  <a class=\\\\\\\"skip-nav\\\\\\\" href=\\\\\\\"#main-nav\\\\\\\">Skip to Navigation</a>\\\\r\\\\n</div>\\\"}}, \\\"id\\\": \\\"f26c095c-3023-4fbe-aaff-b463302679d9\\\"}]\", \"seo_keywords\": \"\", \"socials\": true, \"addthis_pubid\": \"5bbcb76243b82dd4\", \"post_tags\": []}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 12,
+    "fields": {
+        "page": 4,
+        "submitted_for_moderation": false,
+        "created_at": "2019-07-02T01:46:34.589Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 4, \"path\": \"000100020001\", \"depth\": 3, \"numchild\": 0, \"title\": \"Simple (and elegant) ways to make your site more accessible\", \"draft_title\": \"A few simple (and elegant) ways to make your site more accessible\", \"slug\": \"new-blog-post\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/new-blog-post/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-05-22T02:02:47.628Z\", \"last_published_at\": \"2019-07-02T01:45:51.650Z\", \"latest_revision_created_at\": \"2019-07-02T01:45:51.622Z\", \"live_revision\": 11, \"intro\": \"\", \"date\": \"2019-05-22T02:02:00Z\", \"page_content\": \"[{\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>There&#x27;s no excuse for ignoring the need to make your site more accessible. As a developer it is your responsibility to figure out how to incorporate accessibility into your workflows. You have the power! Here are a few easy ways to get started:</p>\\\"}, \\\"id\\\": \\\"e1c6308d-dc0c-460e-82cd-58dab70c85a4\\\"}, {\\\"type\\\": \\\"sub_heading_block\\\", \\\"value\\\": {\\\"sub_heading\\\": \\\"1. Add Skip Links\\\"}, \\\"id\\\": \\\"1fb664fd-533b-4b6a-b598-7edac4ee1cdb\\\"}, {\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>Skip links are an excellent way to help keyboard users navigation your site more efficiently. They are the very first links a tabbing user will find available to them, so make them count! The two I always use are: Skip to Content and Skip to Navigation. The third one I have used on larger sites is: Skip to Sitemap. This would allow the user to get an overview of all the available pages without needed to filter through much content.</p><p>The code for adding skip links is super straightforward and easy to implement on any site. The will only display when focused on but you can style them to match your design.</p>\\\"}, \\\"id\\\": \\\"1a1ffaab-8106-4e7e-968d-0fdb47332de7\\\"}, {\\\"type\\\": \\\"html_block\\\", \\\"value\\\": {\\\"html\\\": \\\"<pre>HTML</pre>\\\"}, \\\"id\\\": \\\"d621c94f-0d83-49d5-b619-c1c0a58167da\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"html\\\", \\\"code\\\": \\\"<div id=\\\\\\\"skiplinks\\\\\\\" class=\\\\\\\"skiplinks\\\\\\\" role=\\\\\\\"navigation\\\\\\\">\\\\r\\\\n  <a class=\\\\\\\"skip-content\\\\\\\" href=\\\\\\\"#main-content\\\\\\\">Skip to Content</a><br>\\\\r\\\\n  <a class=\\\\\\\"skip-nav\\\\\\\" href=\\\\\\\"#main-nav\\\\\\\">Skip to Navigation</a>\\\\r\\\\n</div>\\\"}}, \\\"id\\\": \\\"f26c095c-3023-4fbe-aaff-b463302679d9\\\"}]\", \"seo_keywords\": \"\", \"socials\": true, \"addthis_pubid\": \"5bbcb76243b82dd4\", \"post_tags\": []}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 13,
+    "fields": {
+        "page": 4,
+        "submitted_for_moderation": false,
+        "created_at": "2019-07-02T01:52:49.087Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 4, \"path\": \"000100020001\", \"depth\": 3, \"numchild\": 0, \"title\": \"Simple (and elegant) ways to make your site more accessible\", \"draft_title\": \"Simple (and elegant) ways to make your site more accessible\", \"slug\": \"new-blog-post\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/new-blog-post/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-05-22T02:02:47.628Z\", \"last_published_at\": \"2019-07-02T01:46:34.613Z\", \"latest_revision_created_at\": \"2019-07-02T01:46:34.589Z\", \"live_revision\": 12, \"intro\": \"\", \"date\": \"2019-05-22T02:02:00Z\", \"page_content\": \"[{\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>There&#x27;s no excuse for ignoring the need to make your site more accessible. As a developer it is your responsibility to figure out how to incorporate accessibility into your workflows. You have the power! Here are a few easy ways to get started:</p>\\\"}, \\\"id\\\": \\\"e1c6308d-dc0c-460e-82cd-58dab70c85a4\\\"}, {\\\"type\\\": \\\"sub_heading_block\\\", \\\"value\\\": {\\\"sub_heading\\\": \\\"1. Add Skip Links\\\"}, \\\"id\\\": \\\"1fb664fd-533b-4b6a-b598-7edac4ee1cdb\\\"}, {\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>Skip links are an excellent way to help keyboard users navigation your site more efficiently. They are the very first links a tabbing user will find available to them, so make them count! The two I always use are: Skip to Content and Skip to Navigation. The third one I have used on larger sites is: Skip to Sitemap. This would allow the user to get an overview of all the available pages without needed to filter through much content.</p><p>The code for adding skip links is super straightforward and easy to implement on any site. The will only display when focused on but you can style them to match your design.</p>\\\"}, \\\"id\\\": \\\"1a1ffaab-8106-4e7e-968d-0fdb47332de7\\\"}, {\\\"type\\\": \\\"html_block\\\", \\\"value\\\": {\\\"html\\\": \\\"<pre>HTML</pre>\\\"}, \\\"id\\\": \\\"d621c94f-0d83-49d5-b619-c1c0a58167da\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"html\\\", \\\"code\\\": \\\"<div id=\\\\\\\"skiplinks\\\\\\\" class=\\\\\\\"skiplinks\\\\\\\" role=\\\\\\\"navigation\\\\\\\">\\\\r\\\\n  <a class=\\\\\\\"skip-content\\\\\\\" href=\\\\\\\"#main-content\\\\\\\">Skip to Content</a><br>\\\\r\\\\n  <a class=\\\\\\\"skip-nav\\\\\\\" href=\\\\\\\"#main-nav\\\\\\\">Skip to Navigation</a>\\\\r\\\\n</div>\\\"}}, \\\"id\\\": \\\"f26c095c-3023-4fbe-aaff-b463302679d9\\\"}]\", \"seo_keywords\": \"\", \"socials\": true, \"addthis_pubid\": \"5bbcb76243b82dd4\", \"post_tags\": [{\"pk\": null, \"tag\": 1, \"content_object\": 4}]}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 14,
+    "fields": {
+        "page": 4,
+        "submitted_for_moderation": false,
+        "created_at": "2019-07-02T02:05:35.776Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 4, \"path\": \"000100020001\", \"depth\": 3, \"numchild\": 0, \"title\": \"A Few Simple (and elegant) ways to make your site more accessible\", \"draft_title\": \"Simple (and elegant) ways to make your site more accessible\", \"slug\": \"new-blog-post\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/new-blog-post/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-05-22T02:02:47.628Z\", \"last_published_at\": \"2019-07-02T01:52:49.120Z\", \"latest_revision_created_at\": \"2019-07-02T01:52:49.087Z\", \"live_revision\": 13, \"intro\": \"\", \"date\": \"2019-05-22T02:02:00Z\", \"page_content\": \"[{\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>There&#x27;s no excuse for ignoring the need to make your site more accessible. As a developer it is your responsibility to figure out how to incorporate accessibility into your workflows. You have the power! Here are a few easy ways to get started:</p>\\\"}, \\\"id\\\": \\\"e1c6308d-dc0c-460e-82cd-58dab70c85a4\\\"}, {\\\"type\\\": \\\"sub_heading_block\\\", \\\"value\\\": {\\\"sub_heading\\\": \\\"1. Add Skip Links\\\"}, \\\"id\\\": \\\"1fb664fd-533b-4b6a-b598-7edac4ee1cdb\\\"}, {\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>Skip links are an excellent way to help keyboard users navigation your site more efficiently. They are the very first links a tabbing user will find available to them, so make them count! The two I always use are: Skip to Content and Skip to Navigation. The third one I have used on larger sites is: Skip to Sitemap. This would allow the user to get an overview of all the available pages without needed to filter through much content.</p><p>The code for adding skip links is super straightforward and easy to implement on any site. The will only display when focused on but you can style them to match your design.</p>\\\"}, \\\"id\\\": \\\"1a1ffaab-8106-4e7e-968d-0fdb47332de7\\\"}, {\\\"type\\\": \\\"html_block\\\", \\\"value\\\": {\\\"html\\\": \\\"<pre>HTML</pre>\\\"}, \\\"id\\\": \\\"d621c94f-0d83-49d5-b619-c1c0a58167da\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"html\\\", \\\"code\\\": \\\"<div id=\\\\\\\"skiplinks\\\\\\\" class=\\\\\\\"skiplinks\\\\\\\" role=\\\\\\\"navigation\\\\\\\">\\\\r\\\\n  <a class=\\\\\\\"skip-content\\\\\\\" href=\\\\\\\"#main-content\\\\\\\">Skip to Content</a><br>\\\\r\\\\n  <a class=\\\\\\\"skip-nav\\\\\\\" href=\\\\\\\"#main-nav\\\\\\\">Skip to Navigation</a>\\\\r\\\\n</div>\\\"}}, \\\"id\\\": \\\"f26c095c-3023-4fbe-aaff-b463302679d9\\\"}]\", \"seo_keywords\": \"\", \"socials\": true, \"addthis_pubid\": \"5bbcb76243b82dd4\", \"post_tags\": [{\"pk\": null, \"tag\": 1, \"content_object\": 4}]}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 15,
+    "fields": {
+        "page": 4,
+        "submitted_for_moderation": false,
+        "created_at": "2019-07-02T02:16:43.457Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 4, \"path\": \"000100020001\", \"depth\": 3, \"numchild\": 0, \"title\": \"Three ways to make your site more accessible\", \"draft_title\": \"A Few Simple (and elegant) ways to make your site more accessible\", \"slug\": \"new-blog-post\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/new-blog-post/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-05-22T02:02:47.628Z\", \"last_published_at\": \"2019-07-02T02:05:35.813Z\", \"latest_revision_created_at\": \"2019-07-02T02:05:35.776Z\", \"live_revision\": 14, \"intro\": \"\", \"date\": \"2019-05-22T02:02:00Z\", \"page_content\": \"[{\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>There&#x27;s no excuse for ignoring the need to make your site more accessible. As a developer it is your responsibility to figure out how to incorporate accessibility into your workflows. You have the power! Here are a few easy ways to get started:</p>\\\"}, \\\"id\\\": \\\"e1c6308d-dc0c-460e-82cd-58dab70c85a4\\\"}, {\\\"type\\\": \\\"sub_heading_block\\\", \\\"value\\\": {\\\"sub_heading\\\": \\\"1. Add Skip Links\\\"}, \\\"id\\\": \\\"1fb664fd-533b-4b6a-b598-7edac4ee1cdb\\\"}, {\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>Skip links are an excellent way to help keyboard users navigation your site more efficiently. They are the very first links a tabbing user will find available to them, so make them count! The two I always use are: Skip to Content and Skip to Navigation. The third one I have used on larger sites is: Skip to Sitemap. This would allow the user to get an overview of all the available pages without needed to filter through much content.</p><p>The code for adding skip links is super straightforward and easy to implement on any site. The will only display when focused on but you can style them to match your design.</p>\\\"}, \\\"id\\\": \\\"1a1ffaab-8106-4e7e-968d-0fdb47332de7\\\"}, {\\\"type\\\": \\\"html_block\\\", \\\"value\\\": {\\\"html\\\": \\\"<pre>HTML</pre>\\\"}, \\\"id\\\": \\\"d621c94f-0d83-49d5-b619-c1c0a58167da\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"html\\\", \\\"code\\\": \\\"<div id=\\\\\\\"skiplinks\\\\\\\" class=\\\\\\\"skiplinks\\\\\\\" role=\\\\\\\"navigation\\\\\\\">\\\\r\\\\n  <a class=\\\\\\\"skip-content\\\\\\\" href=\\\\\\\"#main-content\\\\\\\">Skip to Content</a><br>\\\\r\\\\n  <a class=\\\\\\\"skip-nav\\\\\\\" href=\\\\\\\"#main-nav\\\\\\\">Skip to Navigation</a>\\\\r\\\\n</div>\\\"}}, \\\"id\\\": \\\"f26c095c-3023-4fbe-aaff-b463302679d9\\\"}]\", \"seo_keywords\": \"\", \"socials\": true, \"addthis_pubid\": \"5bbcb76243b82dd4\", \"post_tags\": [{\"pk\": null, \"tag\": 1, \"content_object\": 4}]}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 16,
+    "fields": {
+        "page": 4,
+        "submitted_for_moderation": false,
+        "created_at": "2019-07-02T02:22:01.001Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 4, \"path\": \"000100020001\", \"depth\": 3, \"numchild\": 0, \"title\": \"Three simple ways to make your site more accessible\", \"draft_title\": \"Three ways to make your site more accessible\", \"slug\": \"new-blog-post\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/new-blog-post/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-05-22T02:02:47.628Z\", \"last_published_at\": \"2019-07-02T02:16:43.490Z\", \"latest_revision_created_at\": \"2019-07-02T02:16:43.457Z\", \"live_revision\": 15, \"intro\": \"\", \"date\": \"2019-05-22T02:02:00Z\", \"page_content\": \"[{\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>There&#x27;s no excuse for ignoring the need to make your site more accessible. As a developer it is your responsibility to figure out how to incorporate accessibility into your workflows. You have the power! Here are a few easy ways to get started:</p>\\\"}, \\\"id\\\": \\\"e1c6308d-dc0c-460e-82cd-58dab70c85a4\\\"}, {\\\"type\\\": \\\"sub_heading_block\\\", \\\"value\\\": {\\\"sub_heading\\\": \\\"1. Add Skip Links\\\"}, \\\"id\\\": \\\"1fb664fd-533b-4b6a-b598-7edac4ee1cdb\\\"}, {\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>Skip links are an excellent way to help keyboard users navigation your site more efficiently. They are the very first links a tabbing user will find available to them, so make them count! The two I always use are: Skip to Content and Skip to Navigation. The third one I have used on larger sites is: Skip to Sitemap. This would allow the user to get an overview of all the available pages without needed to filter through much content.</p><p>The code for adding skip links is super straightforward and easy to implement on any site. The will only display when focused on but you can style them to match your design.</p>\\\"}, \\\"id\\\": \\\"1a1ffaab-8106-4e7e-968d-0fdb47332de7\\\"}, {\\\"type\\\": \\\"html_block\\\", \\\"value\\\": {\\\"html\\\": \\\"<pre>HTML</pre>\\\"}, \\\"id\\\": \\\"d621c94f-0d83-49d5-b619-c1c0a58167da\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"html\\\", \\\"code\\\": \\\"<div id=\\\\\\\"skiplinks\\\\\\\" class=\\\\\\\"skiplinks\\\\\\\" role=\\\\\\\"navigation\\\\\\\">\\\\r\\\\n  <a class=\\\\\\\"skip-content\\\\\\\" href=\\\\\\\"#main-content\\\\\\\">Skip to Content</a><br>\\\\r\\\\n  <a class=\\\\\\\"skip-nav\\\\\\\" href=\\\\\\\"#main-nav\\\\\\\">Skip to Navigation</a>\\\\r\\\\n</div>\\\"}}, \\\"id\\\": \\\"f26c095c-3023-4fbe-aaff-b463302679d9\\\"}]\", \"seo_keywords\": \"\", \"socials\": true, \"addthis_pubid\": \"5bbcb76243b82dd4\", \"post_tags\": [{\"pk\": null, \"tag\": 1, \"content_object\": 4}]}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 17,
+    "fields": {
+        "page": 4,
+        "submitted_for_moderation": false,
+        "created_at": "2019-07-02T02:22:04.905Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 4, \"path\": \"000100020001\", \"depth\": 3, \"numchild\": 0, \"title\": \"Three simple ways to make your site more accessible\", \"draft_title\": \"Three simple ways to make your site more accessible\", \"slug\": \"new-blog-post\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": true, \"url_path\": \"/home/new-blog-post/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-05-22T02:02:47.628Z\", \"last_published_at\": \"2019-07-02T02:16:43.490Z\", \"latest_revision_created_at\": \"2019-07-02T02:22:01.001Z\", \"live_revision\": 15, \"intro\": \"\", \"date\": \"2019-05-22T02:02:00Z\", \"page_content\": \"[{\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>There&#x27;s no excuse for ignoring the need to make your site more accessible. As a developer it is your responsibility to figure out how to incorporate accessibility into your workflows. You have the power! Here are a few easy ways to get started:</p>\\\"}, \\\"id\\\": \\\"e1c6308d-dc0c-460e-82cd-58dab70c85a4\\\"}, {\\\"type\\\": \\\"sub_heading_block\\\", \\\"value\\\": {\\\"sub_heading\\\": \\\"1. Add Skip Links\\\"}, \\\"id\\\": \\\"1fb664fd-533b-4b6a-b598-7edac4ee1cdb\\\"}, {\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>Skip links are an excellent way to help keyboard users navigation your site more efficiently. They are the very first links a tabbing user will find available to them, so make them count! The two I always use are: Skip to Content and Skip to Navigation. The third one I have used on larger sites is: Skip to Sitemap. This would allow the user to get an overview of all the available pages without needed to filter through much content.</p><p>The code for adding skip links is super straightforward and easy to implement on any site. The will only display when focused on but you can style them to match your design.</p>\\\"}, \\\"id\\\": \\\"1a1ffaab-8106-4e7e-968d-0fdb47332de7\\\"}, {\\\"type\\\": \\\"html_block\\\", \\\"value\\\": {\\\"html\\\": \\\"<pre>HTML</pre>\\\"}, \\\"id\\\": \\\"d621c94f-0d83-49d5-b619-c1c0a58167da\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"html\\\", \\\"code\\\": \\\"<div id=\\\\\\\"skiplinks\\\\\\\" class=\\\\\\\"skiplinks\\\\\\\" role=\\\\\\\"navigation\\\\\\\">\\\\r\\\\n  <a class=\\\\\\\"skip-content\\\\\\\" href=\\\\\\\"#main-content\\\\\\\">Skip to Content</a><br>\\\\r\\\\n  <a class=\\\\\\\"skip-nav\\\\\\\" href=\\\\\\\"#main-nav\\\\\\\">Skip to Navigation</a>\\\\r\\\\n</div>\\\"}}, \\\"id\\\": \\\"f26c095c-3023-4fbe-aaff-b463302679d9\\\"}]\", \"seo_keywords\": \"\", \"socials\": true, \"addthis_pubid\": \"5bbcb76243b82dd4\", \"post_tags\": [{\"pk\": null, \"tag\": 1, \"content_object\": 4}]}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 23,
+    "fields": {
+        "page": 7,
+        "submitted_for_moderation": false,
+        "created_at": "2019-09-05T18:52:38.366Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 7, \"path\": \"000100020004\", \"depth\": 3, \"numchild\": 0, \"title\": \"Wagtail Icons\", \"draft_title\": \"Wagtail Icons\", \"slug\": \"wagtail-icons\", \"content_type\": 17, \"live\": false, \"has_unpublished_changes\": false, \"url_path\": \"/home/wagtail-icons/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"intro\": \"\", \"date\": \"2019-09-05T18:52:00Z\", \"page_content\": \"[{\\\"type\\\": \\\"html_block\\\", \\\"value\\\": {\\\"html\\\": \\\"<section id=\\\\\\\"icons\\\\\\\" class=\\\\\\\"icons\\\\\\\">\\\\r\\\\n            <h2>Icons</h2>\\\\r\\\\n\\\\r\\\\n            <ul class=\\\\\\\"unlist\\\\\\\">\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-down-big\\\\\\\">arrow-down-big</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-down\\\\\\\">arrow-down</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-left\\\\\\\">arrow-left</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-right\\\\\\\">arrow-right</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-up-big\\\\\\\">arrow-up-big</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-up\\\\\\\">arrow-up</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrows-up-down\\\\\\\">arrows-up-down</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-bin\\\\\\\">bin</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-bold\\\\\\\">bold</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-chain-broken\\\\\\\">chain-broken</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-code\\\\\\\">code</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-cog\\\\\\\">cog</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-cogs\\\\\\\">cogs</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-collapse-down\\\\\\\">collapse-down</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-collapse-up\\\\\\\">collapse-up</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-cross\\\\\\\">cross</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-date\\\\\\\">date</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-doc-empty-inverse\\\\\\\">doc-empty-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-doc-empty\\\\\\\">doc-empty</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-doc-full-inverse\\\\\\\">doc-full-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-doc-full\\\\\\\">doc-full</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-download\\\\\\\">download</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-edit\\\\\\\">edit</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-folder-inverse\\\\\\\">folder-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-folder-open-1\\\\\\\">folder-open-1</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-folder-open-inverse\\\\\\\">folder-open-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-folder\\\\\\\">folder</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-form\\\\\\\">form</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-grip\\\\\\\">grip</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-group\\\\\\\">group</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-help\\\\\\\">help</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-help-inverse\\\\\\\">help-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-home\\\\\\\">home</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-horizontalrule\\\\\\\">horizontalrule</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-image\\\\\\\">image</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-italic\\\\\\\">italic</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-link\\\\\\\">link</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-list-ol\\\\\\\">list-ol</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-list-ul\\\\\\\">list-ul</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-locked\\\\\\\">locked</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-logout\\\\\\\">logout</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-mail\\\\\\\">mail</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-media\\\\\\\">media</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-no-view\\\\\\\">no-view</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-openquote\\\\\\\">openquote</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-order-down\\\\\\\">order-down</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-order-up\\\\\\\">order-up</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-order\\\\\\\">order</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-password\\\\\\\">password</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-pick\\\\\\\">pick</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-pilcrow\\\\\\\">pilcrow</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-placeholder\\\\\\\">placeholder</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-plus-inverse\\\\\\\">plus-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-plus\\\\\\\">plus</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-radio-empty\\\\\\\">radio-empty</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-radio-full\\\\\\\">radio-full</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-redirect\\\\\\\">redirect</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-repeat\\\\\\\">repeat</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-search\\\\\\\">search</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-site\\\\\\\">site</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-snippet\\\\\\\">snippet</li>\\\\r\\\\n                <li class=\\\\\\\"spinner\\\\\\\"><div class=\\\\\\\"icon icon-spinner\\\\\\\">spinner</div> spinner</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-strikethrough\\\\\\\">strikethrough</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-subscript\\\\\\\">subscript</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-success\\\\\\\">success</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-superscript\\\\\\\">superscript</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-table\\\\\\\">table</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-tag\\\\\\\">tag</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-tick-inverse\\\\\\\">tick-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-tick\\\\\\\">tick</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-time\\\\\\\">time</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-title\\\\\\\">title</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-undo\\\\\\\">undo</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-unlocked\\\\\\\">unlocked</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-user\\\\\\\">user</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-view\\\\\\\">view</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-wagtail-inverse\\\\\\\">wagtail-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-wagtail\\\\\\\">wagtail</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-warning\\\\\\\">warning</li>\\\\r\\\\n            </ul>\\\\r\\\\n\\\\r\\\\n        </section>\\\"}, \\\"id\\\": \\\"fa1cc16a-895f-40bf-ba5a-206047368f6a\\\"}]\", \"seo_keywords\": \"\", \"socials\": true, \"addthis_pubid\": \"5bbcb76243b82dd4\", \"post_tags\": []}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 24,
+    "fields": {
+        "page": 7,
+        "submitted_for_moderation": false,
+        "created_at": "2019-09-05T18:52:42.545Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 7, \"path\": \"000100020004\", \"depth\": 3, \"numchild\": 0, \"title\": \"Wagtail Icons\", \"draft_title\": \"Wagtail Icons\", \"slug\": \"wagtail-icons\", \"content_type\": 17, \"live\": false, \"has_unpublished_changes\": true, \"url_path\": \"/home/wagtail-icons/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": \"2019-09-05T18:52:38.366Z\", \"live_revision\": null, \"intro\": \"\", \"date\": \"2019-09-05T18:52:00Z\", \"page_content\": \"[{\\\"type\\\": \\\"html_block\\\", \\\"value\\\": {\\\"html\\\": \\\"<section id=\\\\\\\"icons\\\\\\\" class=\\\\\\\"icons\\\\\\\">\\\\r\\\\n            <h2>Icons</h2>\\\\r\\\\n\\\\r\\\\n            <ul class=\\\\\\\"unlist\\\\\\\">\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-down-big\\\\\\\">arrow-down-big</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-down\\\\\\\">arrow-down</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-left\\\\\\\">arrow-left</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-right\\\\\\\">arrow-right</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-up-big\\\\\\\">arrow-up-big</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-up\\\\\\\">arrow-up</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrows-up-down\\\\\\\">arrows-up-down</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-bin\\\\\\\">bin</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-bold\\\\\\\">bold</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-chain-broken\\\\\\\">chain-broken</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-code\\\\\\\">code</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-cog\\\\\\\">cog</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-cogs\\\\\\\">cogs</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-collapse-down\\\\\\\">collapse-down</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-collapse-up\\\\\\\">collapse-up</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-cross\\\\\\\">cross</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-date\\\\\\\">date</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-doc-empty-inverse\\\\\\\">doc-empty-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-doc-empty\\\\\\\">doc-empty</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-doc-full-inverse\\\\\\\">doc-full-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-doc-full\\\\\\\">doc-full</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-download\\\\\\\">download</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-edit\\\\\\\">edit</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-folder-inverse\\\\\\\">folder-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-folder-open-1\\\\\\\">folder-open-1</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-folder-open-inverse\\\\\\\">folder-open-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-folder\\\\\\\">folder</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-form\\\\\\\">form</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-grip\\\\\\\">grip</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-group\\\\\\\">group</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-help\\\\\\\">help</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-help-inverse\\\\\\\">help-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-home\\\\\\\">home</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-horizontalrule\\\\\\\">horizontalrule</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-image\\\\\\\">image</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-italic\\\\\\\">italic</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-link\\\\\\\">link</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-list-ol\\\\\\\">list-ol</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-list-ul\\\\\\\">list-ul</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-locked\\\\\\\">locked</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-logout\\\\\\\">logout</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-mail\\\\\\\">mail</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-media\\\\\\\">media</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-no-view\\\\\\\">no-view</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-openquote\\\\\\\">openquote</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-order-down\\\\\\\">order-down</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-order-up\\\\\\\">order-up</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-order\\\\\\\">order</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-password\\\\\\\">password</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-pick\\\\\\\">pick</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-pilcrow\\\\\\\">pilcrow</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-placeholder\\\\\\\">placeholder</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-plus-inverse\\\\\\\">plus-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-plus\\\\\\\">plus</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-radio-empty\\\\\\\">radio-empty</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-radio-full\\\\\\\">radio-full</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-redirect\\\\\\\">redirect</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-repeat\\\\\\\">repeat</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-search\\\\\\\">search</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-site\\\\\\\">site</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-snippet\\\\\\\">snippet</li>\\\\r\\\\n                <li class=\\\\\\\"spinner\\\\\\\"><div class=\\\\\\\"icon icon-spinner\\\\\\\">spinner</div> spinner</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-strikethrough\\\\\\\">strikethrough</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-subscript\\\\\\\">subscript</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-success\\\\\\\">success</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-superscript\\\\\\\">superscript</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-table\\\\\\\">table</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-tag\\\\\\\">tag</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-tick-inverse\\\\\\\">tick-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-tick\\\\\\\">tick</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-time\\\\\\\">time</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-title\\\\\\\">title</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-undo\\\\\\\">undo</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-unlocked\\\\\\\">unlocked</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-user\\\\\\\">user</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-view\\\\\\\">view</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-wagtail-inverse\\\\\\\">wagtail-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-wagtail\\\\\\\">wagtail</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-warning\\\\\\\">warning</li>\\\\r\\\\n            </ul>\\\\r\\\\n\\\\r\\\\n        </section>\\\"}, \\\"id\\\": \\\"fa1cc16a-895f-40bf-ba5a-206047368f6a\\\"}]\", \"seo_keywords\": \"\", \"socials\": true, \"addthis_pubid\": \"5bbcb76243b82dd4\", \"post_tags\": []}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 25,
+    "fields": {
+        "page": 7,
+        "submitted_for_moderation": false,
+        "created_at": "2019-09-05T19:09:43.869Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 7, \"path\": \"000100020004\", \"depth\": 3, \"numchild\": 0, \"title\": \"Wagtail Icons\", \"draft_title\": \"Wagtail Icons\", \"slug\": \"wagtail-icons\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/wagtail-icons/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-09-05T18:52:42.565Z\", \"last_published_at\": \"2019-09-05T18:52:42.565Z\", \"latest_revision_created_at\": \"2019-09-05T18:52:42.545Z\", \"live_revision\": 24, \"intro\": \"\", \"date\": \"2019-09-05T18:52:00Z\", \"page_content\": \"[{\\\"type\\\": \\\"html_block\\\", \\\"value\\\": {\\\"html\\\": \\\"<link rel=\\\\\\\"stylesheet\\\\\\\" href=\\\\\\\"/static/wagtailstyleguide/css/styleguide.css\\\\\\\" type=\\\\\\\"text/css\\\\\\\" /><section id=\\\\\\\"icons\\\\\\\" class=\\\\\\\"icons\\\\\\\">\\\\r\\\\n            <h2>Icons</h2>\\\\r\\\\n\\\\r\\\\n            <ul class=\\\\\\\"unlist\\\\\\\">\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-down-big\\\\\\\">arrow-down-big</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-down\\\\\\\">arrow-down</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-left\\\\\\\">arrow-left</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-right\\\\\\\">arrow-right</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-up-big\\\\\\\">arrow-up-big</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-up\\\\\\\">arrow-up</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrows-up-down\\\\\\\">arrows-up-down</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-bin\\\\\\\">bin</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-bold\\\\\\\">bold</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-chain-broken\\\\\\\">chain-broken</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-code\\\\\\\">code</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-cog\\\\\\\">cog</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-cogs\\\\\\\">cogs</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-collapse-down\\\\\\\">collapse-down</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-collapse-up\\\\\\\">collapse-up</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-cross\\\\\\\">cross</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-date\\\\\\\">date</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-doc-empty-inverse\\\\\\\">doc-empty-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-doc-empty\\\\\\\">doc-empty</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-doc-full-inverse\\\\\\\">doc-full-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-doc-full\\\\\\\">doc-full</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-download\\\\\\\">download</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-edit\\\\\\\">edit</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-folder-inverse\\\\\\\">folder-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-folder-open-1\\\\\\\">folder-open-1</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-folder-open-inverse\\\\\\\">folder-open-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-folder\\\\\\\">folder</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-form\\\\\\\">form</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-grip\\\\\\\">grip</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-group\\\\\\\">group</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-help\\\\\\\">help</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-help-inverse\\\\\\\">help-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-home\\\\\\\">home</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-horizontalrule\\\\\\\">horizontalrule</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-image\\\\\\\">image</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-italic\\\\\\\">italic</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-link\\\\\\\">link</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-list-ol\\\\\\\">list-ol</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-list-ul\\\\\\\">list-ul</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-locked\\\\\\\">locked</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-logout\\\\\\\">logout</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-mail\\\\\\\">mail</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-media\\\\\\\">media</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-no-view\\\\\\\">no-view</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-openquote\\\\\\\">openquote</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-order-down\\\\\\\">order-down</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-order-up\\\\\\\">order-up</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-order\\\\\\\">order</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-password\\\\\\\">password</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-pick\\\\\\\">pick</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-pilcrow\\\\\\\">pilcrow</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-placeholder\\\\\\\">placeholder</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-plus-inverse\\\\\\\">plus-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-plus\\\\\\\">plus</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-radio-empty\\\\\\\">radio-empty</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-radio-full\\\\\\\">radio-full</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-redirect\\\\\\\">redirect</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-repeat\\\\\\\">repeat</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-search\\\\\\\">search</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-site\\\\\\\">site</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-snippet\\\\\\\">snippet</li>\\\\r\\\\n                <li class=\\\\\\\"spinner\\\\\\\"><div class=\\\\\\\"icon icon-spinner\\\\\\\">spinner</div> spinner</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-strikethrough\\\\\\\">strikethrough</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-subscript\\\\\\\">subscript</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-success\\\\\\\">success</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-superscript\\\\\\\">superscript</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-table\\\\\\\">table</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-tag\\\\\\\">tag</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-tick-inverse\\\\\\\">tick-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-tick\\\\\\\">tick</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-time\\\\\\\">time</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-title\\\\\\\">title</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-undo\\\\\\\">undo</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-unlocked\\\\\\\">unlocked</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-user\\\\\\\">user</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-view\\\\\\\">view</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-wagtail-inverse\\\\\\\">wagtail-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-wagtail\\\\\\\">wagtail</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-warning\\\\\\\">warning</li>\\\\r\\\\n            </ul>\\\\r\\\\n\\\\r\\\\n        </section>\\\"}, \\\"id\\\": \\\"fa1cc16a-895f-40bf-ba5a-206047368f6a\\\"}]\", \"seo_keywords\": \"\", \"socials\": true, \"addthis_pubid\": \"5bbcb76243b82dd4\", \"post_tags\": []}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 26,
+    "fields": {
+        "page": 7,
+        "submitted_for_moderation": false,
+        "created_at": "2019-09-05T19:12:45.054Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 7, \"path\": \"000100020004\", \"depth\": 3, \"numchild\": 0, \"title\": \"Wagtail Icons\", \"draft_title\": \"Wagtail Icons\", \"slug\": \"wagtail-icons\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/wagtail-icons/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-09-05T18:52:42.565Z\", \"last_published_at\": \"2019-09-05T19:09:43.913Z\", \"latest_revision_created_at\": \"2019-09-05T19:09:43.869Z\", \"live_revision\": 25, \"intro\": \"\", \"date\": \"2019-09-05T18:52:00Z\", \"page_content\": \"[{\\\"type\\\": \\\"html_block\\\", \\\"value\\\": {\\\"html\\\": \\\"<link rel=\\\\\\\"stylesheet\\\\\\\" href=\\\\\\\"https://uname-production-assets.s3.amazonaws.com/wagtailadmin/css/core.css\\\\\\\" type=\\\\\\\"text/css\\\\\\\" />\\\\r\\\\n<link rel=\\\\\\\"stylesheet\\\\\\\" href=\\\\\\\"/static/wagtailstyleguide/css/styleguide.css\\\\\\\" type=\\\\\\\"text/css\\\\\\\" /><section id=\\\\\\\"icons\\\\\\\" class=\\\\\\\"icons\\\\\\\">\\\\r\\\\n            <h2>Icons</h2>\\\\r\\\\n\\\\r\\\\n            <ul class=\\\\\\\"unlist\\\\\\\">\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-down-big\\\\\\\">arrow-down-big</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-down\\\\\\\">arrow-down</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-left\\\\\\\">arrow-left</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-right\\\\\\\">arrow-right</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-up-big\\\\\\\">arrow-up-big</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-up\\\\\\\">arrow-up</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrows-up-down\\\\\\\">arrows-up-down</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-bin\\\\\\\">bin</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-bold\\\\\\\">bold</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-chain-broken\\\\\\\">chain-broken</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-code\\\\\\\">code</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-cog\\\\\\\">cog</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-cogs\\\\\\\">cogs</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-collapse-down\\\\\\\">collapse-down</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-collapse-up\\\\\\\">collapse-up</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-cross\\\\\\\">cross</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-date\\\\\\\">date</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-doc-empty-inverse\\\\\\\">doc-empty-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-doc-empty\\\\\\\">doc-empty</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-doc-full-inverse\\\\\\\">doc-full-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-doc-full\\\\\\\">doc-full</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-download\\\\\\\">download</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-edit\\\\\\\">edit</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-folder-inverse\\\\\\\">folder-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-folder-open-1\\\\\\\">folder-open-1</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-folder-open-inverse\\\\\\\">folder-open-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-folder\\\\\\\">folder</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-form\\\\\\\">form</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-grip\\\\\\\">grip</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-group\\\\\\\">group</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-help\\\\\\\">help</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-help-inverse\\\\\\\">help-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-home\\\\\\\">home</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-horizontalrule\\\\\\\">horizontalrule</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-image\\\\\\\">image</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-italic\\\\\\\">italic</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-link\\\\\\\">link</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-list-ol\\\\\\\">list-ol</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-list-ul\\\\\\\">list-ul</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-locked\\\\\\\">locked</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-logout\\\\\\\">logout</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-mail\\\\\\\">mail</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-media\\\\\\\">media</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-no-view\\\\\\\">no-view</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-openquote\\\\\\\">openquote</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-order-down\\\\\\\">order-down</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-order-up\\\\\\\">order-up</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-order\\\\\\\">order</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-password\\\\\\\">password</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-pick\\\\\\\">pick</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-pilcrow\\\\\\\">pilcrow</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-placeholder\\\\\\\">placeholder</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-plus-inverse\\\\\\\">plus-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-plus\\\\\\\">plus</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-radio-empty\\\\\\\">radio-empty</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-radio-full\\\\\\\">radio-full</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-redirect\\\\\\\">redirect</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-repeat\\\\\\\">repeat</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-search\\\\\\\">search</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-site\\\\\\\">site</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-snippet\\\\\\\">snippet</li>\\\\r\\\\n                <li class=\\\\\\\"spinner\\\\\\\"><div class=\\\\\\\"icon icon-spinner\\\\\\\">spinner</div> spinner</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-strikethrough\\\\\\\">strikethrough</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-subscript\\\\\\\">subscript</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-success\\\\\\\">success</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-superscript\\\\\\\">superscript</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-table\\\\\\\">table</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-tag\\\\\\\">tag</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-tick-inverse\\\\\\\">tick-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-tick\\\\\\\">tick</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-time\\\\\\\">time</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-title\\\\\\\">title</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-undo\\\\\\\">undo</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-unlocked\\\\\\\">unlocked</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-user\\\\\\\">user</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-view\\\\\\\">view</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-wagtail-inverse\\\\\\\">wagtail-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-wagtail\\\\\\\">wagtail</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-warning\\\\\\\">warning</li>\\\\r\\\\n            </ul>\\\\r\\\\n\\\\r\\\\n        </section>\\\"}, \\\"id\\\": \\\"fa1cc16a-895f-40bf-ba5a-206047368f6a\\\"}]\", \"seo_keywords\": \"\", \"socials\": true, \"addthis_pubid\": \"5bbcb76243b82dd4\", \"post_tags\": []}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 27,
+    "fields": {
+        "page": 7,
+        "submitted_for_moderation": false,
+        "created_at": "2019-09-05T19:12:45.614Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 7, \"path\": \"000100020004\", \"depth\": 3, \"numchild\": 0, \"title\": \"Wagtail Icons\", \"draft_title\": \"Wagtail Icons\", \"slug\": \"wagtail-icons\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/wagtail-icons/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-09-05T18:52:42.565Z\", \"last_published_at\": \"2019-09-05T19:12:45.086Z\", \"latest_revision_created_at\": \"2019-09-05T19:12:45.054Z\", \"live_revision\": 26, \"intro\": \"\", \"date\": \"2019-09-05T18:52:00Z\", \"page_content\": \"[{\\\"type\\\": \\\"html_block\\\", \\\"value\\\": {\\\"html\\\": \\\"<link rel=\\\\\\\"stylesheet\\\\\\\" href=\\\\\\\"https://uname-production-assets.s3.amazonaws.com/wagtailadmin/css/core.css\\\\\\\" type=\\\\\\\"text/css\\\\\\\" />\\\\r\\\\n<link rel=\\\\\\\"stylesheet\\\\\\\" href=\\\\\\\"/static/wagtailstyleguide/css/styleguide.css\\\\\\\" type=\\\\\\\"text/css\\\\\\\" /><section id=\\\\\\\"icons\\\\\\\" class=\\\\\\\"icons\\\\\\\">\\\\r\\\\n            <h2>Icons</h2>\\\\r\\\\n\\\\r\\\\n            <ul class=\\\\\\\"unlist\\\\\\\">\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-down-big\\\\\\\">arrow-down-big</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-down\\\\\\\">arrow-down</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-left\\\\\\\">arrow-left</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-right\\\\\\\">arrow-right</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-up-big\\\\\\\">arrow-up-big</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrow-up\\\\\\\">arrow-up</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-arrows-up-down\\\\\\\">arrows-up-down</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-bin\\\\\\\">bin</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-bold\\\\\\\">bold</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-chain-broken\\\\\\\">chain-broken</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-code\\\\\\\">code</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-cog\\\\\\\">cog</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-cogs\\\\\\\">cogs</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-collapse-down\\\\\\\">collapse-down</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-collapse-up\\\\\\\">collapse-up</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-cross\\\\\\\">cross</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-date\\\\\\\">date</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-doc-empty-inverse\\\\\\\">doc-empty-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-doc-empty\\\\\\\">doc-empty</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-doc-full-inverse\\\\\\\">doc-full-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-doc-full\\\\\\\">doc-full</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-download\\\\\\\">download</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-edit\\\\\\\">edit</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-folder-inverse\\\\\\\">folder-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-folder-open-1\\\\\\\">folder-open-1</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-folder-open-inverse\\\\\\\">folder-open-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-folder\\\\\\\">folder</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-form\\\\\\\">form</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-grip\\\\\\\">grip</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-group\\\\\\\">group</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-help\\\\\\\">help</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-help-inverse\\\\\\\">help-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-home\\\\\\\">home</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-horizontalrule\\\\\\\">horizontalrule</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-image\\\\\\\">image</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-italic\\\\\\\">italic</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-link\\\\\\\">link</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-list-ol\\\\\\\">list-ol</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-list-ul\\\\\\\">list-ul</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-locked\\\\\\\">locked</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-logout\\\\\\\">logout</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-mail\\\\\\\">mail</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-media\\\\\\\">media</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-no-view\\\\\\\">no-view</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-openquote\\\\\\\">openquote</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-order-down\\\\\\\">order-down</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-order-up\\\\\\\">order-up</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-order\\\\\\\">order</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-password\\\\\\\">password</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-pick\\\\\\\">pick</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-pilcrow\\\\\\\">pilcrow</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-placeholder\\\\\\\">placeholder</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-plus-inverse\\\\\\\">plus-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-plus\\\\\\\">plus</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-radio-empty\\\\\\\">radio-empty</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-radio-full\\\\\\\">radio-full</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-redirect\\\\\\\">redirect</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-repeat\\\\\\\">repeat</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-search\\\\\\\">search</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-site\\\\\\\">site</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-snippet\\\\\\\">snippet</li>\\\\r\\\\n                <li class=\\\\\\\"spinner\\\\\\\"><div class=\\\\\\\"icon icon-spinner\\\\\\\">spinner</div> spinner</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-strikethrough\\\\\\\">strikethrough</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-subscript\\\\\\\">subscript</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-success\\\\\\\">success</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-superscript\\\\\\\">superscript</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-table\\\\\\\">table</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-tag\\\\\\\">tag</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-tick-inverse\\\\\\\">tick-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-tick\\\\\\\">tick</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-time\\\\\\\">time</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-title\\\\\\\">title</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-undo\\\\\\\">undo</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-unlocked\\\\\\\">unlocked</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-user\\\\\\\">user</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-view\\\\\\\">view</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-wagtail-inverse\\\\\\\">wagtail-inverse</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-wagtail\\\\\\\">wagtail</li>\\\\r\\\\n                <li class=\\\\\\\"icon icon-warning\\\\\\\">warning</li>\\\\r\\\\n            </ul>\\\\r\\\\n\\\\r\\\\n        </section>\\\"}, \\\"id\\\": \\\"fa1cc16a-895f-40bf-ba5a-206047368f6a\\\"}]\", \"seo_keywords\": \"\", \"socials\": true, \"addthis_pubid\": \"5bbcb76243b82dd4\", \"post_tags\": []}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 28,
+    "fields": {
+        "page": 8,
+        "submitted_for_moderation": false,
+        "created_at": "2020-03-15T16:39:38.389Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 8, \"path\": \"000100020005\", \"depth\": 3, \"numchild\": 0, \"title\": \"About\", \"draft_title\": \"About\", \"slug\": \"about\", \"content_type\": 12, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/about/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": true, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"page_title_override\": \"\", \"page_content\": \"[{\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>I like writing, coding, learning, and pushing myself to be better everyday. I discovered web development in college while studying architecture and felt like I had finally found something I was really passionate about.</p><p>Mostly I want to write about things I&#x27;ve learned in my career so far to keep track of useful tips and tricks. My focus areas are currently Front End, UI/UX Design, Python, Wagtail, JavaScript, and AWS. I consider myself a &quot;full-stack&quot; developer with knowledge and understanding of all stages of the development life cycle. I have been a professional developer for 7 years.</p><p>Enjoy!</p>\\\"}, \\\"id\\\": \\\"4e7e8690-8259-4642-81aa-50c8ff81c00d\\\"}]\"}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 29,
+    "fields": {
+        "page": 9,
+        "submitted_for_moderation": false,
+        "created_at": "2020-03-15T16:40:21.262Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 9, \"path\": \"000100020006\", \"depth\": 3, \"numchild\": 0, \"title\": \"Introduction\", \"draft_title\": \"Introduction\", \"slug\": \"introduction\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/introduction/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"intro\": \"\", \"date\": \"2020-03-15T16:40:00Z\", \"page_content\": \"[{\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>I like writing, coding, and pushing myself to be better everyday. I discovered web development in college while studying architecture and felt like I had finally found my true calling. I would have dropped architecture, but I was already going into my senior year, so I figured I should just graduate and hope that someone would hire me. This was 2012, so getting a job in architecture also going to be nearly impossible. Anyway, after coding for more than a year at my work-study job, I was hired as an <i>HTML Programmer</i>. Yeah. You don&#x27;t hear that title anymore.</p><p>Mostly I want to write about things I&#x27;ve learned in my career so far and keep track of useful tips and tricks. I don&#x27;t claim to be an expert in anything and will probably write about things that will change, or are not how someone else would do them. But that&#x27;s life as a developer, there&#x27;s no one way of doing things.</p><p>So anyway, that&#x27;s a little bit about me.</p>\\\"}, \\\"id\\\": \\\"637b2531-87e1-4576-a94c-450e1bf45524\\\"}]\", \"seo_keywords\": \"\", \"socials\": true, \"addthis_pubid\": \"5bbcb76243b82dd4\", \"post_tags\": []}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 30,
+    "fields": {
+        "page": 9,
+        "submitted_for_moderation": false,
+        "created_at": "2020-03-15T16:41:00.544Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 9, \"path\": \"000100020006\", \"depth\": 3, \"numchild\": 0, \"title\": \"Introduction\", \"draft_title\": \"Introduction\", \"slug\": \"introduction\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/introduction/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2020-03-15T16:40:21.281Z\", \"last_published_at\": \"2020-03-15T16:40:21.281Z\", \"latest_revision_created_at\": \"2020-03-15T16:40:21.262Z\", \"live_revision\": 29, \"intro\": \"\", \"date\": \"2019-06-26T16:40:00Z\", \"page_content\": \"[{\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>I like writing, coding, and pushing myself to be better everyday. I discovered web development in college while studying architecture and felt like I had finally found my true calling. I would have dropped architecture, but I was already going into my senior year, so I figured I should just graduate and hope that someone would hire me. This was 2012, so getting a job in architecture also going to be nearly impossible. Anyway, after coding for more than a year at my work-study job, I was hired as an <i>HTML Programmer</i>. Yeah. You don&#x27;t hear that title anymore.</p><p>Mostly I want to write about things I&#x27;ve learned in my career so far and keep track of useful tips and tricks. I don&#x27;t claim to be an expert in anything and will probably write about things that will change, or are not how someone else would do them. But that&#x27;s life as a developer, there&#x27;s no one way of doing things.</p><p>So anyway, that&#x27;s a little bit about me.</p>\\\"}, \\\"id\\\": \\\"637b2531-87e1-4576-a94c-450e1bf45524\\\"}]\", \"seo_keywords\": \"\", \"socials\": true, \"addthis_pubid\": \"5bbcb76243b82dd4\", \"post_tags\": []}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 31,
+    "fields": {
+        "page": 4,
+        "submitted_for_moderation": false,
+        "created_at": "2020-03-15T16:45:16.202Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 4, \"path\": \"000100020001\", \"depth\": 3, \"numchild\": 0, \"title\": \"3 easy ways to make your site more accessible\", \"draft_title\": \"Three simple ways to make your site more accessible\", \"slug\": \"3-easy-ways-make-your-site-more-accessible\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/new-blog-post/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-05-22T02:02:47.628Z\", \"last_published_at\": \"2019-07-02T02:22:04.932Z\", \"latest_revision_created_at\": \"2019-07-02T02:22:04.905Z\", \"live_revision\": 17, \"intro\": \"\", \"date\": \"2019-06-27T14:51:00Z\", \"page_content\": \"[{\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>There&#x27;s no excuse for ignoring the need to make your site accessible. As a developer it&#x27;s your responsibility to figure out how to incorporate accessibility into your workflows. You have the power! Here are a few easy ways to get started:</p>\\\"}, \\\"id\\\": \\\"e1c6308d-dc0c-460e-82cd-58dab70c85a4\\\"}, {\\\"type\\\": \\\"sub_heading_block\\\", \\\"value\\\": {\\\"sub_heading\\\": \\\"1. Add skip links\\\"}, \\\"id\\\": \\\"1fb664fd-533b-4b6a-b598-7edac4ee1cdb\\\"}, {\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>Skip links are an excellent way to help keyboard users navigate your site more efficiently. They are the very first links a tabbing user will find available to them, so make them count! The two I always use are: <b>Skip to Content</b> and <b>Skip to Navigation</b>. The third one I have used on larger sites is: <b>Skip to Sitemap</b>. This would allow the user to get an overview of all the available pages without needed to filter through much content.</p><p>The code for adding skip links is super straightforward and easy to implement on any site. They will only display when focused on, but you can style them to match your design.</p>\\\"}, \\\"id\\\": \\\"1a1ffaab-8106-4e7e-968d-0fdb47332de7\\\"}, {\\\"type\\\": \\\"html_block\\\", \\\"value\\\": {\\\"html\\\": \\\"<pre>HTML</pre>\\\"}, \\\"id\\\": \\\"d621c94f-0d83-49d5-b619-c1c0a58167da\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"html\\\", \\\"code\\\": \\\"<div id=\\\\\\\"skiplinks\\\\\\\" class=\\\\\\\"skiplinks\\\\\\\" role=\\\\\\\"navigation\\\\\\\">\\\\r\\\\n  <a class=\\\\\\\"skip-content\\\\\\\" href=\\\\\\\"#main-content\\\\\\\">Skip to Content</a><br>\\\\r\\\\n  <a class=\\\\\\\"skip-nav\\\\\\\" href=\\\\\\\"#main-nav\\\\\\\">Skip to Navigation</a>\\\\r\\\\n</div>\\\"}}, \\\"id\\\": \\\"f26c095c-3023-4fbe-aaff-b463302679d9\\\"}, {\\\"type\\\": \\\"html_block\\\", \\\"value\\\": {\\\"html\\\": \\\"<pre>SCSS</pre>\\\"}, \\\"id\\\": \\\"61f74981-50e2-4f91-9138-8977b3cd1824\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"scss\\\", \\\"code\\\": \\\".skiplinks {\\\\r\\\\n  a {\\\\r\\\\n    position: absolute !important;\\\\r\\\\n    left: -999em;\\\\r\\\\n    &:hover,\\\\r\\\\n    &:visited {\\\\r\\\\n      position: absolute !important;\\\\r\\\\n      left: -999em;\\\\r\\\\n    }\\\\r\\\\n    &:active,\\\\r\\\\n    &:focus {\\\\r\\\\n      position: absolute;\\\\r\\\\n      z-index: 999999;\\\\r\\\\n      left: 10px;\\\\r\\\\n    }\\\\r\\\\n  }\\\\r\\\\n}\\\"}}, \\\"id\\\": \\\"62742571-b8da-489d-af88-8d9ee0e7e451\\\"}, {\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>Then just make sure your content container and nav container id&#x27;s match with your anchor links and you are good to go!</p>\\\"}, \\\"id\\\": \\\"8b094841-2d3a-4b75-a5c1-e537a38264ce\\\"}, {\\\"type\\\": \\\"sub_heading_block\\\", \\\"value\\\": {\\\"sub_heading\\\": \\\"2. Remove the focus outline for non-tabbing users <i>only</i>\\\"}, \\\"id\\\": \\\"a17096e6-8e8b-420b-86cb-1c3a79de2fcf\\\"}, {\\\"type\\\": \\\"html_block\\\", \\\"value\\\": {\\\"html\\\": \\\"<pre>Javascript</pre>\\\"}, \\\"id\\\": \\\"1e5097fd-5eb4-4333-851d-e5b1f479cef8\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"javascript\\\", \\\"code\\\": \\\"// RECOGNIZE A KEYBOARD USER\\\\r\\\\nfunction handleFirstTab(e) {\\\\r\\\\n  if (e.keyCode === 9) { // the \\\\\\\"I am a keyboard user\\\\\\\" key\\\\r\\\\n    document.body.classList.add('user-is-tabbing');\\\\r\\\\n    window.removeEventListener('keydown', handleFirstTab);\\\\r\\\\n  }\\\\r\\\\n}\\\\r\\\\n\\\\r\\\\nwindow.addEventListener('keydown', handleFirstTab);\\\"}}, \\\"id\\\": \\\"262308af-447d-41a4-801a-c9932678ca17\\\"}, {\\\"type\\\": \\\"html_block\\\", \\\"value\\\": {\\\"html\\\": \\\"<pre>SCSS</pre>\\\"}, \\\"id\\\": \\\"94678076-3a88-4a99-936d-9d04ee8146a5\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"scss\\\", \\\"code\\\": \\\"body {\\\\r\\\\n  &.user-is-tabbing {\\\\r\\\\n    button,\\\\r\\\\n    .btn,\\\\r\\\\n    a {\\\\r\\\\n      &:focus {\\\\r\\\\n        outline: 5px auto $accent2 !important;\\\\r\\\\n      }\\\\r\\\\n    }\\\\r\\\\n  }\\\\r\\\\n}\\\"}}, \\\"id\\\": \\\"bd705d21-9d59-4842-9267-3576202b0a0c\\\"}, {\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>Depending on the size of your site, this may seem daunting or even impossible. But really ask yourself, what are people here do to? Try to focus on the basics.</p><p>If you must do a dropdown menu, please make sure that is is accessible via the keyboard. Here is an example of how that can be done:</p>\\\"}, \\\"id\\\": \\\"839b5db3-5642-4be0-bce4-61b7ac78201e\\\"}, {\\\"type\\\": \\\"html_block\\\", \\\"value\\\": {\\\"html\\\": \\\"<pre>Javascript</pre>\\\"}, \\\"id\\\": \\\"586d4b32-22ed-4974-a370-7d6dffff6c5e\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"javascript\\\", \\\"code\\\": \\\"$('.allow-toggle').focusin(function() {\\\\r\\\\n  $(this).parents('.has-submenu').find('.dropdown-menu').css('display', 'block');\\\\r\\\\n});\\\\r\\\\n\\\\r\\\\n$('.dropdown-menu li:last-of-type .menu-link').focusout(function() {\\\\r\\\\n  $(this).parents('.dropdown-menu').css('display', 'none');\\\\r\\\\n});\\\"}}, \\\"id\\\": \\\"e01ae03c-f436-4d53-81e7-154a096acdc8\\\"}, {\\\"type\\\": \\\"html_block\\\", \\\"value\\\": {\\\"html\\\": \\\"<pre>HTML</pre>\\\"}, \\\"id\\\": \\\"13082169-f211-48aa-8e54-fdea64d81922\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"html\\\", \\\"code\\\": \\\"<div id=\\\\\\\"mainNav\\\\\\\" class=\\\\\\\"collapse navbar-collapse\\\\\\\" role=\\\\\\\"navigation\\\\\\\" aria-label=\\\\\\\"Primary site navigation\\\\\\\">\\\\r\\\\n  <ul class=\\\\\\\"nav\\\\\\\">\\\\r\\\\n    <li class=\\\\\\\"presentation about has-submenu\\\\\\\">\\\\r\\\\n      <a href=\\\\\\\"/about/\\\\\\\" class=\\\\\\\"menu-link allow-toggle\\\\\\\">About</a>\\\\r\\\\n      <ul class=\\\\\\\"dropdown-menu\\\\\\\" role=\\\\\\\"menu\\\\\\\">\\\\r\\\\n        <li class=\\\\\\\"child-page\\\\\\\"><a class=\\\\\\\"menu-link\\\\\\\" href=\\\\\\\"/about/child-page/\\\\\\\" role=\\\\\\\"menuitem\\\\\\\">Child Page</a></li>\\\\r\\\\n      </ul>\\\\r\\\\n    </li>\\\\r\\\\n  </ul>\\\\r\\\\n</div>\\\"}}, \\\"id\\\": \\\"57911822-4863-4747-8f03-72e0272a6fb1\\\"}]\", \"seo_keywords\": \"\", \"socials\": true, \"addthis_pubid\": \"5bbcb76243b82dd4\", \"post_tags\": [{\"pk\": null, \"tag\": 1, \"content_object\": 4}, {\"pk\": null, \"tag\": 2, \"content_object\": 4}, {\"pk\": null, \"tag\": 3, \"content_object\": 4}]}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 32,
+    "fields": {
+        "page": 4,
+        "submitted_for_moderation": false,
+        "created_at": "2020-03-15T16:46:07.322Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 4, \"path\": \"000100020001\", \"depth\": 3, \"numchild\": 0, \"title\": \"3 easy ways to make your site more accessible\", \"draft_title\": \"3 easy ways to make your site more accessible\", \"slug\": \"3-easy-ways-make-your-site-more-accessible\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/3-easy-ways-make-your-site-more-accessible/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-05-22T02:02:47.628Z\", \"last_published_at\": \"2020-03-15T16:45:16.260Z\", \"latest_revision_created_at\": \"2020-03-15T16:45:16.202Z\", \"live_revision\": 31, \"intro\": \"\", \"date\": \"2019-06-27T14:51:00Z\", \"page_content\": \"[{\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>There&#x27;s no excuse for ignoring the need to make your site accessible. As a developer it&#x27;s your responsibility to figure out how to incorporate accessibility into your workflows. You have the power! Here are a few easy ways to get started:</p>\\\"}, \\\"id\\\": \\\"e1c6308d-dc0c-460e-82cd-58dab70c85a4\\\"}, {\\\"type\\\": \\\"sub_heading_block\\\", \\\"value\\\": {\\\"sub_heading\\\": \\\"1. Add skip links\\\"}, \\\"id\\\": \\\"1fb664fd-533b-4b6a-b598-7edac4ee1cdb\\\"}, {\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>Skip links are an excellent way to help keyboard users navigate your site more efficiently. They are the very first links a tabbing user will find available to them, so make them count! The two I always use are: <b>Skip to Content</b> and <b>Skip to Navigation</b>. The third one I have used on larger sites is: <b>Skip to Sitemap</b>. This would allow the user to get an overview of all the available pages without needed to filter through much content.</p><p>The code for adding skip links is super straightforward and easy to implement on any site. They will only display when focused on, but you can style them to match your design.</p>\\\"}, \\\"id\\\": \\\"1a1ffaab-8106-4e7e-968d-0fdb47332de7\\\"}, {\\\"type\\\": \\\"html_block\\\", \\\"value\\\": {\\\"html\\\": \\\"<pre>HTML</pre>\\\"}, \\\"id\\\": \\\"d621c94f-0d83-49d5-b619-c1c0a58167da\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"html\\\", \\\"code\\\": \\\"<div id=\\\\\\\"skiplinks\\\\\\\" class=\\\\\\\"skiplinks\\\\\\\" role=\\\\\\\"navigation\\\\\\\">\\\\r\\\\n  <a class=\\\\\\\"skip-content\\\\\\\" href=\\\\\\\"#main-content\\\\\\\">Skip to Content</a><br>\\\\r\\\\n  <a class=\\\\\\\"skip-nav\\\\\\\" href=\\\\\\\"#main-nav\\\\\\\">Skip to Navigation</a>\\\\r\\\\n</div>\\\"}}, \\\"id\\\": \\\"f26c095c-3023-4fbe-aaff-b463302679d9\\\"}, {\\\"type\\\": \\\"html_block\\\", \\\"value\\\": {\\\"html\\\": \\\"<pre>SCSS</pre>\\\"}, \\\"id\\\": \\\"61f74981-50e2-4f91-9138-8977b3cd1824\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"scss\\\", \\\"code\\\": \\\".skiplinks {\\\\r\\\\n  a {\\\\r\\\\n    position: absolute !important;\\\\r\\\\n    left: -999em;\\\\r\\\\n    &:hover,\\\\r\\\\n    &:visited {\\\\r\\\\n      position: absolute !important;\\\\r\\\\n      left: -999em;\\\\r\\\\n    }\\\\r\\\\n    &:active,\\\\r\\\\n    &:focus {\\\\r\\\\n      position: absolute;\\\\r\\\\n      z-index: 999999;\\\\r\\\\n      left: 10px;\\\\r\\\\n    }\\\\r\\\\n  }\\\\r\\\\n}\\\"}}, \\\"id\\\": \\\"62742571-b8da-489d-af88-8d9ee0e7e451\\\"}, {\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>Then just make sure your content container and nav container id&#x27;s match with your anchor links and you are good to go!</p>\\\"}, \\\"id\\\": \\\"8b094841-2d3a-4b75-a5c1-e537a38264ce\\\"}, {\\\"type\\\": \\\"sub_heading_block\\\", \\\"value\\\": {\\\"sub_heading\\\": \\\"2. Remove the focus outline for non-tabbing users <i>only</i>\\\"}, \\\"id\\\": \\\"a17096e6-8e8b-420b-86cb-1c3a79de2fcf\\\"}, {\\\"type\\\": \\\"html_block\\\", \\\"value\\\": {\\\"html\\\": \\\"<pre>Javascript</pre>\\\"}, \\\"id\\\": \\\"1e5097fd-5eb4-4333-851d-e5b1f479cef8\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"javascript\\\", \\\"code\\\": \\\"// RECOGNIZE A KEYBOARD USER\\\\r\\\\nfunction handleFirstTab(e) {\\\\r\\\\n  if (e.keyCode === 9) { // the \\\\\\\"I am a keyboard user\\\\\\\" key\\\\r\\\\n    document.body.classList.add('user-is-tabbing');\\\\r\\\\n    window.removeEventListener('keydown', handleFirstTab);\\\\r\\\\n  }\\\\r\\\\n}\\\\r\\\\n\\\\r\\\\nwindow.addEventListener('keydown', handleFirstTab);\\\"}}, \\\"id\\\": \\\"262308af-447d-41a4-801a-c9932678ca17\\\"}, {\\\"type\\\": \\\"html_block\\\", \\\"value\\\": {\\\"html\\\": \\\"<pre>SCSS</pre>\\\"}, \\\"id\\\": \\\"94678076-3a88-4a99-936d-9d04ee8146a5\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"scss\\\", \\\"code\\\": \\\"body {\\\\r\\\\n  &.user-is-tabbing {\\\\r\\\\n    button,\\\\r\\\\n    .btn,\\\\r\\\\n    a {\\\\r\\\\n      &:focus {\\\\r\\\\n        outline: 5px auto $accent2 !important;\\\\r\\\\n      }\\\\r\\\\n    }\\\\r\\\\n  }\\\\r\\\\n}\\\"}}, \\\"id\\\": \\\"bd705d21-9d59-4842-9267-3576202b0a0c\\\"}, {\\\"type\\\": \\\"sub_heading_block\\\", \\\"value\\\": {\\\"sub_heading\\\": \\\"3. Limit your main menu to 6 items or less\\\"}, \\\"id\\\": \\\"a3eb749e-aea4-4754-b28d-6abe291c5a88\\\"}, {\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>Depending on the size of your site, this may seem daunting or even impossible. But really ask yourself, what are people here do to? Try to focus on the basics.</p><p>If you must do a dropdown menu, please make sure that is is accessible via the keyboard. Here is an example of how that can be done:</p>\\\"}, \\\"id\\\": \\\"839b5db3-5642-4be0-bce4-61b7ac78201e\\\"}, {\\\"type\\\": \\\"html_block\\\", \\\"value\\\": {\\\"html\\\": \\\"<pre>Javascript</pre>\\\"}, \\\"id\\\": \\\"586d4b32-22ed-4974-a370-7d6dffff6c5e\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"javascript\\\", \\\"code\\\": \\\"$('.allow-toggle').focusin(function() {\\\\r\\\\n  $(this).parents('.has-submenu').find('.dropdown-menu').css('display', 'block');\\\\r\\\\n});\\\\r\\\\n\\\\r\\\\n$('.dropdown-menu li:last-of-type .menu-link').focusout(function() {\\\\r\\\\n  $(this).parents('.dropdown-menu').css('display', 'none');\\\\r\\\\n});\\\"}}, \\\"id\\\": \\\"e01ae03c-f436-4d53-81e7-154a096acdc8\\\"}, {\\\"type\\\": \\\"html_block\\\", \\\"value\\\": {\\\"html\\\": \\\"<pre>HTML</pre>\\\"}, \\\"id\\\": \\\"13082169-f211-48aa-8e54-fdea64d81922\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"html\\\", \\\"code\\\": \\\"<div id=\\\\\\\"mainNav\\\\\\\" class=\\\\\\\"collapse navbar-collapse\\\\\\\" role=\\\\\\\"navigation\\\\\\\" aria-label=\\\\\\\"Primary site navigation\\\\\\\">\\\\r\\\\n  <ul class=\\\\\\\"nav\\\\\\\">\\\\r\\\\n    <li class=\\\\\\\"presentation about has-submenu\\\\\\\">\\\\r\\\\n      <a href=\\\\\\\"/about/\\\\\\\" class=\\\\\\\"menu-link allow-toggle\\\\\\\">About</a>\\\\r\\\\n      <ul class=\\\\\\\"dropdown-menu\\\\\\\" role=\\\\\\\"menu\\\\\\\">\\\\r\\\\n        <li class=\\\\\\\"child-page\\\\\\\"><a class=\\\\\\\"menu-link\\\\\\\" href=\\\\\\\"/about/child-page/\\\\\\\" role=\\\\\\\"menuitem\\\\\\\">Child Page</a></li>\\\\r\\\\n      </ul>\\\\r\\\\n    </li>\\\\r\\\\n  </ul>\\\\r\\\\n</div>\\\"}}, \\\"id\\\": \\\"57911822-4863-4747-8f03-72e0272a6fb1\\\"}]\", \"seo_keywords\": \"\", \"socials\": true, \"addthis_pubid\": \"5bbcb76243b82dd4\", \"post_tags\": [{\"pk\": null, \"tag\": 1, \"content_object\": 4}, {\"pk\": null, \"tag\": 2, \"content_object\": 4}, {\"pk\": null, \"tag\": 3, \"content_object\": 4}]}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 33,
+    "fields": {
+        "page": 10,
+        "submitted_for_moderation": false,
+        "created_at": "2020-03-15T16:49:27.523Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 10, \"path\": \"000100020007\", \"depth\": 3, \"numchild\": 0, \"title\": \"Structuring your SASS files\", \"draft_title\": \"Structuring your SASS files\", \"slug\": \"structuring-your-sass-files-2\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/structuring-your-sass-files-2/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"intro\": \"\", \"date\": \"2019-08-02T16:03:00Z\", \"page_content\": \"[{\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>I love organization. My favorite projects are ones where you can easily find and remember where each piece of code is. File structure can be a highly contentious and debatable topic on any dev team. However, having a standard structure for your projects will help keep everyone on the same page and reduce confusion. Here is my favorite way to structure SASS files.</p><p>I break up my scss folder into 4 sub-folders:</p><p></p><embed alt=\\\\\\\"Sass_Structure.png\\\\\\\" embedtype=\\\\\\\"image\\\\\\\" format=\\\\\\\"left\\\\\\\" id=\\\\\\\"2\\\\\\\"/><ul><li><b>Components -</b> larger sections of the project that will be reusable across the site</li><li><b>Elements</b> - specific html elements</li><li><b>Pages</b> - page template styles</li><li><b>Settings</b> - variables and global settings</li></ul>\\\"}, \\\"id\\\": \\\"c25f9bdf-ea4b-4e35-8139-ad8bb8ec1796\\\"}, {\\\"type\\\": \\\"html_block\\\", \\\"value\\\": {\\\"html\\\": \\\"All files are imported to <code>app.scss</code> , then compiled for the static style sheet. Yay for organization!\\\"}, \\\"id\\\": \\\"4f65f67b-d95c-4349-b351-b40dd97c62d5\\\"}, {\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p></p><embed alt=\\\\\\\"SASS_folder_structure.png\\\\\\\" embedtype=\\\\\\\"image\\\\\\\" format=\\\\\\\"left\\\\\\\" id=\\\\\\\"3\\\\\\\"/><p></p>\\\"}, \\\"id\\\": \\\"52919023-ea3f-4904-a58b-4e9bdecfc56a\\\"}]\", \"seo_keywords\": \"\", \"socials\": true, \"addthis_pubid\": \"5bbcb76243b82dd4\", \"post_tags\": [{\"pk\": 11, \"tag\": 2, \"content_object\": 10}, {\"pk\": 12, \"tag\": 4, \"content_object\": 10}]}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 34,
+    "fields": {
+        "page": 10,
+        "submitted_for_moderation": false,
+        "created_at": "2020-03-15T16:49:40.624Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 10, \"path\": \"000100020007\", \"depth\": 3, \"numchild\": 0, \"title\": \"Structuring your SASS files\", \"draft_title\": \"Structuring your SASS files\", \"slug\": \"structuring-your-sass-files\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/structuring-your-sass-files-2/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2020-03-15T16:49:27.554Z\", \"last_published_at\": \"2020-03-15T16:49:27.554Z\", \"latest_revision_created_at\": \"2020-03-15T16:49:27.523Z\", \"live_revision\": 33, \"intro\": \"\", \"date\": \"2019-08-02T16:03:00Z\", \"page_content\": \"[{\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>I love organization. My favorite projects are ones where you can easily find and remember where each piece of code is. File structure can be a highly contentious and debatable topic on any dev team. However, having a standard structure for your projects will help keep everyone on the same page and reduce confusion. Here is my favorite way to structure SASS files.</p><p>I break up my scss folder into 4 sub-folders:</p><p></p><embed alt=\\\\\\\"Sass_Structure.png\\\\\\\" embedtype=\\\\\\\"image\\\\\\\" format=\\\\\\\"left\\\\\\\" id=\\\\\\\"2\\\\\\\"/><ul><li><b>Components -</b> larger sections of the project that will be reusable across the site</li><li><b>Elements</b> - specific html elements</li><li><b>Pages</b> - page template styles</li><li><b>Settings</b> - variables and global settings</li></ul>\\\"}, \\\"id\\\": \\\"c25f9bdf-ea4b-4e35-8139-ad8bb8ec1796\\\"}, {\\\"type\\\": \\\"html_block\\\", \\\"value\\\": {\\\"html\\\": \\\"All files are imported to <code>app.scss</code> , then compiled for the static style sheet. Yay for organization!\\\"}, \\\"id\\\": \\\"4f65f67b-d95c-4349-b351-b40dd97c62d5\\\"}, {\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p></p><embed alt=\\\\\\\"SASS_folder_structure.png\\\\\\\" embedtype=\\\\\\\"image\\\\\\\" format=\\\\\\\"left\\\\\\\" id=\\\\\\\"3\\\\\\\"/><p></p>\\\"}, \\\"id\\\": \\\"52919023-ea3f-4904-a58b-4e9bdecfc56a\\\"}]\", \"seo_keywords\": \"\", \"socials\": true, \"addthis_pubid\": \"5bbcb76243b82dd4\", \"post_tags\": [{\"pk\": null, \"tag\": 2, \"content_object\": 10}, {\"pk\": null, \"tag\": 4, \"content_object\": 10}]}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 35,
+    "fields": {
+        "page": 11,
+        "submitted_for_moderation": false,
+        "created_at": "2020-03-15T16:51:57.347Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 11, \"path\": \"000100020008\", \"depth\": 3, \"numchild\": 0, \"title\": \"Show Material Design Icons with CSS :after :before\", \"draft_title\": \"Show Material Design Icons with CSS :after :before\", \"slug\": \"show-material-design-icons-css-after\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/show-material-design-icons-css-after/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"intro\": \"\", \"date\": \"2019-08-07T16:46:00Z\", \"page_content\": \"[{\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>For most of my career I have been an almost exclusive user of <a href=\\\\\\\"https://fontawesome.com\\\\\\\">Font Awesome</a>. More recently I started to feel like I needed something fresh to work with. I did some research and landed on testing out <a href=\\\\\\\"https://material.io/resources/icons/?style=baseline\\\\\\\">Google&#x27;s Material Design Icons</a> on my next project.</p><p>It&#x27;s super easy to get started because you can just include them as a Google Font like so:</p>\\\"}, \\\"id\\\": \\\"43d0d8dd-0216-46b7-a782-af9e92ef6d42\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"html\\\", \\\"code\\\": \\\"<link href=\\\\\\\"https://fonts.googleapis.com/icon family=Material+Icons\\\\\\\" rel=\\\\\\\"stylesheet\\\\\\\">\\\"}}, \\\"id\\\": \\\"1af0b556-8b8f-4121-ab65-0a259331dff5\\\"}, {\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>If you would rather include them a different way, the <a href=\\\\\\\"https://google.github.io/material-design-icons/\\\\\\\">developer guide</a> explains how to directly download, use npm or bower, and more!</p><p>After using them in my HTML I realized I also wanted to use them in my CSS as :before and :after elements. Here&#x27;s a fun way you can do that:</p>\\\"}, \\\"id\\\": \\\"7fed986b-667c-4058-9a08-49834b68cbf8\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"css\\\", \\\"code\\\": \\\".material-icons {\\\\r\\\\n  direction: ltr;\\\\r\\\\n  display: inline-block;\\\\r\\\\n  font-family: 'Material Icons';\\\\r\\\\n  font-size: 24px;\\\\r\\\\n  font-style: normal;\\\\r\\\\n  font-weight: normal;\\\\r\\\\n  letter-spacing: normal;\\\\r\\\\n  line-height: 1;\\\\r\\\\n  text-transform: none;\\\\r\\\\n  white-space: nowrap;\\\\r\\\\n  word-wrap: normal;\\\\r\\\\n  -webkit-font-feature-settings: 'liga';\\\\r\\\\n  -webkit-font-smoothing: antialiased;\\\\r\\\\n}\\\"}}, \\\"id\\\": \\\"6637e45f-996a-4859-98ef-d030efef80fd\\\"}, {\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>Then using SASS you can extend it and set the content using pseudo css elements:</p>\\\"}, \\\"id\\\": \\\"85953891-18a9-4657-b138-a819f9951595\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"scss\\\", \\\"code\\\": \\\"ul\\\\r\\\\n  &:before {\\\\r\\\\n    @extend .material-icons;\\\\r\\\\n    content: 'label';\\\\r\\\\n  }\\\\r\\\\n}\\\"}}, \\\"id\\\": \\\"10cef7b8-831f-496b-a484-75d45ea0bd5f\\\"}, {\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>I love how clean and modern these icons are and I&#x27;m excited to spice up my designs a little bit with something more than just Font Awesome (which I still use and love). Happy Devving!</p>\\\"}, \\\"id\\\": \\\"236cd7fb-f375-4cfb-879e-af5bde696c9f\\\"}]\", \"seo_keywords\": \"\", \"socials\": true, \"addthis_pubid\": \"5bbcb76243b82dd4\", \"post_tags\": [{\"pk\": 15, \"tag\": 2, \"content_object\": 11}, {\"pk\": 16, \"tag\": 5, \"content_object\": 11}, {\"pk\": 17, \"tag\": 6, \"content_object\": 11}]}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 36,
+    "fields": {
+        "page": 12,
+        "submitted_for_moderation": false,
+        "created_at": "2020-03-15T16:54:12.018Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 12, \"path\": \"000100020009\", \"depth\": 3, \"numchild\": 0, \"title\": \"Creating an alias for Pipenv + Django commands\", \"draft_title\": \"Creating an alias for Pipenv + Django commands\", \"slug\": \"creating-alias-pipenv-django-commands\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/creating-alias-pipenv-django-commands/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"intro\": \"\", \"date\": \"2019-09-04T22:32:00Z\", \"page_content\": \"[{\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>Maybe it&#x27;s just the front-ender in me, but I don&#x27;t like memorizing or typing out long shell commands. Thankfully, there&#x27;s a fun and easy way for me to customize my shell experience using <a href=\\\\\\\"https://en.wikipedia.org/wiki/Alias_(command)\\\\\\\">aliases</a>. Today I&#x27;m going to share my #1 alias that I use multiple times everyday. If you&#x27;re a <a href=\\\\\\\"https://www.djangoproject.com/\\\\\\\">Django</a> developer and use <a href=\\\\\\\"https://pipenv-fork.readthedocs.io/en/latest/\\\\\\\">Pipenv</a> then this will be the perfect one for you.</p><p>Open up your ~/.<i>bash_profile (</i>or the file you are using for your local bash scripts, in my case is is my <i>~/.zshrc</i> file) and add the following:</p>\\\"}, \\\"id\\\": \\\"2e11f9f2-fa39-4099-bd5b-3eddd72a63de\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"bash\\\", \\\"code\\\": \\\"alias pippy=\\\\\\\"pipenv run python manage.py\\\\\\\"\\\"}}, \\\"id\\\": \\\"7fe644ea-53ab-4d8c-a540-62e575e36e27\\\"}, {\\\"type\\\": \\\"html_block\\\", \\\"value\\\": {\\\"html\\\": \\\"<small>If you're unsure where to find your <i>~/.bash_profile</i>, you can open Finder (on a mac) to my home directory then use  <code>Cmd + Shift + .</code> to show hidden files. Your <i>~/.bash_profile</i> should then appear along with all other hidden files. Double click to open in an editor.</small>\\\"}, \\\"id\\\": \\\"00da375d-6a61-4038-88ec-80f9b53885b4\\\"}, {\\\"type\\\": \\\"sub_heading_block\\\", \\\"value\\\": {\\\"sub_heading\\\": \\\"Voil\\\\u00e0\\\"}, \\\"id\\\": \\\"2a9702a5-11d7-4b53-aec2-dc54b3d02991\\\"}, {\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>Now you are able to use commands such as:</p>\\\"}, \\\"id\\\": \\\"006a39cf-f8b3-46c8-9658-ab964c48530f\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"bash\\\", \\\"code\\\": \\\"pippy runserver\\\\r\\\\npippy createsuperuser\\\\r\\\\npippy makemigrations\\\\r\\\\npippy migrate\\\"}}, \\\"id\\\": \\\"ef7e3a3b-3a8a-44ef-97b7-c1d1bc565fb5\\\"}, {\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>So much easier and faster.</p>\\\"}, \\\"id\\\": \\\"6cd72d19-672c-4f41-881a-b187073c6fbb\\\"}]\", \"seo_keywords\": \"\", \"socials\": true, \"addthis_pubid\": \"5bbcb76243b82dd4\", \"post_tags\": [{\"pk\": 18, \"tag\": 8, \"content_object\": 12}, {\"pk\": 19, \"tag\": 9, \"content_object\": 12}, {\"pk\": 20, \"tag\": 10, \"content_object\": 12}, {\"pk\": 21, \"tag\": 7, \"content_object\": 12}]}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.pagerevision",
+    "pk": 37,
+    "fields": {
+        "page": 13,
+        "submitted_for_moderation": false,
+        "created_at": "2020-03-15T16:55:32.879Z",
+        "user": [
+            "ashleyelainewright@gmail.com"
+        ],
+        "content_json": "{\"pk\": 13, \"path\": \"00010002000A\", \"depth\": 3, \"numchild\": 0, \"title\": \"Adding an external link alert\", \"draft_title\": \"Adding an external link alert\", \"slug\": \"adding-external-link-alert\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/adding-external-link-alert/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"intro\": \"\", \"date\": \"2019-09-18T13:44:00Z\", \"page_content\": \"[{\\\"type\\\": \\\"content_block\\\", \\\"value\\\": {\\\"content\\\": \\\"<p>Here is a little snippet of Javascript that I like to add to each of my projects to help improve accessibility. The issue with external links is they take a user to a completely new website, that may or may not have made accessibility a priority. Therefore, it&#x27;s important to alert the screen reader user that they are leaving your website when selecting an external link. This way they won&#x27;t unknowingly end up on a different site with which you have no control over. The easiest way to do this (in my opinion) is the following:</p>\\\"}, \\\"id\\\": \\\"275ff394-9174-4905-8c56-9ad09f10b569\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"javascript\\\", \\\"code\\\": \\\"setTimeout(function() {\\\\r\\\\n    $('a[target=\\\\\\\"_blank\\\\\\\"]').addClass('external-link');\\\\r\\\\n    $('.external-link').append(' <span class=\\\\\\\"sr-only\\\\\\\"> External link - Opens in new window</span>');\\\\r\\\\n}, 100);\\\"}}, \\\"id\\\": \\\"b9b33d41-892a-432a-a129-f1e54a97d90a\\\"}, {\\\"type\\\": \\\"html_block\\\", \\\"value\\\": {\\\"html\\\": \\\"<p>The very short timeout is added just to make sure all the links are loaded on the page before adding the necessary class. The <code>sr-only</code> class is built into <a target=\\\\\\\"_blank\\\\\\\" href=\\\\\\\"https://getbootstrap.com/docs/4.0/utilities/screenreaders/\\\\\\\">Bootstrap</a>, so if you aren't using Bootstrap you should also add the following to your css:</p>\\\"}, \\\"id\\\": \\\"ba1f1c52-6f33-46a7-9393-defeb6156b4b\\\"}, {\\\"type\\\": \\\"code_block\\\", \\\"value\\\": {\\\"code\\\": {\\\"language\\\": \\\"scss\\\", \\\"code\\\": \\\".sr-only {\\\\r\\\\n  border: 0;\\\\r\\\\n  clip: rect(0, 0, 0, 0);\\\\r\\\\n  height: 1px;\\\\r\\\\n  margin: -1px;\\\\r\\\\n  overflow: hidden;\\\\r\\\\n  padding: 0;\\\\r\\\\n  position: absolute;\\\\r\\\\n  width: 1px;\\\\r\\\\n}\\\"}}, \\\"id\\\": \\\"60bc577d-5421-40cb-ae16-12cabd68da6c\\\"}]\", \"seo_keywords\": \"\", \"socials\": true, \"addthis_pubid\": \"5bbcb76243b82dd4\", \"post_tags\": [{\"pk\": 22, \"tag\": 1, \"content_object\": 13}, {\"pk\": 23, \"tag\": 3, \"content_object\": 13}]}",
+        "approved_go_live_at": null
+    }
+},
+{
+    "model": "wagtailcore.grouppagepermission",
+    "pk": 1,
+    "fields": {
+        "group": [
+            "Moderators"
+        ],
+        "page": 1,
+        "permission_type": "add"
+    }
+},
+{
+    "model": "wagtailcore.grouppagepermission",
+    "pk": 2,
+    "fields": {
+        "group": [
+            "Moderators"
+        ],
+        "page": 1,
+        "permission_type": "edit"
+    }
+},
+{
+    "model": "wagtailcore.grouppagepermission",
+    "pk": 3,
+    "fields": {
+        "group": [
+            "Moderators"
+        ],
+        "page": 1,
+        "permission_type": "publish"
+    }
+},
+{
+    "model": "wagtailcore.grouppagepermission",
+    "pk": 4,
+    "fields": {
+        "group": [
+            "Editors"
+        ],
+        "page": 1,
+        "permission_type": "add"
+    }
+},
+{
+    "model": "wagtailcore.grouppagepermission",
+    "pk": 5,
+    "fields": {
+        "group": [
+            "Editors"
+        ],
+        "page": 1,
+        "permission_type": "edit"
+    }
+},
+{
+    "model": "wagtailcore.grouppagepermission",
+    "pk": 6,
+    "fields": {
+        "group": [
+            "Moderators"
+        ],
+        "page": 1,
+        "permission_type": "lock"
+    }
+},
+{
+    "model": "wagtailcore.collection",
+    "pk": 1,
+    "fields": {
+        "path": "0001",
+        "depth": 1,
+        "numchild": 0,
+        "name": "Root"
+    }
+},
+{
+    "model": "wagtailcore.groupcollectionpermission",
+    "pk": 1,
+    "fields": {
+        "group": [
+            "Moderators"
+        ],
+        "collection": 1,
+        "permission": [
+            "add_document",
+            "wagtaildocs",
+            "document"
+        ]
+    }
+},
+{
+    "model": "wagtailcore.groupcollectionpermission",
+    "pk": 2,
+    "fields": {
+        "group": [
+            "Editors"
+        ],
+        "collection": 1,
+        "permission": [
+            "add_document",
+            "wagtaildocs",
+            "document"
+        ]
+    }
+},
+{
+    "model": "wagtailcore.groupcollectionpermission",
+    "pk": 3,
+    "fields": {
+        "group": [
+            "Moderators"
+        ],
+        "collection": 1,
+        "permission": [
+            "change_document",
+            "wagtaildocs",
+            "document"
+        ]
+    }
+},
+{
+    "model": "wagtailcore.groupcollectionpermission",
+    "pk": 4,
+    "fields": {
+        "group": [
+            "Editors"
+        ],
+        "collection": 1,
+        "permission": [
+            "change_document",
+            "wagtaildocs",
+            "document"
+        ]
+    }
+},
+{
+    "model": "wagtailcore.groupcollectionpermission",
+    "pk": 5,
+    "fields": {
+        "group": [
+            "Moderators"
+        ],
+        "collection": 1,
+        "permission": [
+            "add_image",
+            "wagtailimages",
+            "image"
+        ]
+    }
+},
+{
+    "model": "wagtailcore.groupcollectionpermission",
+    "pk": 6,
+    "fields": {
+        "group": [
+            "Editors"
+        ],
+        "collection": 1,
+        "permission": [
+            "add_image",
+            "wagtailimages",
+            "image"
+        ]
+    }
+},
+{
+    "model": "wagtailcore.groupcollectionpermission",
+    "pk": 7,
+    "fields": {
+        "group": [
+            "Moderators"
+        ],
+        "collection": 1,
+        "permission": [
+            "change_image",
+            "wagtailimages",
+            "image"
+        ]
+    }
+},
+{
+    "model": "wagtailcore.groupcollectionpermission",
+    "pk": 8,
+    "fields": {
+        "group": [
+            "Editors"
+        ],
+        "collection": 1,
+        "permission": [
+            "change_image",
+            "wagtailimages",
+            "image"
+        ]
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 1,
+    "fields": {
+        "name": "Accessibility",
+        "slug": "accessibility"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 2,
+    "fields": {
+        "name": "Front End",
+        "slug": "front-end"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 3,
+    "fields": {
+        "name": "JavaScript",
+        "slug": "javascript"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 4,
+    "fields": {
+        "name": "SASS",
+        "slug": "sass"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 5,
+    "fields": {
+        "name": "CSS",
+        "slug": "css"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 6,
+    "fields": {
+        "name": "User Experience",
+        "slug": "user-experience"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 7,
+    "fields": {
+        "name": "Django",
+        "slug": "django"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 8,
+    "fields": {
+        "name": "Pipenv",
+        "slug": "pipenv"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 9,
+    "fields": {
+        "name": "Bash",
+        "slug": "bash"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 10,
+    "fields": {
+        "name": "Python",
+        "slug": "python"
+    }
+},
+{
+    "model": "base.globalsettings",
+    "pk": 1,
+    "fields": {
+        "site": [
+            "localhost",
+            80
+        ],
+        "logo": "",
+        "logo_text": "uname",
+        "logo_sub_text": "a dev blog"
+    }
+}
+]
